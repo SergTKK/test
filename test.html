@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"] - Автомагазин на Таманской</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/fontello.css"/>
+    <link rel="stylesheet" href="/css/site.css"/>
+    <link rel="stylesheet" href="chosen/chosen.css" />
+    <link rel="stylesheet" href="/awesome/css/font-awesome.min.css"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" rel="stylesheet"/>
+</head>
+<body style="font-size: 16px">
+
+<!-- Header non Admin Area Layout -->
+<header>
+   
+</header>
+
+<div class="container" id="c2">
+    
+    
+        
+<link rel="stylesheet" href="/css/fontello.css">
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+
+<style>
+    table, th, td {
+        border: 1px solid gray;
+        border-collapse: collapse;        
+    }
+    th, td {
+        padding: 5px;
+        font-style: italic;
+    }
+    thead {
+        color: darkgoldenrod;
+    }
+    #c2 {
+        width: 1200px;
+        padding-top: 25px;
+        padding-bottom: 50px;
+    }    
+    
+</style>
+
+<div>
+    <table id = "mytable" style="width: 80%">
+        
+        <thead>
+        <tr style="height: 1.25em">
+            <th>Название</th>
+            <th>Брэнд</th>
+            <th>Артикул</th>
+            <th>Цена</th>
+            <th>Срок доставки</th>
+            <th>Поставщик</th>
+            <th></th>
+        </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Прокладка сливной пробки / dichtring n0138157</td>
+                <td>VAG</td>
+                <td>N0138157</td>
+                <td>243</td>
+                <td>15.11.2022</td>
+                <td>Berg</td>
+                <td id="idItem">
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A14,%22WarehouseName%22%3A%22APZ%22,%22Id%22%3A%22420306%22,%22Brand%22%3A%22VAG%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%22N0138157%22,%22NameOfPart%22%3A%22%D0%9F%D0%A0%D0%9E%D0%9A%D0%9B%D0%90%D0%94%D0%9A%D0%90%20%D0%A1%D0%9B%D0%98%D0%92%D0%9D%D0%9E%D0%99%20%D0%9F%D0%A0%D0%9E%D0%91%D0%9A%D0%98%20%2F%20DICHTRING%20N0138157%22,%22Quantity%22%3A%2264%22,%22DeliveryTime%22%3A%2215.11.2022%22,%22Price%22%3A180.0,%22OwnWarehouse%22%3Afalse,%22OriginalFlag%22%3A1,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A243.0,%22Percent%22%3A%2296%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3Anull,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A41064089,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn btn-link"><i class="icon-cart-plus"></i></a>
+                </td>
+            </tr>
+            <tr >
+                <td>Прокладка сливной пробки / dichtring n0138157</td>
+                <td>VAG</td>
+                <td>N0138157</td>
+                <td>251</td>
+                <td>15.11.2022</td>
+                <td>Berg</td>
+                <td id="idItem">
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A14,%22WarehouseName%22%3A%22%D0%94%D0%B8%D0%BB%D0%B5%D1%80%22,%22Id%22%3A%22420306%22,%22Brand%22%3A%22VAG%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%22N0138157%22,%22NameOfPart%22%3A%22%D0%9F%D0%A0%D0%9E%D0%9A%D0%9B%D0%90%D0%94%D0%9A%D0%90%20%D0%A1%D0%9B%D0%98%D0%92%D0%9D%D0%9E%D0%99%20%D0%9F%D0%A0%D0%9E%D0%91%D0%9A%D0%98%20%2F%20DICHTRING%20N0138157%22,%22Quantity%22%3A%22898%22,%22DeliveryTime%22%3A%2215.11.2022%22,%22Price%22%3A185.84,%22OwnWarehouse%22%3Afalse,%22OriginalFlag%22%3A1,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A251.0,%22Percent%22%3A%2287%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3Anull,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A37609105,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn btn-link"><i class="icon-cart-plus"></i></a>
+                </td>
+            </tr>
+            <tr >
+                <td>Прокладка сливной пробки / dichtring n0138157</td>
+                <td>VAG</td>
+                <td>N0138157</td>
+                <td>265</td>
+                <td>17.11.2022</td>
+                <td>Berg</td>
+                <td id="idItem">
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A14,%22WarehouseName%22%3A%22UFD%22,%22Id%22%3A%22420306%22,%22Brand%22%3A%22VAG%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%22N0138157%22,%22NameOfPart%22%3A%22%D0%9F%D0%A0%D0%9E%D0%9A%D0%9B%D0%90%D0%94%D0%9A%D0%90%20%D0%A1%D0%9B%D0%98%D0%92%D0%9D%D0%9E%D0%99%20%D0%9F%D0%A0%D0%9E%D0%91%D0%9A%D0%98%20%2F%20DICHTRING%20N0138157%22,%22Quantity%22%3A%22200%22,%22DeliveryTime%22%3A%2217.11.2022%22,%22Price%22%3A196.26,%22OwnWarehouse%22%3Afalse,%22OriginalFlag%22%3A1,%22Kratnost%22%3A%2210%22,%22Sale_cena%22%3A265.0,%22Percent%22%3A%2289%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3Anull,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A55398749,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn btn-link"><i class="icon-cart-plus"></i></a>
+                </td>
+            </tr>
+            <tr >
+                <td>Прокладка сливной пробки / dichtring n0138157</td>
+                <td>VAG</td>
+                <td>N0138157</td>
+                <td>267</td>
+                <td>18.11.2022</td>
+                <td>Berg</td>
+                <td id="idItem">
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A14,%22WarehouseName%22%3A%22ACW%22,%22Id%22%3A%22420306%22,%22Brand%22%3A%22VAG%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%22N0138157%22,%22NameOfPart%22%3A%22%D0%9F%D0%A0%D0%9E%D0%9A%D0%9B%D0%90%D0%94%D0%9A%D0%90%20%D0%A1%D0%9B%D0%98%D0%92%D0%9D%D0%9E%D0%99%20%D0%9F%D0%A0%D0%9E%D0%91%D0%9A%D0%98%20%2F%20DICHTRING%20N0138157%22,%22Quantity%22%3A%2264%22,%22DeliveryTime%22%3A%2218.11.2022%22,%22Price%22%3A197.42,%22OwnWarehouse%22%3Afalse,%22OriginalFlag%22%3A1,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A267.0,%22Percent%22%3A%2261%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3Anull,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A29617743,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn btn-link"><i class="icon-cart-plus"></i></a>
+                </td>
+            </tr>
+            <tr >
+                <td>Прокладка сливной пробки / dichtring n0138157</td>
+                <td>VAG</td>
+                <td>N0138157</td>
+                <td>275</td>
+                <td>15.11.2022</td>
+                <td>Berg</td>
+                <td id="idItem">
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A14,%22WarehouseName%22%3A%22RSB%22,%22Id%22%3A%22420306%22,%22Brand%22%3A%22VAG%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%22N0138157%22,%22NameOfPart%22%3A%22%D0%9F%D0%A0%D0%9E%D0%9A%D0%9B%D0%90%D0%94%D0%9A%D0%90%20%D0%A1%D0%9B%D0%98%D0%92%D0%9D%D0%9E%D0%99%20%D0%9F%D0%A0%D0%9E%D0%91%D0%9A%D0%98%20%2F%20DICHTRING%20N0138157%22,%22Quantity%22%3A%22200%22,%22DeliveryTime%22%3A%2215.11.2022%22,%22Price%22%3A203.17,%22OwnWarehouse%22%3Afalse,%22OriginalFlag%22%3A1,%22Kratnost%22%3A%2210%22,%22Sale_cena%22%3A275.0,%22Percent%22%3A%2290%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3Anull,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A179875638,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn btn-link"><i class="icon-cart-plus"></i></a>
+                </td>
+            </tr>
+            <tr >
+                <td>Прокладка сливной пробки / dichtring n0138157</td>
+                <td>VAG</td>
+                <td>N0138157</td>
+                <td>280</td>
+                <td>15.11.2022</td>
+                <td>Berg</td>
+                <td id="idItem">
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A14,%22WarehouseName%22%3A%22%D0%90%D0%90%D0%90%22,%22Id%22%3A%22420306%22,%22Brand%22%3A%22VAG%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%22N0138157%22,%22NameOfPart%22%3A%22%D0%9F%D0%A0%D0%9E%D0%9A%D0%9B%D0%90%D0%94%D0%9A%D0%90%20%D0%A1%D0%9B%D0%98%D0%92%D0%9D%D0%9E%D0%99%20%D0%9F%D0%A0%D0%9E%D0%91%D0%9A%D0%98%20%2F%20DICHTRING%20N0138157%22,%22Quantity%22%3A%22905%22,%22DeliveryTime%22%3A%2215.11.2022%22,%22Price%22%3A207.09,%22OwnWarehouse%22%3Afalse,%22OriginalFlag%22%3A1,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A280.0,%22Percent%22%3A%2264%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3Anull,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A94203483,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn btn-link"><i class="icon-cart-plus"></i></a>
+                </td>
+            </tr>
+            <tr >
+                <td>Прокладка сливной пробки / dichtring n0138157</td>
+                <td>VAG</td>
+                <td>N0138157</td>
+                <td>280</td>
+                <td>15.11.2022</td>
+                <td>Berg</td>
+                <td id="idItem">
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A14,%22WarehouseName%22%3A%22RTY%22,%22Id%22%3A%22420306%22,%22Brand%22%3A%22VAG%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%22N0138157%22,%22NameOfPart%22%3A%22%D0%9F%D0%A0%D0%9E%D0%9A%D0%9B%D0%90%D0%94%D0%9A%D0%90%20%D0%A1%D0%9B%D0%98%D0%92%D0%9D%D0%9E%D0%99%20%D0%9F%D0%A0%D0%9E%D0%91%D0%9A%D0%98%20%2F%20DICHTRING%20N0138157%22,%22Quantity%22%3A%22898%22,%22DeliveryTime%22%3A%2215.11.2022%22,%22Price%22%3A207.09,%22OwnWarehouse%22%3Afalse,%22OriginalFlag%22%3A1,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A280.0,%22Percent%22%3A%2289%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3Anull,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A100282785,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn btn-link"><i class="icon-cart-plus"></i></a>
+                </td>
+            </tr>
+            <tr >
+                <td>Прокладка сливной пробки / dichtring n0138157</td>
+                <td>VAG</td>
+                <td>N0138157</td>
+                <td>281</td>
+                <td>12.11.2022</td>
+                <td>Berg</td>
+                <td id="idItem">
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A14,%22WarehouseName%22%3A%22BMS%22,%22Id%22%3A%22420306%22,%22Brand%22%3A%22VAG%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%22N0138157%22,%22NameOfPart%22%3A%22%D0%9F%D0%A0%D0%9E%D0%9A%D0%9B%D0%90%D0%94%D0%9A%D0%90%20%D0%A1%D0%9B%D0%98%D0%92%D0%9D%D0%9E%D0%99%20%D0%9F%D0%A0%D0%9E%D0%91%D0%9A%D0%98%20%2F%20DICHTRING%20N0138157%22,%22Quantity%22%3A%2230%22,%22DeliveryTime%22%3A%2212.11.2022%22,%22Price%22%3A208.11,%22OwnWarehouse%22%3Afalse,%22OriginalFlag%22%3A1,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A281.0,%22Percent%22%3A%2287%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3Anull,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A38497175,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn btn-link"><i class="icon-cart-plus"></i></a>
+                </td>
+            </tr>
+            <tr >
+                <td>Прокладка сливной пробки / dichtring n0138157</td>
+                <td>VAG</td>
+                <td>N0138157</td>
+                <td>294</td>
+                <td>15.11.2022</td>
+                <td>Berg</td>
+                <td id="idItem">
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A14,%22WarehouseName%22%3A%22RFV%22,%22Id%22%3A%22420306%22,%22Brand%22%3A%22VAG%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%22N0138157%22,%22NameOfPart%22%3A%22%D0%9F%D0%A0%D0%9E%D0%9A%D0%9B%D0%90%D0%94%D0%9A%D0%90%20%D0%A1%D0%9B%D0%98%D0%92%D0%9D%D0%9E%D0%99%20%D0%9F%D0%A0%D0%9E%D0%91%D0%9A%D0%98%20%2F%20DICHTRING%20N0138157%22,%22Quantity%22%3A%221%22,%22DeliveryTime%22%3A%2215.11.2022%22,%22Price%22%3A217.4,%22OwnWarehouse%22%3Afalse,%22OriginalFlag%22%3A1,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A294.0,%22Percent%22%3A%2291%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3Anull,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A100857696,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn btn-link"><i class="icon-cart-plus"></i></a>
+                </td>
+            </tr>
+            <tr >
+                <td>Прокладка сливной пробки / dichtring n0138157</td>
+                <td>VAG</td>
+                <td>N0138157</td>
+                <td>294</td>
+                <td>15.11.2022</td>
+                <td>Berg</td>
+                <td id="idItem">
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A14,%22WarehouseName%22%3A%22AVTS%22,%22Id%22%3A%22420306%22,%22Brand%22%3A%22VAG%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%22N0138157%22,%22NameOfPart%22%3A%22%D0%9F%D0%A0%D0%9E%D0%9A%D0%9B%D0%90%D0%94%D0%9A%D0%90%20%D0%A1%D0%9B%D0%98%D0%92%D0%9D%D0%9E%D0%99%20%D0%9F%D0%A0%D0%9E%D0%91%D0%9A%D0%98%20%2F%20DICHTRING%20N0138157%22,%22Quantity%22%3A%22146%22,%22DeliveryTime%22%3A%2215.11.2022%22,%22Price%22%3A217.62,%22OwnWarehouse%22%3Afalse,%22OriginalFlag%22%3A1,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A294.0,%22Percent%22%3A%2286%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3Anull,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A110840259,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn btn-link"><i class="icon-cart-plus"></i></a>
+                </td>
+            </tr>
+            <tr >
+                <td>Прокладка сливной пробки / dichtring n0138157</td>
+                <td>VAG</td>
+                <td>N0138157</td>
+                <td>320</td>
+                <td>15.11.2022</td>
+                <td>Berg</td>
+                <td id="idItem">
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A14,%22WarehouseName%22%3A%22IBO%22,%22Id%22%3A%22420306%22,%22Brand%22%3A%22VAG%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%22N0138157%22,%22NameOfPart%22%3A%22%D0%9F%D0%A0%D0%9E%D0%9A%D0%9B%D0%90%D0%94%D0%9A%D0%90%20%D0%A1%D0%9B%D0%98%D0%92%D0%9D%D0%9E%D0%99%20%D0%9F%D0%A0%D0%9E%D0%91%D0%9A%D0%98%20%2F%20DICHTRING%20N0138157%22,%22Quantity%22%3A%22736%22,%22DeliveryTime%22%3A%2215.11.2022%22,%22Price%22%3A236.4,%22OwnWarehouse%22%3Afalse,%22OriginalFlag%22%3A1,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A320.0,%22Percent%22%3A%2283%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3Anull,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A47871895,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn btn-link"><i class="icon-cart-plus"></i></a>
+                </td>
+            </tr>
+            <tr >
+                <td>Прокладка сливной пробки / dichtring n0138157</td>
+                <td>VAG</td>
+                <td>N0138157</td>
+                <td>321</td>
+                <td>29.11.2022</td>
+                <td>Berg</td>
+                <td id="idItem">
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A14,%22WarehouseName%22%3A%22LUD%22,%22Id%22%3A%22420306%22,%22Brand%22%3A%22VAG%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%22N0138157%22,%22NameOfPart%22%3A%22%D0%9F%D0%A0%D0%9E%D0%9A%D0%9B%D0%90%D0%94%D0%9A%D0%90%20%D0%A1%D0%9B%D0%98%D0%92%D0%9D%D0%9E%D0%99%20%D0%9F%D0%A0%D0%9E%D0%91%D0%9A%D0%98%20%2F%20DICHTRING%20N0138157%22,%22Quantity%22%3A%2219%22,%22DeliveryTime%22%3A%2229.11.2022%22,%22Price%22%3A237.6,%22OwnWarehouse%22%3Afalse,%22OriginalFlag%22%3A1,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A321.0,%22Percent%22%3A%2269%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3Anull,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A69600195,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn btn-link"><i class="icon-cart-plus"></i></a>
+                </td>
+            </tr>
+            <tr >
+                <td>Прокладка сливной пробки / dichtring n0138157</td>
+                <td>VAG</td>
+                <td>N0138157</td>
+                <td>323</td>
+                <td>15.11.2022</td>
+                <td>Berg</td>
+                <td id="idItem">
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A14,%22WarehouseName%22%3A%22%D0%94%D0%B8%D0%BB%D0%B5%D1%80%22,%22Id%22%3A%22420306%22,%22Brand%22%3A%22VAG%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%22N0138157%22,%22NameOfPart%22%3A%22%D0%9F%D0%A0%D0%9E%D0%9A%D0%9B%D0%90%D0%94%D0%9A%D0%90%20%D0%A1%D0%9B%D0%98%D0%92%D0%9D%D0%9E%D0%99%20%D0%9F%D0%A0%D0%9E%D0%91%D0%9A%D0%98%20%2F%20DICHTRING%20N0138157%22,%22Quantity%22%3A%2220%22,%22DeliveryTime%22%3A%2215.11.2022%22,%22Price%22%3A238.8,%22OwnWarehouse%22%3Afalse,%22OriginalFlag%22%3A1,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A323.0,%22Percent%22%3A%2291%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3Anull,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A11325633,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn btn-link"><i class="icon-cart-plus"></i></a>
+                </td>
+            </tr>
+            <tr >
+                <td>Прокладка сливной пробки / dichtring n0138157</td>
+                <td>VAG</td>
+                <td>N0138157</td>
+                <td>326</td>
+                <td>15.11.2022</td>
+                <td>Berg</td>
+                <td id="idItem">
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A14,%22WarehouseName%22%3A%22UTT%22,%22Id%22%3A%22420306%22,%22Brand%22%3A%22VAG%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%22N0138157%22,%22NameOfPart%22%3A%22%D0%9F%D0%A0%D0%9E%D0%9A%D0%9B%D0%90%D0%94%D0%9A%D0%90%20%D0%A1%D0%9B%D0%98%D0%92%D0%9D%D0%9E%D0%99%20%D0%9F%D0%A0%D0%9E%D0%91%D0%9A%D0%98%20%2F%20DICHTRING%20N0138157%22,%22Quantity%22%3A%226%22,%22DeliveryTime%22%3A%2215.11.2022%22,%22Price%22%3A240.8,%22OwnWarehouse%22%3Afalse,%22OriginalFlag%22%3A1,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A326.0,%22Percent%22%3A%2266%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3Anull,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A40543989,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn btn-link"><i class="icon-cart-plus"></i></a>
+                </td>
+            </tr>
+            <tr >
+                <td>Прокладка сливной пробки / dichtring n0138157</td>
+                <td>VAG</td>
+                <td>N0138157</td>
+                <td>330</td>
+                <td>18.11.2022</td>
+                <td>Berg</td>
+                <td id="idItem">
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A14,%22WarehouseName%22%3A%22%D0%94%D0%B8%D0%BB%D0%B5p%22,%22Id%22%3A%22420306%22,%22Brand%22%3A%22VAG%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%22N0138157%22,%22NameOfPart%22%3A%22%D0%9F%D0%A0%D0%9E%D0%9A%D0%9B%D0%90%D0%94%D0%9A%D0%90%20%D0%A1%D0%9B%D0%98%D0%92%D0%9D%D0%9E%D0%99%20%D0%9F%D0%A0%D0%9E%D0%91%D0%9A%D0%98%20%2F%20DICHTRING%20N0138157%22,%22Quantity%22%3A%2229%22,%22DeliveryTime%22%3A%2218.11.2022%22,%22Price%22%3A244.02,%22OwnWarehouse%22%3Afalse,%22OriginalFlag%22%3A1,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A330.0,%22Percent%22%3A%2283%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3Anull,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A2880603,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn btn-link"><i class="icon-cart-plus"></i></a>
+                </td>
+            </tr>
+            <tr >
+                <td>Прокладка сливной пробки / dichtring n0138157</td>
+                <td>VAG</td>
+                <td>N0138157</td>
+                <td>335</td>
+                <td>19.11.2022</td>
+                <td>Berg</td>
+                <td id="idItem">
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A14,%22WarehouseName%22%3A%22DUB%22,%22Id%22%3A%22420306%22,%22Brand%22%3A%22VAG%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%22N0138157%22,%22NameOfPart%22%3A%22%D0%9F%D0%A0%D0%9E%D0%9A%D0%9B%D0%90%D0%94%D0%9A%D0%90%20%D0%A1%D0%9B%D0%98%D0%92%D0%9D%D0%9E%D0%99%20%D0%9F%D0%A0%D0%9E%D0%91%D0%9A%D0%98%20%2F%20DICHTRING%20N0138157%22,%22Quantity%22%3A%22230%22,%22DeliveryTime%22%3A%2219.11.2022%22,%22Price%22%3A248.04,%22OwnWarehouse%22%3Afalse,%22OriginalFlag%22%3A1,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A335.0,%22Percent%22%3A%2236%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3Anull,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A102322800,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn btn-link"><i class="icon-cart-plus"></i></a>
+                </td>
+            </tr>
+            <tr >
+                <td>Прокладка сливной пробки / dichtring n0138157</td>
+                <td>VAG</td>
+                <td>N0138157</td>
+                <td>338</td>
+                <td>18.11.2022</td>
+                <td>Berg</td>
+                <td id="idItem">
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A14,%22WarehouseName%22%3A%22PGD%22,%22Id%22%3A%22420306%22,%22Brand%22%3A%22VAG%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%22N0138157%22,%22NameOfPart%22%3A%22%D0%9F%D0%A0%D0%9E%D0%9A%D0%9B%D0%90%D0%94%D0%9A%D0%90%20%D0%A1%D0%9B%D0%98%D0%92%D0%9D%D0%9E%D0%99%20%D0%9F%D0%A0%D0%9E%D0%91%D0%9A%D0%98%20%2F%20DICHTRING%20N0138157%22,%22Quantity%22%3A%22101%22,%22DeliveryTime%22%3A%2218.11.2022%22,%22Price%22%3A250.24,%22OwnWarehouse%22%3Afalse,%22OriginalFlag%22%3A1,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A338.0,%22Percent%22%3A%2246%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3Anull,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A70208745,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn btn-link"><i class="icon-cart-plus"></i></a>
+                </td>
+            </tr>
+            <tr >
+                <td>Прокладка сливной пробки / dichtring n0138157</td>
+                <td>VAG</td>
+                <td>N0138157</td>
+                <td>342</td>
+                <td>18.11.2022</td>
+                <td>Berg</td>
+                <td id="idItem">
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A14,%22WarehouseName%22%3A%22SMP%22,%22Id%22%3A%22420306%22,%22Brand%22%3A%22VAG%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%22N0138157%22,%22NameOfPart%22%3A%22%D0%9F%D0%A0%D0%9E%D0%9A%D0%9B%D0%90%D0%94%D0%9A%D0%90%20%D0%A1%D0%9B%D0%98%D0%92%D0%9D%D0%9E%D0%99%20%D0%9F%D0%A0%D0%9E%D0%91%D0%9A%D0%98%20%2F%20DICHTRING%20N0138157%22,%22Quantity%22%3A%2210%22,%22DeliveryTime%22%3A%2218.11.2022%22,%22Price%22%3A253.2,%22OwnWarehouse%22%3Afalse,%22OriginalFlag%22%3A1,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A342.0,%22Percent%22%3A%2286%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3Anull,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A143705067,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn btn-link"><i class="icon-cart-plus"></i></a>
+                </td>
+            </tr>
+            <tr >
+                <td>Прокладка сливной пробки / dichtring n0138157</td>
+                <td>VAG</td>
+                <td>N0138157</td>
+                <td>350</td>
+                <td>15.11.2022</td>
+                <td>Berg</td>
+                <td id="idItem">
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A14,%22WarehouseName%22%3A%22NMT%22,%22Id%22%3A%22420306%22,%22Brand%22%3A%22VAG%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%22N0138157%22,%22NameOfPart%22%3A%22%D0%9F%D0%A0%D0%9E%D0%9A%D0%9B%D0%90%D0%94%D0%9A%D0%90%20%D0%A1%D0%9B%D0%98%D0%92%D0%9D%D0%9E%D0%99%20%D0%9F%D0%A0%D0%9E%D0%91%D0%9A%D0%98%20%2F%20DICHTRING%20N0138157%22,%22Quantity%22%3A%221%22,%22DeliveryTime%22%3A%2215.11.2022%22,%22Price%22%3A259.2,%22OwnWarehouse%22%3Afalse,%22OriginalFlag%22%3A1,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A350.0,%22Percent%22%3A%2293%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3Anull,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A27212961,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn btn-link"><i class="icon-cart-plus"></i></a>
+                </td>
+            </tr>
+            <tr >
+                <td>Прокладка сливной пробки / dichtring n0138157</td>
+                <td>VAG</td>
+                <td>N0138157</td>
+                <td>355</td>
+                <td>02.01.2023</td>
+                <td>Berg</td>
+                <td id="idItem">
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A14,%22WarehouseName%22%3A%22%D0%AD%D0%BC%D0%B8%D1%80%D0%B0%D1%82%D1%8B-6%22,%22Id%22%3A%22420306%22,%22Brand%22%3A%22VAG%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%22N0138157%22,%22NameOfPart%22%3A%22%D0%9F%D0%A0%D0%9E%D0%9A%D0%9B%D0%90%D0%94%D0%9A%D0%90%20%D0%A1%D0%9B%D0%98%D0%92%D0%9D%D0%9E%D0%99%20%D0%9F%D0%A0%D0%9E%D0%91%D0%9A%D0%98%20%2F%20DICHTRING%20N0138157%22,%22Quantity%22%3A%22849%22,%22DeliveryTime%22%3A%2202.01.2023%22,%22Price%22%3A262.45,%22OwnWarehouse%22%3Afalse,%22OriginalFlag%22%3A1,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A355.0,%22Percent%22%3A%221%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3Anull,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A176091276,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn btn-link"><i class="icon-cart-plus"></i></a>
+                </td>
+            </tr>
+            <tr >
+                <td>Прокладка сливной пробки / dichtring n0138157</td>
+                <td>VAG</td>
+                <td>N0138157</td>
+                <td>362</td>
+                <td>17.11.2022</td>
+                <td>Berg</td>
+                <td id="idItem">
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A14,%22WarehouseName%22%3A%22GHK%22,%22Id%22%3A%22420306%22,%22Brand%22%3A%22VAG%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%22N0138157%22,%22NameOfPart%22%3A%22%D0%9F%D0%A0%D0%9E%D0%9A%D0%9B%D0%90%D0%94%D0%9A%D0%90%20%D0%A1%D0%9B%D0%98%D0%92%D0%9D%D0%9E%D0%99%20%D0%9F%D0%A0%D0%9E%D0%91%D0%9A%D0%98%20%2F%20DICHTRING%20N0138157%22,%22Quantity%22%3A%2234%22,%22DeliveryTime%22%3A%2217.11.2022%22,%22Price%22%3A267.56,%22OwnWarehouse%22%3Afalse,%22OriginalFlag%22%3A1,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A362.0,%22Percent%22%3A%2269%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3Anull,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A136510677,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn btn-link"><i class="icon-cart-plus"></i></a>
+                </td>
+            </tr>
+            <tr >
+                <td>Прокладка сливной пробки / dichtring n0138157</td>
+                <td>VAG</td>
+                <td>N0138157</td>
+                <td>378</td>
+                <td>21.11.2022</td>
+                <td>Berg</td>
+                <td id="idItem">
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A14,%22WarehouseName%22%3A%22AKR%22,%22Id%22%3A%22420306%22,%22Brand%22%3A%22VAG%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%22N0138157%22,%22NameOfPart%22%3A%22%D0%9F%D0%A0%D0%9E%D0%9A%D0%9B%D0%90%D0%94%D0%9A%D0%90%20%D0%A1%D0%9B%D0%98%D0%92%D0%9D%D0%9E%D0%99%20%D0%9F%D0%A0%D0%9E%D0%91%D0%9A%D0%98%20%2F%20DICHTRING%20N0138157%22,%22Quantity%22%3A%22200%22,%22DeliveryTime%22%3A%2221.11.2022%22,%22Price%22%3A279.6,%22OwnWarehouse%22%3Afalse,%22OriginalFlag%22%3A1,%22Kratnost%22%3A%2210%22,%22Sale_cena%22%3A378.0,%22Percent%22%3A%2270%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3Anull,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A146681517,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn btn-link"><i class="icon-cart-plus"></i></a>
+                </td>
+            </tr>
+            <tr >
+                <td>Прокладка сливной пробки / dichtring n0138157</td>
+                <td>VAG</td>
+                <td>N0138157</td>
+                <td>381</td>
+                <td>26.11.2022</td>
+                <td>Berg</td>
+                <td id="idItem">
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A14,%22WarehouseName%22%3A%22WOP%22,%22Id%22%3A%22420306%22,%22Brand%22%3A%22VAG%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%22N0138157%22,%22NameOfPart%22%3A%22%D0%9F%D0%A0%D0%9E%D0%9A%D0%9B%D0%90%D0%94%D0%9A%D0%90%20%D0%A1%D0%9B%D0%98%D0%92%D0%9D%D0%9E%D0%99%20%D0%9F%D0%A0%D0%9E%D0%91%D0%9A%D0%98%20%2F%20DICHTRING%20N0138157%22,%22Quantity%22%3A%22300%22,%22DeliveryTime%22%3A%2226.11.2022%22,%22Price%22%3A282.0,%22OwnWarehouse%22%3Afalse,%22OriginalFlag%22%3A1,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A381.0,%22Percent%22%3A%2278%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3Anull,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A66732102,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn btn-link"><i class="icon-cart-plus"></i></a>
+                </td>
+            </tr>
+            <tr >
+                <td>Прокладка сливной пробки / dichtring n0138157</td>
+                <td>VAG</td>
+                <td>N0138157</td>
+                <td>430</td>
+                <td>15.11.2022</td>
+                <td>Berg</td>
+                <td id="idItem">
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A14,%22WarehouseName%22%3A%22SVG%22,%22Id%22%3A%22420306%22,%22Brand%22%3A%22VAG%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%22N0138157%22,%22NameOfPart%22%3A%22%D0%9F%D0%A0%D0%9E%D0%9A%D0%9B%D0%90%D0%94%D0%9A%D0%90%20%D0%A1%D0%9B%D0%98%D0%92%D0%9D%D0%9E%D0%99%20%D0%9F%D0%A0%D0%9E%D0%91%D0%9A%D0%98%20%2F%20DICHTRING%20N0138157%22,%22Quantity%22%3A%2210%22,%22DeliveryTime%22%3A%2215.11.2022%22,%22Price%22%3A318.0,%22OwnWarehouse%22%3Afalse,%22OriginalFlag%22%3A1,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A430.0,%22Percent%22%3A%2293%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3Anull,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A40569187,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn btn-link"><i class="icon-cart-plus"></i></a>
+                </td>
+            </tr>
+            <tr >
+                <td>Прокладка сливной пробки / dichtring n0138157</td>
+                <td>VAG</td>
+                <td>N0138157</td>
+                <td>439</td>
+                <td>15.11.2022</td>
+                <td>Berg</td>
+                <td id="idItem">
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A14,%22WarehouseName%22%3A%22%D0%94%D0%B8%D0%BB%D0%B5%D1%80%22,%22Id%22%3A%22420306%22,%22Brand%22%3A%22VAG%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%22N0138157%22,%22NameOfPart%22%3A%22%D0%9F%D0%A0%D0%9E%D0%9A%D0%9B%D0%90%D0%94%D0%9A%D0%90%20%D0%A1%D0%9B%D0%98%D0%92%D0%9D%D0%9E%D0%99%20%D0%9F%D0%A0%D0%9E%D0%91%D0%9A%D0%98%20%2F%20DICHTRING%20N0138157%22,%22Quantity%22%3A%22332%22,%22DeliveryTime%22%3A%2215.11.2022%22,%22Price%22%3A324.79,%22OwnWarehouse%22%3Afalse,%22OriginalFlag%22%3A1,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A439.0,%22Percent%22%3A%2296%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3Anull,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A104131452,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn btn-link"><i class="icon-cart-plus"></i></a>
+                </td>
+            </tr>
+            <tr >
+                <td>Прокладка сливной пробки / dichtring n0138157</td>
+                <td>VAG</td>
+                <td>N0138157</td>
+                <td>443</td>
+                <td>26.11.2022</td>
+                <td>Berg</td>
+                <td id="idItem">
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A14,%22WarehouseName%22%3A%22WXG%22,%22Id%22%3A%22420306%22,%22Brand%22%3A%22VAG%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%22N0138157%22,%22NameOfPart%22%3A%22%D0%9F%D0%A0%D0%9E%D0%9A%D0%9B%D0%90%D0%94%D0%9A%D0%90%20%D0%A1%D0%9B%D0%98%D0%92%D0%9D%D0%9E%D0%99%20%D0%9F%D0%A0%D0%9E%D0%91%D0%9A%D0%98%20%2F%20DICHTRING%20N0138157%22,%22Quantity%22%3A%2220%22,%22DeliveryTime%22%3A%2226.11.2022%22,%22Price%22%3A327.6,%22OwnWarehouse%22%3Afalse,%22OriginalFlag%22%3A1,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A443.0,%22Percent%22%3A%2265%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3Anull,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A155348556,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn btn-link"><i class="icon-cart-plus"></i></a>
+                </td>
+            </tr>
+            <tr >
+                <td>Прокладка сливной пробки / dichtring n0138157</td>
+                <td>VAG</td>
+                <td>N0138157</td>
+                <td>488</td>
+                <td>15.11.2022</td>
+                <td>Berg</td>
+                <td id="idItem">
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A14,%22WarehouseName%22%3A%22TAT%22,%22Id%22%3A%22420306%22,%22Brand%22%3A%22VAG%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%22N0138157%22,%22NameOfPart%22%3A%22%D0%9F%D0%A0%D0%9E%D0%9A%D0%9B%D0%90%D0%94%D0%9A%D0%90%20%D0%A1%D0%9B%D0%98%D0%92%D0%9D%D0%9E%D0%99%20%D0%9F%D0%A0%D0%9E%D0%91%D0%9A%D0%98%20%2F%20DICHTRING%20N0138157%22,%22Quantity%22%3A%222%22,%22DeliveryTime%22%3A%2215.11.2022%22,%22Price%22%3A361.2,%22OwnWarehouse%22%3Afalse,%22OriginalFlag%22%3A1,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A488.0,%22Percent%22%3A%2290%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3Anull,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A13786581,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn btn-link"><i class="icon-cart-plus"></i></a>
+                </td>
+            </tr>
+            <tr >
+                <td>Прокладка сливной пробки / dichtring n0138157</td>
+                <td>VAG</td>
+                <td>N0138157</td>
+                <td>494</td>
+                <td>18.11.2022</td>
+                <td>Berg</td>
+                <td id="idItem">
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A14,%22WarehouseName%22%3A%22ACK%22,%22Id%22%3A%22420306%22,%22Brand%22%3A%22VAG%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%22N0138157%22,%22NameOfPart%22%3A%22%D0%9F%D0%A0%D0%9E%D0%9A%D0%9B%D0%90%D0%94%D0%9A%D0%90%20%D0%A1%D0%9B%D0%98%D0%92%D0%9D%D0%9E%D0%99%20%D0%9F%D0%A0%D0%9E%D0%91%D0%9A%D0%98%20%2F%20DICHTRING%20N0138157%22,%22Quantity%22%3A%228%22,%22DeliveryTime%22%3A%2218.11.2022%22,%22Price%22%3A365.7,%22OwnWarehouse%22%3Afalse,%22OriginalFlag%22%3A1,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A494.0,%22Percent%22%3A%2284%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3Anull,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A51353987,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn btn-link"><i class="icon-cart-plus"></i></a>
+                </td>
+            </tr>
+            <tr >
+                <td>Прокладка сливной пробки / dichtring n0138157</td>
+                <td>VAG</td>
+                <td>N0138157</td>
+                <td>502</td>
+                <td>20.12.2022</td>
+                <td>Berg</td>
+                <td id="idItem">
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A14,%22WarehouseName%22%3A%22%D0%AD%D0%BC%D0%B8%D1%80%D0%B0%D1%82%D1%8B-1%22,%22Id%22%3A%22420306%22,%22Brand%22%3A%22VAG%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%22N0138157%22,%22NameOfPart%22%3A%22%D0%9F%D0%A0%D0%9E%D0%9A%D0%9B%D0%90%D0%94%D0%9A%D0%90%20%D0%A1%D0%9B%D0%98%D0%92%D0%9D%D0%9E%D0%99%20%D0%9F%D0%A0%D0%9E%D0%91%D0%9A%D0%98%20%2F%20DICHTRING%20N0138157%22,%22Quantity%22%3A%2230%22,%22DeliveryTime%22%3A%2220.12.2022%22,%22Price%22%3A371.25,%22OwnWarehouse%22%3Afalse,%22OriginalFlag%22%3A1,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A502.0,%22Percent%22%3A%2269%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3Anull,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A176072619,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn btn-link"><i class="icon-cart-plus"></i></a>
+                </td>
+            </tr>
+            <tr >
+                <td>Прокладка сливной пробки / dichtring n0138157</td>
+                <td>VAG</td>
+                <td>N0138157</td>
+                <td>535</td>
+                <td>18.11.2022</td>
+                <td>Berg</td>
+                <td id="idItem">
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A14,%22WarehouseName%22%3A%22AVL%22,%22Id%22%3A%22420306%22,%22Brand%22%3A%22VAG%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%22N0138157%22,%22NameOfPart%22%3A%22%D0%9F%D0%A0%D0%9E%D0%9A%D0%9B%D0%90%D0%94%D0%9A%D0%90%20%D0%A1%D0%9B%D0%98%D0%92%D0%9D%D0%9E%D0%99%20%D0%9F%D0%A0%D0%9E%D0%91%D0%9A%D0%98%20%2F%20DICHTRING%20N0138157%22,%22Quantity%22%3A%221%22,%22DeliveryTime%22%3A%2218.11.2022%22,%22Price%22%3A396.26,%22OwnWarehouse%22%3Afalse,%22OriginalFlag%22%3A1,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A535.0,%22Percent%22%3A%2261%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3Anull,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A156486321,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn btn-link"><i class="icon-cart-plus"></i></a>
+                </td>
+            </tr>
+            <tr >
+                <td>Прокладка сливной пробки / dichtring n0138157</td>
+                <td>VAG</td>
+                <td>N0138157</td>
+                <td>587</td>
+                <td>25.11.2022</td>
+                <td>Berg</td>
+                <td id="idItem">
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A14,%22WarehouseName%22%3A%22KUT%22,%22Id%22%3A%22420306%22,%22Brand%22%3A%22VAG%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%22N0138157%22,%22NameOfPart%22%3A%22%D0%9F%D0%A0%D0%9E%D0%9A%D0%9B%D0%90%D0%94%D0%9A%D0%90%20%D0%A1%D0%9B%D0%98%D0%92%D0%9D%D0%9E%D0%99%20%D0%9F%D0%A0%D0%9E%D0%91%D0%9A%D0%98%20%2F%20DICHTRING%20N0138157%22,%22Quantity%22%3A%22108%22,%22DeliveryTime%22%3A%2225.11.2022%22,%22Price%22%3A434.4,%22OwnWarehouse%22%3Afalse,%22OriginalFlag%22%3A1,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A587.0,%22Percent%22%3A%2273%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3Anull,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A69600093,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn btn-link"><i class="icon-cart-plus"></i></a>
+                </td>
+            </tr>
+            <tr >
+                <td>Прокладка сливной пробки / dichtring n0138157</td>
+                <td>VAG</td>
+                <td>N0138157</td>
+                <td>694</td>
+                <td>17.11.2022</td>
+                <td>Berg</td>
+                <td id="idItem">
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A14,%22WarehouseName%22%3A%22LFR%22,%22Id%22%3A%22420306%22,%22Brand%22%3A%22VAG%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%22N0138157%22,%22NameOfPart%22%3A%22%D0%9F%D0%A0%D0%9E%D0%9A%D0%9B%D0%90%D0%94%D0%9A%D0%90%20%D0%A1%D0%9B%D0%98%D0%92%D0%9D%D0%9E%D0%99%20%D0%9F%D0%A0%D0%9E%D0%91%D0%9A%D0%98%20%2F%20DICHTRING%20N0138157%22,%22Quantity%22%3A%221%22,%22DeliveryTime%22%3A%2217.11.2022%22,%22Price%22%3A513.6,%22OwnWarehouse%22%3Afalse,%22OriginalFlag%22%3A1,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A694.0,%22Percent%22%3A%2280%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3Anull,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A115541616,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn btn-link"><i class="icon-cart-plus"></i></a>
+                </td>
+            </tr>
+            <tr >
+                <td>Прокладка сливной пробки / dichtring n0138157</td>
+                <td>VAG</td>
+                <td>N0138157</td>
+                <td>803</td>
+                <td>19.11.2022</td>
+                <td>Berg</td>
+                <td id="idItem">
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A14,%22WarehouseName%22%3A%22KGR%22,%22Id%22%3A%22420306%22,%22Brand%22%3A%22VAG%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%22N0138157%22,%22NameOfPart%22%3A%22%D0%9F%D0%A0%D0%9E%D0%9A%D0%9B%D0%90%D0%94%D0%9A%D0%90%20%D0%A1%D0%9B%D0%98%D0%92%D0%9D%D0%9E%D0%99%20%D0%9F%D0%A0%D0%9E%D0%91%D0%9A%D0%98%20%2F%20DICHTRING%20N0138157%22,%22Quantity%22%3A%2220%22,%22DeliveryTime%22%3A%2219.11.2022%22,%22Price%22%3A594.08,%22OwnWarehouse%22%3Afalse,%22OriginalFlag%22%3A1,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A803.0,%22Percent%22%3A%2289%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3Anull,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A141966681,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn btn-link"><i class="icon-cart-plus"></i></a>
+                </td>
+            </tr>
+            <tr >
+                <td>Прокладка сливной пробки  n0138157</td>
+                <td>PORSCHE</td>
+                <td>N0138157</td>
+                <td>1113</td>
+                <td>17.11.2022</td>
+                <td>Berg</td>
+                <td id="idItem">
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A14,%22WarehouseName%22%3A%22DFS%22,%22Id%22%3A%22175664491%22,%22Brand%22%3A%22PORSCHE%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%22N0138157%22,%22NameOfPart%22%3A%22%D0%9F%D1%80%D0%BE%D0%BA%D0%BB%D0%B0%D0%B4%D0%BA%D0%B0%20%D1%81%D0%BB%D0%B8%D0%B2%D0%BD%D0%BE%D0%B9%20%D0%BF%D1%80%D0%BE%D0%B1%D0%BA%D0%B8%20%20N0138157%22,%22Quantity%22%3A%221%22,%22DeliveryTime%22%3A%2217.11.2022%22,%22Price%22%3A824.35,%22OwnWarehouse%22%3Afalse,%22OriginalFlag%22%3A1,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A1113.0,%22Percent%22%3A%2252%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3Anull,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A33606327,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn btn-link"><i class="icon-cart-plus"></i></a>
+                </td>
+            </tr>
+            <tr >
+                <td>Прокладка сливной пробки  n0138157</td>
+                <td>PORSCHE</td>
+                <td>N0138157</td>
+                <td>1117</td>
+                <td>18.11.2022</td>
+                <td>Berg</td>
+                <td id="idItem">
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A14,%22WarehouseName%22%3A%22KAZP%22,%22Id%22%3A%22175664491%22,%22Brand%22%3A%22PORSCHE%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%22N0138157%22,%22NameOfPart%22%3A%22%D0%9F%D1%80%D0%BE%D0%BA%D0%BB%D0%B0%D0%B4%D0%BA%D0%B0%20%D1%81%D0%BB%D0%B8%D0%B2%D0%BD%D0%BE%D0%B9%20%D0%BF%D1%80%D0%BE%D0%B1%D0%BA%D0%B8%20%20N0138157%22,%22Quantity%22%3A%221%22,%22DeliveryTime%22%3A%2218.11.2022%22,%22Price%22%3A826.71,%22OwnWarehouse%22%3Afalse,%22OriginalFlag%22%3A1,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A1117.0,%22Percent%22%3A%2285%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3Anull,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A3,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn btn-link"><i class="icon-cart-plus"></i></a>
+                </td>
+            </tr>
+            <tr >
+                <td>Прокладка сливной пробки  n0138157</td>
+                <td>PORSCHE</td>
+                <td>N0138157</td>
+                <td>1196</td>
+                <td>15.11.2022</td>
+                <td>Berg</td>
+                <td id="idItem">
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A14,%22WarehouseName%22%3A%22%D0%90%D0%90%D0%90%22,%22Id%22%3A%22175664491%22,%22Brand%22%3A%22PORSCHE%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%22N0138157%22,%22NameOfPart%22%3A%22%D0%9F%D1%80%D0%BE%D0%BA%D0%BB%D0%B0%D0%B4%D0%BA%D0%B0%20%D1%81%D0%BB%D0%B8%D0%B2%D0%BD%D0%BE%D0%B9%20%D0%BF%D1%80%D0%BE%D0%B1%D0%BA%D0%B8%20%20N0138157%22,%22Quantity%22%3A%221%22,%22DeliveryTime%22%3A%2215.11.2022%22,%22Price%22%3A885.69,%22OwnWarehouse%22%3Afalse,%22OriginalFlag%22%3A1,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A1196.0,%22Percent%22%3A%2264%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3Anull,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A94203483,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn btn-link"><i class="icon-cart-plus"></i></a>
+                </td>
+            </tr>
+            <tr >
+                <td>Прокладка сливной пробки / dichtring n0138157</td>
+                <td>VAG</td>
+                <td>N0138157</td>
+                <td>2429</td>
+                <td>15.11.2022</td>
+                <td>Berg</td>
+                <td id="idItem">
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A14,%22WarehouseName%22%3A%22%D0%94%D0%B8%D0%BB%D0%B5%D1%80%22,%22Id%22%3A%22420306%22,%22Brand%22%3A%22VAG%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%22N0138157%22,%22NameOfPart%22%3A%22%D0%9F%D0%A0%D0%9E%D0%9A%D0%9B%D0%90%D0%94%D0%9A%D0%90%20%D0%A1%D0%9B%D0%98%D0%92%D0%9D%D0%9E%D0%99%20%D0%9F%D0%A0%D0%9E%D0%91%D0%9A%D0%98%20%2F%20DICHTRING%20N0138157%22,%22Quantity%22%3A%22458%22,%22DeliveryTime%22%3A%2215.11.2022%22,%22Price%22%3A1798.8,%22OwnWarehouse%22%3Afalse,%22OriginalFlag%22%3A1,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A2429.0,%22Percent%22%3A%2285%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3Anull,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A57788583,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn btn-link"><i class="icon-cart-plus"></i></a>
+                </td>
+            </tr>
+            <tr >
+                <td>Кольцо уплотнительное citroen, peugeot.</td>
+                <td>SASIC</td>
+                <td>3130270</td>
+                <td>11</td>
+                <td>11.11.2022</td>
+                <td>Mikado</td>
+                <td id="idItem">
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A5,%22WarehouseName%22%3A%22%D0%90%D0%BD%D0%B0%D0%BF%D0%B0%22,%22Id%22%3A%22xsas-3130270%22,%22Brand%22%3A%22SASIC%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%223130270%22,%22NameOfPart%22%3A%22%D0%9A%D0%BE%D0%BB%D1%8C%D1%86%D0%BE%20%D1%83%D0%BF%D0%BB%D0%BE%D1%82%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5%20Citroen,%20Peugeot.%22,%22Quantity%22%3A%2210%22,%22DeliveryTime%22%3A%2211.11.2022%22,%22Price%22%3A8.0,%22OwnWarehouse%22%3Atrue,%22OriginalFlag%22%3A0,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A11.0,%22Percent%22%3A%22%D0%BD%2F%D0%B4%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3A%22223%22,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A0,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn btn-link"><i class="icon-cart-plus"></i></a>
+                </td>
+            </tr>
+            <tr >
+                <td>Кольцо уплотнительное citroen, peugeot.</td>
+                <td>SASIC</td>
+                <td>3130270</td>
+                <td>11</td>
+                <td>11.11.2022</td>
+                <td>Mikado</td>
+                <td id="idItem">
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A5,%22WarehouseName%22%3A%22%D0%9D%D0%BE%D0%B2%D0%BE%D1%80%D0%BE%D1%81%D1%81%D0%B8%D0%B9%D1%81%D0%BA%22,%22Id%22%3A%22xsas-3130270%22,%22Brand%22%3A%22SASIC%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%223130270%22,%22NameOfPart%22%3A%22%D0%9A%D0%BE%D0%BB%D1%8C%D1%86%D0%BE%20%D1%83%D0%BF%D0%BB%D0%BE%D1%82%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5%20Citroen,%20Peugeot.%22,%22Quantity%22%3A%2210%22,%22DeliveryTime%22%3A%2211.11.2022%22,%22Price%22%3A8.0,%22OwnWarehouse%22%3Atrue,%22OriginalFlag%22%3A0,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A11.0,%22Percent%22%3A%22%D0%BD%2F%D0%B4%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3A%22123%22,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A0,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn btn-link"><i class="icon-cart-plus"></i></a>
+                </td>
+            </tr>
+            <tr >
+                <td>Кольцо уплотнительное citroen, peugeot.</td>
+                <td>SASIC</td>
+                <td>3130270</td>
+                <td>11</td>
+                <td>11.11.2022</td>
+                <td>Mikado</td>
+                <td id="idItem">
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A5,%22WarehouseName%22%3A%22%D0%9A%D1%80%D0%B0%D1%81%D0%BD%D0%BE%D0%B4%D0%B0%D1%80%22,%22Id%22%3A%22xsas-3130270%22,%22Brand%22%3A%22SASIC%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%223130270%22,%22NameOfPart%22%3A%22%D0%9A%D0%BE%D0%BB%D1%8C%D1%86%D0%BE%20%D1%83%D0%BF%D0%BB%D0%BE%D1%82%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5%20Citroen,%20Peugeot.%22,%22Quantity%22%3A%2210%22,%22DeliveryTime%22%3A%2211.11.2022%22,%22Price%22%3A8.0,%22OwnWarehouse%22%3Atrue,%22OriginalFlag%22%3A0,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A11.0,%22Percent%22%3A%22%D0%BD%2F%D0%B4%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3A%2223%22,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A0,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn btn-link"><i class="icon-cart-plus"></i></a>
+                </td>
+            </tr>
+            <tr >
+                <td>Кольцо уплотнительное citroen, peugeot.</td>
+                <td>SASIC</td>
+                <td>3130270</td>
+                <td>11</td>
+                <td>12.11.2022</td>
+                <td>Mikado</td>
+                <td id="idItem">
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A5,%22WarehouseName%22%3A%22%D0%A0%D0%BE%D1%81%D1%82%D0%BE%D0%B2%20%D0%94%22,%22Id%22%3A%22xsas-3130270%22,%22Brand%22%3A%22SASIC%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%223130270%22,%22NameOfPart%22%3A%22%D0%9A%D0%BE%D0%BB%D1%8C%D1%86%D0%BE%20%D1%83%D0%BF%D0%BB%D0%BE%D1%82%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5%20Citroen,%20Peugeot.%22,%22Quantity%22%3A%2210%22,%22DeliveryTime%22%3A%2212.11.2022%22,%22Price%22%3A8.0,%22OwnWarehouse%22%3Atrue,%22OriginalFlag%22%3A0,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A11.0,%22Percent%22%3A%22%D0%BD%2F%D0%B4%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3A%2261%22,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A0,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn btn-link"><i class="icon-cart-plus"></i></a>
+                </td>
+            </tr>
+            <tr >
+                <td>Кольцо уплотнительное citroen, peugeot.</td>
+                <td>SASIC</td>
+                <td>3130270</td>
+                <td>11</td>
+                <td>12.11.2022</td>
+                <td>Mikado</td>
+                <td id="idItem">
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A5,%22WarehouseName%22%3A%22%D0%A1%D0%BE%D1%87%D0%B82%22,%22Id%22%3A%22xsas-3130270%22,%22Brand%22%3A%22SASIC%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%223130270%22,%22NameOfPart%22%3A%22%D0%9A%D0%BE%D0%BB%D1%8C%D1%86%D0%BE%20%D1%83%D0%BF%D0%BB%D0%BE%D1%82%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5%20Citroen,%20Peugeot.%22,%22Quantity%22%3A%229%22,%22DeliveryTime%22%3A%2212.11.2022%22,%22Price%22%3A8.0,%22OwnWarehouse%22%3Atrue,%22OriginalFlag%22%3A0,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A11.0,%22Percent%22%3A%22%D0%BD%2F%D0%B4%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3A%22193%22,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A0,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn btn-link"><i class="icon-cart-plus"></i></a>
+                </td>
+            </tr>
+            <tr >
+                <td>Кольцо уплотнительное citroen, peugeot.</td>
+                <td>SASIC</td>
+                <td>3130270</td>
+                <td>11</td>
+                <td>12.11.2022</td>
+                <td>Mikado</td>
+                <td id="idItem">
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A5,%22WarehouseName%22%3A%22%D0%90%D0%B4%D0%BB%D0%B5%D1%80%20%22,%22Id%22%3A%22xsas-3130270%22,%22Brand%22%3A%22SASIC%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%223130270%22,%22NameOfPart%22%3A%22%D0%9A%D0%BE%D0%BB%D1%8C%D1%86%D0%BE%20%D1%83%D0%BF%D0%BB%D0%BE%D1%82%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5%20Citroen,%20Peugeot.%22,%22Quantity%22%3A%226%22,%22DeliveryTime%22%3A%2212.11.2022%22,%22Price%22%3A8.0,%22OwnWarehouse%22%3Atrue,%22OriginalFlag%22%3A0,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A11.0,%22Percent%22%3A%22%D0%BD%2F%D0%B4%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3A%2293%22,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A0,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn btn-link"><i class="icon-cart-plus"></i></a>
+                </td>
+            </tr>
+            <tr >
+                <td>Кольцо уплотнительное citroen, peugeot.</td>
+                <td>SASIC</td>
+                <td>3130270</td>
+                <td>11</td>
+                <td>14.11.2022</td>
+                <td>Mikado</td>
+                <td id="idItem">
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A5,%22WarehouseName%22%3A%22%D0%92%D0%BE%D0%BB%D0%B3%D0%BE%D0%B3%D1%80%D0%B0%D0%B4%22,%22Id%22%3A%22xsas-3130270%22,%22Brand%22%3A%22SASIC%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%223130270%22,%22NameOfPart%22%3A%22%D0%9A%D0%BE%D0%BB%D1%8C%D1%86%D0%BE%20%D1%83%D0%BF%D0%BB%D0%BE%D1%82%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5%20Citroen,%20Peugeot.%22,%22Quantity%22%3A%2210%22,%22DeliveryTime%22%3A%2214.11.2022%22,%22Price%22%3A8.0,%22OwnWarehouse%22%3Atrue,%22OriginalFlag%22%3A0,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A11.0,%22Percent%22%3A%22%D0%BD%2F%D0%B4%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3A%2234%22,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A0,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn btn-link"><i class="icon-cart-plus"></i></a>
+                </td>
+            </tr>
+            <tr >
+                <td>Кольцо уплотнительное citroen, peugeot.</td>
+                <td>SASIC</td>
+                <td>3130270</td>
+                <td>11</td>
+                <td>14.11.2022</td>
+                <td>Mikado</td>
+                <td id="idItem">
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A5,%22WarehouseName%22%3A%22%D0%9F%D1%8F%D1%82%D0%B8%D0%B3%D0%BE%D1%80%D1%81%D0%BA%22,%22Id%22%3A%22xsas-3130270%22,%22Brand%22%3A%22SASIC%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%223130270%22,%22NameOfPart%22%3A%22%D0%9A%D0%BE%D0%BB%D1%8C%D1%86%D0%BE%20%D1%83%D0%BF%D0%BB%D0%BE%D1%82%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5%20Citroen,%20Peugeot.%22,%22Quantity%22%3A%2210%22,%22DeliveryTime%22%3A%2214.11.2022%22,%22Price%22%3A8.0,%22OwnWarehouse%22%3Atrue,%22OriginalFlag%22%3A0,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A11.0,%22Percent%22%3A%22%D0%BD%2F%D0%B4%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3A%2226%22,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A0,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn btn-link"><i class="icon-cart-plus"></i></a>
+                </td>
+            </tr>
+            <tr >
+                <td>Кольцо уплотнительное citroen, peugeot.</td>
+                <td>SASIC</td>
+                <td>3130270</td>
+                <td>11</td>
+                <td>14.11.2022</td>
+                <td>Mikado</td>
+                <td id="idItem">
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A5,%22WarehouseName%22%3A%22%D0%A1%D1%82%D0%B0%D0%B2%D1%80%D0%BE%D0%BF%D0%BE%D0%BB%D1%8C%22,%22Id%22%3A%22xsas-3130270%22,%22Brand%22%3A%22SASIC%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%223130270%22,%22NameOfPart%22%3A%22%D0%9A%D0%BE%D0%BB%D1%8C%D1%86%D0%BE%20%D1%83%D0%BF%D0%BB%D0%BE%D1%82%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5%20Citroen,%20Peugeot.%22,%22Quantity%22%3A%2210%22,%22DeliveryTime%22%3A%2214.11.2022%22,%22Price%22%3A8.0,%22OwnWarehouse%22%3Atrue,%22OriginalFlag%22%3A0,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A11.0,%22Percent%22%3A%22%D0%BD%2F%D0%B4%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3A%22126%22,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A0,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn btn-link"><i class="icon-cart-plus"></i></a>
+                </td>
+            </tr>
+            <tr >
+                <td>Кольцо уплотнительное citroen, peugeot.</td>
+                <td>SASIC</td>
+                <td>3130270</td>
+                <td>11</td>
+                <td>14.11.2022</td>
+                <td>Mikado</td>
+                <td id="idItem">
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A5,%22WarehouseName%22%3A%22%D0%A1%D0%B0%D1%80%D0%B0%D1%82%D0%BE%D0%B2%22,%22Id%22%3A%22xsas-3130270%22,%22Brand%22%3A%22SASIC%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%223130270%22,%22NameOfPart%22%3A%22%D0%9A%D0%BE%D0%BB%D1%8C%D1%86%D0%BE%20%D1%83%D0%BF%D0%BB%D0%BE%D1%82%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5%20Citroen,%20Peugeot.%22,%22Quantity%22%3A%2210%22,%22DeliveryTime%22%3A%2214.11.2022%22,%22Price%22%3A8.0,%22OwnWarehouse%22%3Atrue,%22OriginalFlag%22%3A0,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A11.0,%22Percent%22%3A%22%D0%BD%2F%D0%B4%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3A%2264%22,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A0,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn btn-link"><i class="icon-cart-plus"></i></a>
+                </td>
+            </tr>
+            <tr >
+                <td>Кольцо уплотнительное citroen, peugeot.</td>
+                <td>SASIC</td>
+                <td>3130270</td>
+                <td>11</td>
+                <td>14.11.2022</td>
+                <td>Mikado</td>
+                <td id="idItem">
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A5,%22WarehouseName%22%3A%22%D0%A1%D0%B0%D0%BC%D0%B0%D1%80%D0%B0%22,%22Id%22%3A%22xsas-3130270%22,%22Brand%22%3A%22SASIC%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%223130270%22,%22NameOfPart%22%3A%22%D0%9A%D0%BE%D0%BB%D1%8C%D1%86%D0%BE%20%D1%83%D0%BF%D0%BB%D0%BE%D1%82%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5%20Citroen,%20Peugeot.%22,%22Quantity%22%3A%2210%22,%22DeliveryTime%22%3A%2214.11.2022%22,%22Price%22%3A8.0,%22OwnWarehouse%22%3Atrue,%22OriginalFlag%22%3A0,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A11.0,%22Percent%22%3A%22%D0%BD%2F%D0%B4%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3A%2263%22,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A0,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn btn-link"><i class="icon-cart-plus"></i></a>
+                </td>
+            </tr>
+            <tr >
+                <td>Кольцо уплотнительное citroen, peugeot.</td>
+                <td>SASIC</td>
+                <td>3130270</td>
+                <td>11</td>
+                <td>14.11.2022</td>
+                <td>Mikado</td>
+                <td id="idItem">
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A5,%22WarehouseName%22%3A%22%D0%90%D1%81%D1%82%D1%80%D0%B0%D1%85%D0%B0%D0%BD%D1%8C%22,%22Id%22%3A%22xsas-3130270%22,%22Brand%22%3A%22SASIC%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%223130270%22,%22NameOfPart%22%3A%22%D0%9A%D0%BE%D0%BB%D1%8C%D1%86%D0%BE%20%D1%83%D0%BF%D0%BB%D0%BE%D1%82%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5%20Citroen,%20Peugeot.%22,%22Quantity%22%3A%226%22,%22DeliveryTime%22%3A%2214.11.2022%22,%22Price%22%3A8.0,%22OwnWarehouse%22%3Atrue,%22OriginalFlag%22%3A0,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A11.0,%22Percent%22%3A%22%D0%BD%2F%D0%B4%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3A%2230%22,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A0,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn btn-link"><i class="icon-cart-plus"></i></a>
+                </td>
+            </tr>
+            <tr >
+                <td>Кольцо уплотнительное citroen, peugeot.</td>
+                <td>SASIC</td>
+                <td>3130270</td>
+                <td>11</td>
+                <td>14.11.2022</td>
+                <td>Mikado</td>
+                <td id="idItem">
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A5,%22WarehouseName%22%3A%22%D0%A1.-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3%22,%22Id%22%3A%22xsas-3130270%22,%22Brand%22%3A%22SASIC%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%223130270%22,%22NameOfPart%22%3A%22%D0%9A%D0%BE%D0%BB%D1%8C%D1%86%D0%BE%20%D1%83%D0%BF%D0%BB%D0%BE%D1%82%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5%20Citroen,%20Peugeot.%22,%22Quantity%22%3A%2210%22,%22DeliveryTime%22%3A%2214.11.2022%22,%22Price%22%3A8.0,%22OwnWarehouse%22%3Atrue,%22OriginalFlag%22%3A0,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A11.0,%22Percent%22%3A%22%D0%BD%2F%D0%B4%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3A%221%22,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A0,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn btn-link"><i class="icon-cart-plus"></i></a>
+                </td>
+            </tr>
+            <tr >
+                <td>Кольцо уплотнительное citroen, peugeot.</td>
+                <td>SASIC</td>
+                <td>3130270</td>
+                <td>11</td>
+                <td>15.11.2022</td>
+                <td>Mikado</td>
+                <td id="idItem">
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A5,%22WarehouseName%22%3A%22%D0%9A%D0%A0%D0%A0-2%22,%22Id%22%3A%22xsas-3130270%22,%22Brand%22%3A%22SASIC%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%223130270%22,%22NameOfPart%22%3A%22%D0%9A%D0%BE%D0%BB%D1%8C%D1%86%D0%BE%20%D1%83%D0%BF%D0%BB%D0%BE%D1%82%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5%20Citroen,%20Peugeot.%22,%22Quantity%22%3A%2210%22,%22DeliveryTime%22%3A%2215.11.2022%22,%22Price%22%3A8.0,%22OwnWarehouse%22%3Atrue,%22OriginalFlag%22%3A0,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A11.0,%22Percent%22%3A%22%D0%BD%2F%D0%B4%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3A%2282%22,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A0,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn btn-link"><i class="icon-cart-plus"></i></a>
+                </td>
+            </tr>
+            <tr >
+                <td>Кольцо уплотнительное citroen, peugeot.</td>
+                <td>SASIC</td>
+                <td>3130270</td>
+                <td>11</td>
+                <td>16.11.2022</td>
+                <td>Mikado</td>
+                <td id="idItem">
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A5,%22WarehouseName%22%3A%22%D0%9A%D0%A0%D0%A0-3%22,%22Id%22%3A%22xsas-3130270%22,%22Brand%22%3A%22SASIC%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%223130270%22,%22NameOfPart%22%3A%22%D0%9A%D0%BE%D0%BB%D1%8C%D1%86%D0%BE%20%D1%83%D0%BF%D0%BB%D0%BE%D1%82%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5%20Citroen,%20Peugeot.%22,%22Quantity%22%3A%2210%22,%22DeliveryTime%22%3A%2216.11.2022%22,%22Price%22%3A8.0,%22OwnWarehouse%22%3Atrue,%22OriginalFlag%22%3A0,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A11.0,%22Percent%22%3A%22%D0%BD%2F%D0%B4%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3A%2292%22,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A0,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn btn-link"><i class="icon-cart-plus"></i></a>
+                </td>
+            </tr>
+            <tr >
+                <td>Прокладка.</td>
+                <td>ELWIS ROYAL</td>
+                <td>5244247</td>
+                <td>21</td>
+                <td>11.11.2022</td>
+                <td>Mikado</td>
+                <td id="idItem">
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A5,%22WarehouseName%22%3A%22%D0%9A%D1%80%D0%B0%D1%81%D0%BD%D0%BE%D0%B4%D0%B0%D1%80%22,%22Id%22%3A%22xes-5244247%22,%22Brand%22%3A%22ELWIS%20ROYAL%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%225244247%22,%22NameOfPart%22%3A%22%D0%9F%D1%80%D0%BE%D0%BA%D0%BB%D0%B0%D0%B4%D0%BA%D0%B0.%22,%22Quantity%22%3A%221%22,%22DeliveryTime%22%3A%2211.11.2022%22,%22Price%22%3A15.5,%22OwnWarehouse%22%3Atrue,%22OriginalFlag%22%3A0,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A21.0,%22Percent%22%3A%22%D0%BD%2F%D0%B4%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3A%2223%22,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A0,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn btn-link"><i class="icon-cart-plus"></i></a>
+                </td>
+            </tr>
+            <tr >
+                <td>Прокладка.</td>
+                <td>ELWIS ROYAL</td>
+                <td>5244247</td>
+                <td>21</td>
+                <td>12.11.2022</td>
+                <td>Mikado</td>
+                <td id="idItem">
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A5,%22WarehouseName%22%3A%22%D0%A0%D0%BE%D1%81%D1%82%D0%BE%D0%B2%20%D0%94%22,%22Id%22%3A%22xes-5244247%22,%22Brand%22%3A%22ELWIS%20ROYAL%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%225244247%22,%22NameOfPart%22%3A%22%D0%9F%D1%80%D0%BE%D0%BA%D0%BB%D0%B0%D0%B4%D0%BA%D0%B0.%22,%22Quantity%22%3A%222%22,%22DeliveryTime%22%3A%2212.11.2022%22,%22Price%22%3A15.5,%22OwnWarehouse%22%3Atrue,%22OriginalFlag%22%3A0,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A21.0,%22Percent%22%3A%22%D0%BD%2F%D0%B4%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3A%2261%22,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A0,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn btn-link"><i class="icon-cart-plus"></i></a>
+                </td>
+            </tr>
+            <tr >
+                <td>Прокладка.</td>
+                <td>ELWIS ROYAL</td>
+                <td>5244247</td>
+                <td>21</td>
+                <td>14.11.2022</td>
+                <td>Mikado</td>
+                <td id="idItem">
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A5,%22WarehouseName%22%3A%22%D0%92%D0%BE%D0%BB%D0%B3%D0%BE%D0%B3%D1%80%D0%B0%D0%B4%22,%22Id%22%3A%22xes-5244247%22,%22Brand%22%3A%22ELWIS%20ROYAL%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%225244247%22,%22NameOfPart%22%3A%22%D0%9F%D1%80%D0%BE%D0%BA%D0%BB%D0%B0%D0%B4%D0%BA%D0%B0.%22,%22Quantity%22%3A%221%22,%22DeliveryTime%22%3A%2214.11.2022%22,%22Price%22%3A15.5,%22OwnWarehouse%22%3Atrue,%22OriginalFlag%22%3A0,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A21.0,%22Percent%22%3A%22%D0%BD%2F%D0%B4%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3A%2234%22,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A0,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn btn-link"><i class="icon-cart-plus"></i></a>
+                </td>
+            </tr>
+            <tr >
+                <td>Прокладка.</td>
+                <td>ELWIS ROYAL</td>
+                <td>5244247</td>
+                <td>21</td>
+                <td>14.11.2022</td>
+                <td>Mikado</td>
+                <td id="idItem">
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A5,%22WarehouseName%22%3A%22%D0%A1%D0%B0%D1%80%D0%B0%D1%82%D0%BE%D0%B2%22,%22Id%22%3A%22xes-5244247%22,%22Brand%22%3A%22ELWIS%20ROYAL%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%225244247%22,%22NameOfPart%22%3A%22%D0%9F%D1%80%D0%BE%D0%BA%D0%BB%D0%B0%D0%B4%D0%BA%D0%B0.%22,%22Quantity%22%3A%221%22,%22DeliveryTime%22%3A%2214.11.2022%22,%22Price%22%3A15.5,%22OwnWarehouse%22%3Atrue,%22OriginalFlag%22%3A0,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A21.0,%22Percent%22%3A%22%D0%BD%2F%D0%B4%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3A%2264%22,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A0,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn btn-link"><i class="icon-cart-plus"></i></a>
+                </td>
+            </tr>
+            <tr >
+                <td>Прокладка.</td>
+                <td>ELWIS ROYAL</td>
+                <td>5244247</td>
+                <td>21</td>
+                <td>14.11.2022</td>
+                <td>Mikado</td>
+                <td id="idItem">
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A5,%22WarehouseName%22%3A%22%D0%A1%D0%B0%D0%BC%D0%B0%D1%80%D0%B0%22,%22Id%22%3A%22xes-5244247%22,%22Brand%22%3A%22ELWIS%20ROYAL%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%225244247%22,%22NameOfPart%22%3A%22%D0%9F%D1%80%D0%BE%D0%BA%D0%BB%D0%B0%D0%B4%D0%BA%D0%B0.%22,%22Quantity%22%3A%221%22,%22DeliveryTime%22%3A%2214.11.2022%22,%22Price%22%3A15.5,%22OwnWarehouse%22%3Atrue,%22OriginalFlag%22%3A0,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A21.0,%22Percent%22%3A%22%D0%BD%2F%D0%B4%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3A%2263%22,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A0,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn btn-link"><i class="icon-cart-plus"></i></a>
+                </td>
+            </tr>
+            <tr >
+                <td>Прокладка.</td>
+                <td>ELWIS ROYAL</td>
+                <td>5244247</td>
+                <td>21</td>
+                <td>14.11.2022</td>
+                <td>Mikado</td>
+                <td id="idItem">
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A5,%22WarehouseName%22%3A%22%D0%A1.-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3%22,%22Id%22%3A%22xes-5244247%22,%22Brand%22%3A%22ELWIS%20ROYAL%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%225244247%22,%22NameOfPart%22%3A%22%D0%9F%D1%80%D0%BE%D0%BA%D0%BB%D0%B0%D0%B4%D0%BA%D0%B0.%22,%22Quantity%22%3A%2210%22,%22DeliveryTime%22%3A%2214.11.2022%22,%22Price%22%3A15.5,%22OwnWarehouse%22%3Atrue,%22OriginalFlag%22%3A0,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A21.0,%22Percent%22%3A%22%D0%BD%2F%D0%B4%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3A%221%22,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A0,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn btn-link"><i class="icon-cart-plus"></i></a>
+                </td>
+            </tr>
+            <tr >
+                <td>Прокладка.</td>
+                <td>ELWIS ROYAL</td>
+                <td>5244247</td>
+                <td>21</td>
+                <td>15.11.2022</td>
+                <td>Mikado</td>
+                <td id="idItem">
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A5,%22WarehouseName%22%3A%22%D0%9A%D0%A0%D0%A0-2%22,%22Id%22%3A%22xes-5244247%22,%22Brand%22%3A%22ELWIS%20ROYAL%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%225244247%22,%22NameOfPart%22%3A%22%D0%9F%D1%80%D0%BE%D0%BA%D0%BB%D0%B0%D0%B4%D0%BA%D0%B0.%22,%22Quantity%22%3A%221%22,%22DeliveryTime%22%3A%2215.11.2022%22,%22Price%22%3A15.5,%22OwnWarehouse%22%3Atrue,%22OriginalFlag%22%3A0,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A21.0,%22Percent%22%3A%22%D0%BD%2F%D0%B4%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3A%2282%22,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A0,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn btn-link"><i class="icon-cart-plus"></i></a>
+                </td>
+            </tr>
+            <tr >
+                <td>Шайба.</td>
+                <td>AJUSA</td>
+                <td>18001000</td>
+                <td>54</td>
+                <td>11.11.2022</td>
+                <td>Mikado</td>
+                <td id="idItem">
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A5,%22WarehouseName%22%3A%22%D0%90%D0%BD%D0%B0%D0%BF%D0%B0%22,%22Id%22%3A%22xaj-18001000%22,%22Brand%22%3A%22AJUSA%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%2218001000%22,%22NameOfPart%22%3A%22%D0%A8%D0%B0%D0%B9%D0%B1%D0%B0.%22,%22Quantity%22%3A%221%22,%22DeliveryTime%22%3A%2211.11.2022%22,%22Price%22%3A40.0,%22OwnWarehouse%22%3Atrue,%22OriginalFlag%22%3A0,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A54.0,%22Percent%22%3A%22%D0%BD%2F%D0%B4%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3A%22223%22,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A0,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn btn-link"><i class="icon-cart-plus"></i></a>
+                </td>
+            </tr>
+            <tr >
+                <td>Шайба.</td>
+                <td>AJUSA</td>
+                <td>18001000</td>
+                <td>54</td>
+                <td>12.11.2022</td>
+                <td>Mikado</td>
+                <td id="idItem">
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A5,%22WarehouseName%22%3A%22%D0%A0%D0%BE%D1%81%D1%82%D0%BE%D0%B2%20%D0%94%22,%22Id%22%3A%22xaj-18001000%22,%22Brand%22%3A%22AJUSA%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%2218001000%22,%22NameOfPart%22%3A%22%D0%A8%D0%B0%D0%B9%D0%B1%D0%B0.%22,%22Quantity%22%3A%224%22,%22DeliveryTime%22%3A%2212.11.2022%22,%22Price%22%3A40.0,%22OwnWarehouse%22%3Atrue,%22OriginalFlag%22%3A0,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A54.0,%22Percent%22%3A%22%D0%BD%2F%D0%B4%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3A%2261%22,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A0,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn btn-link"><i class="icon-cart-plus"></i></a>
+                </td>
+            </tr>
+            <tr >
+                <td>Шайба.</td>
+                <td>AJUSA</td>
+                <td>18001000</td>
+                <td>54</td>
+                <td>12.11.2022</td>
+                <td>Mikado</td>
+                <td id="idItem">
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A5,%22WarehouseName%22%3A%22%D0%90%D0%B4%D0%BB%D0%B5%D1%80%20%22,%22Id%22%3A%22xaj-18001000%22,%22Brand%22%3A%22AJUSA%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%2218001000%22,%22NameOfPart%22%3A%22%D0%A8%D0%B0%D0%B9%D0%B1%D0%B0.%22,%22Quantity%22%3A%222%22,%22DeliveryTime%22%3A%2212.11.2022%22,%22Price%22%3A40.0,%22OwnWarehouse%22%3Atrue,%22OriginalFlag%22%3A0,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A54.0,%22Percent%22%3A%22%D0%BD%2F%D0%B4%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3A%2293%22,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A0,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn btn-link"><i class="icon-cart-plus"></i></a>
+                </td>
+            </tr>
+            <tr >
+                <td>Шайба.</td>
+                <td>AJUSA</td>
+                <td>18001000</td>
+                <td>54</td>
+                <td>14.11.2022</td>
+                <td>Mikado</td>
+                <td id="idItem">
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A5,%22WarehouseName%22%3A%22%D0%9F%D1%8F%D1%82%D0%B8%D0%B3%D0%BE%D1%80%D1%81%D0%BA%22,%22Id%22%3A%22xaj-18001000%22,%22Brand%22%3A%22AJUSA%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%2218001000%22,%22NameOfPart%22%3A%22%D0%A8%D0%B0%D0%B9%D0%B1%D0%B0.%22,%22Quantity%22%3A%2210%22,%22DeliveryTime%22%3A%2214.11.2022%22,%22Price%22%3A40.0,%22OwnWarehouse%22%3Atrue,%22OriginalFlag%22%3A0,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A54.0,%22Percent%22%3A%22%D0%BD%2F%D0%B4%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3A%2226%22,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A0,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn btn-link"><i class="icon-cart-plus"></i></a>
+                </td>
+            </tr>
+            <tr >
+                <td>Шайба.</td>
+                <td>AJUSA</td>
+                <td>18001000</td>
+                <td>54</td>
+                <td>14.11.2022</td>
+                <td>Mikado</td>
+                <td id="idItem">
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A5,%22WarehouseName%22%3A%22%D0%A1%D0%B0%D0%BC%D0%B0%D1%80%D0%B0%22,%22Id%22%3A%22xaj-18001000%22,%22Brand%22%3A%22AJUSA%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%2218001000%22,%22NameOfPart%22%3A%22%D0%A8%D0%B0%D0%B9%D0%B1%D0%B0.%22,%22Quantity%22%3A%223%22,%22DeliveryTime%22%3A%2214.11.2022%22,%22Price%22%3A40.0,%22OwnWarehouse%22%3Atrue,%22OriginalFlag%22%3A0,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A54.0,%22Percent%22%3A%22%D0%BD%2F%D0%B4%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3A%2263%22,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A0,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn btn-link"><i class="icon-cart-plus"></i></a>
+                </td>
+            </tr>
+            <tr >
+                <td>Шайба.</td>
+                <td>AJUSA</td>
+                <td>18001000</td>
+                <td>54</td>
+                <td>14.11.2022</td>
+                <td>Mikado</td>
+                <td id="idItem">
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A5,%22WarehouseName%22%3A%22%D0%90%D1%81%D1%82%D1%80%D0%B0%D1%85%D0%B0%D0%BD%D1%8C%22,%22Id%22%3A%22xaj-18001000%22,%22Brand%22%3A%22AJUSA%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%2218001000%22,%22NameOfPart%22%3A%22%D0%A8%D0%B0%D0%B9%D0%B1%D0%B0.%22,%22Quantity%22%3A%222%22,%22DeliveryTime%22%3A%2214.11.2022%22,%22Price%22%3A40.0,%22OwnWarehouse%22%3Atrue,%22OriginalFlag%22%3A0,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A54.0,%22Percent%22%3A%22%D0%BD%2F%D0%B4%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3A%2230%22,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A0,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn btn-link"><i class="icon-cart-plus"></i></a>
+                </td>
+            </tr>
+            <tr >
+                <td>Шайба.</td>
+                <td>AJUSA</td>
+                <td>18001000</td>
+                <td>54</td>
+                <td>16.11.2022</td>
+                <td>Mikado</td>
+                <td id="idItem">
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A5,%22WarehouseName%22%3A%22%D0%9A%D0%A0%D0%A0-4%D1%84%22,%22Id%22%3A%22xaj-18001000%22,%22Brand%22%3A%22AJUSA%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%2218001000%22,%22NameOfPart%22%3A%22%D0%A8%D0%B0%D0%B9%D0%B1%D0%B0.%22,%22Quantity%22%3A%222%22,%22DeliveryTime%22%3A%2216.11.2022%22,%22Price%22%3A40.0,%22OwnWarehouse%22%3Atrue,%22OriginalFlag%22%3A0,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A54.0,%22Percent%22%3A%22%D0%BD%2F%D0%B4%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3A%22182%22,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A0,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn btn-link"><i class="icon-cart-plus"></i></a>
+                </td>
+            </tr>
+            <tr >
+                <td>Шайба.</td>
+                <td>AJUSA</td>
+                <td>18001200</td>
+                <td>91</td>
+                <td>14.11.2022</td>
+                <td>Mikado</td>
+                <td id="idItem">
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A5,%22WarehouseName%22%3A%22%D0%A1.-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3%22,%22Id%22%3A%22xaj-18001200%22,%22Brand%22%3A%22AJUSA%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%2218001200%22,%22NameOfPart%22%3A%22%D0%A8%D0%B0%D0%B9%D0%B1%D0%B0.%22,%22Quantity%22%3A%228%22,%22DeliveryTime%22%3A%2214.11.2022%22,%22Price%22%3A67.0,%22OwnWarehouse%22%3Atrue,%22OriginalFlag%22%3A0,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A91.0,%22Percent%22%3A%22%D0%BD%2F%D0%B4%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3A%221%22,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A0,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn btn-link"><i class="icon-cart-plus"></i></a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+    
+
+
+ 
+
+
+<script src="/js/bootstrap.bundle.js"></script>
+<script src="/js/jquery.min.js"></script>
+<script src="/js/site.js"></script>
+
+</body>
+<footer style="position: fixed; bottom: 5px; left: 50px; right: 50px; width: 80%;" class="container footer mt-auto py-3 bg-light">
+    <div class="container">
+        <span class="text-muted">Футер</span>
+    </div>
+</footer>
+</html>

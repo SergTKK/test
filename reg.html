@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <style>
+        {
+           alignment: center
+        }
+    </style>
+    <link href="css/bootstrap.min.css"/>
+    <link href="css/site.css" rel="stylesheet"/>
+    <link href="~/css/validationColors.css" rel="stylesheet"/>
+</head>
+<body>
+    <div id="login-invite" class="form-signin w-100 m-auto" style="text-align: center; padding: 50px; width: 1300 px;">
+        <div id="wrap-login-invite">
+            <div id="wrap-login-header">
+                <span style="color: slategray;">Регистрация</span>
+            </div>
+            <div class="inner">
+                <form asp-action="Register" asp-controller="Login" asp-antiforgery="true">
+                    <div asp-validation-summary="ModelOnly"></div>
+                    <div >
+                        <div>
+                            <label asp-for="UserLogin">Введите логин</label><br/>
+                            <input asp-for="UserLogin"/>
+                            <span asp-validation-for="UserLogin"></span>
+                        </div>
+                        <div>
+                            <label asp-for="Password">Введите пароль</label><br/>
+                            <input asp-for="Password"/>
+                            <span asp-validation-for="Password"></span>
+                        </div>
+                        <div>
+                            <label asp-for="ConfirmPassword">Повторите пароль</label><br/>
+                            <input asp-for="ConfirmPassword"/>
+                            <span asp-validation-for="ConfirmPassword"></span>
+                        </div>
+                        <div>
+                            <label asp-for="Phone">Введите номер телефона</label><br/>
+                            <input type="tel" asp-for="Phone"/>
+                            <span asp-validation-for="Phone"></span>
+                        </div>
+                    </div>
+                    <br/>
+                    <div>
+                        <input type="submit" value="Регистрация" id="inpreg"/>
+                    </div>
+                </form>
+            </div>
+    </div>
+   
+
+</body>
+</html>

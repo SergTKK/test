@@ -1,0 +1,139 @@
+@import "nullstyle.scss";
+//Заголовок основной страницы (_Layout)
+.container-fluid {
+    margin-top: 10px;
+}
+
+.row-header{
+    border-bottom: black;
+    padding: 10px 0px 0px 0px;
+}
+.header-adress {
+    margin: 0px 0px 0px 0px;    
+    padding: 5px;
+    display: inline-block;
+}
+
+.header-adress-text {
+    font-size: 10px;
+    display: inline;
+}
+
+.header-middle {
+    text-align: center;
+}
+
+.header-right-part {
+    text-align: right;
+}
+
+
+//Основной блок
+
+.wrapper {
+    min-height: 100%; /*чтобы оболочка wrapper была на всю высоту экрана*/
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+.content {
+    flex: 1 1 auto;
+}
+.container {
+    max-width: 1180px;  /*ширина занимаемой части экрана для контента*/
+    margin: 0px auto;
+}
+
+//Login
+
+.login-invite {
+    width: 300px;       
+    margin: auto;
+    position: relative;
+    top: 150px;
+    text-align: center;
+    padding: 9px;
+}
+
+.wrap-login-invite {
+    background-color: #e1dac7;
+    height: 200px;
+    padding: 5px 20px;
+}
+
+.wrap-login-header {
+    background-color: #e1dac7;
+    height: 25px;
+    font-weight: 500;
+    font-size: 26px;
+    padding-top: 0px;
+}
+
+.wrap-login-invite {
+    border: 3px solid #CCC;
+    height: 300px;
+}
+
+#wrap-login-invite {
+    padding: 20px;
+    padding-bottom: 10px;
+    padding-top: 10px !important;
+    margin: 0;
+}
+
+.inner {
+    margin: 15px 0px 0px 0px;
+    padding: 0px;
+    align-content: center;   
+}
+
+.login-inner-formline {
+    padding: 1px 0px 0px 0px;
+    font-size: 18px;   
+    margin: 0 auto;
+}
+
+.login-inner-formline>input {
+    padding: 5px 0px 0px 0px;
+    font-size: 14px;    
+    margin: 10px 0px 10px 0px;
+}
+
+//Кнопки на формах входа и регистрации
+
+.btn-login {
+    width: 60px;
+    height: 30px;
+    margin-top: 0px;
+    background-color: #187202;     
+    border-radius: 5px;
+    color: #ffffff;
+}
+
+.btn-register {
+    width: auto;
+    height: 30px;
+    background-color: #187202;     
+    border-radius: 5px;
+    margin-top: -25px;
+    color: #ffffff
+}
+
+.btn-confirm {
+    width: 50px;
+    height: 30px;
+    background-color: #187202;
+    border-radius: 5px;
+    margin-top: -25px;
+    color: #ffffff
+}
+<<<<<<< HEAD
+=======
+
+//Детали добавления в корзину
+.details .form-group {
+    >.gr1 {
+        font-weight: 500;
+    }
+}
+>>>>>>> cab1bc6 (part2)

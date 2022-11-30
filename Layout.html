@@ -1,0 +1,163 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Автомагазин на Таманской</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/fontello.css">
+    <link rel="stylesheet" href="/css/site.css">
+<style id="inert-style">
+[inert] {
+  pointer-events: none;
+  cursor: default;
+}
+
+[inert], [inert] * {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+</style></head>
+<body>
+    <header>
+        <!-- _Layout header -->
+        <div class="container">
+            <div class="row row-header">
+                <div class="col-3">
+                    <div>
+                        <i class="fa fa-map-pin header-adress"></i>
+                        <div class="header-adress-text">г.Темрюк ул.Таманская д.6</div>
+                    </div>                                         
+                </div>
+
+                <div class="col-5 header-middle">
+                    <img src="images/logo.png">
+                </div>
+
+                <div class="col-4 header-right-part">                        
+                            <form method="post" action="/Login/Logout">
+                                Sergey
+                                <input style="margin-bottom: 3px;" class="btn btn-link" value="Выход" type="submit">
+                            <input name="__RequestVerificationToken" type="hidden" value="CfDJ8INJ1qw7_1xHipkpk9FOMoNf-Gi-y9azZn_ah_hARmhYH4nP2B0LJYzPaQFPssw5n2IuP3pIRYwYSgCxSDabn_VOMifJThaHelsg1gvsxpvAEneEQISOTozpaIY_Wd-JngH0WBCEFjEiZ5SyELOIfBmLxYPgcFeG9zziLsJ22yieEyWpBeBWeoADjbwCoh-nkw"></form>                       
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- _Layout.cshtml -->
+    <div class="wrapper">
+        <div class="content">
+            <div class="container">
+                
+
+
+
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/images/logo_ico.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/site.css">
+    <link href="/lib/jquery-ui-1.13.0.custom/jquery-ui.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Личный кабинет</title>
+
+
+    <header>
+        <div class="row" id="lcMain">
+        </div>
+    </header>
+<div class="row">
+   
+
+</div>
+
+    <div class="col">
+        <nav class="navbar navbar-expand-lg" style="background-color: blanchedalmond" aria-label="Tenth navbar example">
+            <div class="container-fluid">
+                <form>
+                    <div style="display: inline-block">
+                        <input class="form-control" type="search" placeholder="Введите артикул" id="searchArtikul" aria-label="Search" name="Articul" value="">
+                    </div>
+                    <div style="display: inline-block">
+                        <a class="btn" onclick="searchFunction()"><i class="icon-search"></i>Поиск</a>
+                    </div>
+                </form>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample08" aria-controls="navbarsExample08" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                
+                <div class="topnavbar">
+                    <div class="topbutton">
+                        <a onclick="busketList()"><i class="fa fa-shopping-cart"></i><span id="busketCounter" class="topbutton__badge">5</span></a>
+                    </div>
+                    <div class="topbutton">
+                        <i class="fa fa-list"></i>
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+
+        
+        <script type="text/javascript">
+            var searchFunction = function search() {
+                var art = $('#searchArtikul').val();
+                $('#result').empty();
+                $('#result').load('/Search/Search?Articul=' + art + '&idClient=' + 158);
+            }
+        </script>
+        
+        <script type="text/javascript">
+            var busketList = function() {
+                $('#result2').html('');
+                $('#result').load('/Busket/BusketList');
+            }
+        </script>
+
+
+    </div>
+
+    <div id="result" style="margin: 0px 10px 0px 10px"></div>
+
+    <div id="result2"></div>
+
+
+  
+
+<!-- Visual Studio Browser Link -->
+<script type="text/javascript" src="/_vs/browserLink" async="async" id="__browserLink_initializationData" data-requestid="e3331b5ecac14d5d96406e0afef24611" data-requestmappingfromserver="false" data-connecturl="http://localhost:51081/80620853974a4ff7b02762e4b78d4b45/browserLink"></script>
+<!-- End Browser Link -->
+
+<script src="/_framework/aspnetcore-browser-refresh.js"></script>
+
+
+
+
+
+            </div>
+        </div>
+
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer_row">
+                    <div class="footer_text">
+                        <p class="float-end"><a href="#">Back to top</a></p>
+                        <p>© 2022 <a href="#">1 пункт</a> · <a href="#">2 пункт</a></p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <script src="/js/bootstrap.bundle.js"></script>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/site.js"></script>
+    
+
+
+
+<live-preview-root></live-preview-root></body></html>

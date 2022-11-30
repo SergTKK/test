@@ -1,0 +1,337 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+/*Обнуление*/
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+*, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:focus, :active {
+    outline: none;
+}
+
+a:focus, a:active {
+    outline: none;
+}
+
+nav, footer, header, aside {
+    display: block;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+    font-family: inherit;
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+a, a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+/*--------------------*/
+
+
+
+
+
+
+
+
+
+
+/*html {
+    position: relative;
+    min-height: 100%;
+}
+
+html {
+    font-size: 14px;
+}
+*/
+
+.login-wrapper {
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.login-container {    
+    max-width: 300px;    
+    margin: 0px auto;
+    background-color: burlywood;
+}
+
+.login-tittle {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form-row {    
+    margin: 0px 0px 40px 0px;
+}
+
+.row-header {
+    border-bottom: black;
+    padding: 10px 0px 0px 0px;
+}
+
+.container-fluid {
+    margin-top: 10px;
+}
+
+.header-adress {
+    margin: 0px 0px 0px 0px;    
+    padding: 5px;
+    display: inline-block;
+}
+
+.header-adress-text {
+    font-size: 10px;
+    display: inline;
+}
+
+.header-middle {
+    text-align: center;
+}
+
+.header-right-part {
+    text-align: right;
+}
+
+.wrapper {
+    min-height: 100%; /*чтобы оболочка wrapper была на всю высоту экрана*/
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex: 1 1 auto;
+}
+
+.container {
+    max-width: 1180px;  /*ширина занимаемой части экрана для контента*/
+    margin: 0px auto;
+}
+
+a.navbar-brand {
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+}
+
+/* Provide sufficient contrast against white background */
+a {
+    color: #0366d6;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.border-top {
+    border-top: 1px solid #e5e5e5;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+    font-size: 1rem;
+    line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+
+
+.login-invite {
+    width: 300px;       
+    margin: auto;
+    position: relative;
+    top: 150px;
+    text-align: center;
+    padding: 9px;
+}
+
+.wrap-login-invite {
+    background-color: #e1dac7;
+    height: 200px;
+    padding: 5px 20px;
+}
+
+.wrap-login-header {
+    background-color: #e1dac7;
+    height: 25px;
+    font-weight: 500;
+    font-size: 26px;
+    padding-top: 5px;
+}
+
+.wrap-login-invite {
+    border: 5px solid #CCC;
+    height: 300px;
+}
+
+#wrap-login-invite {
+    padding: 20px;
+    padding-bottom: 10px;
+    padding-top: 10px !important;
+    margin: 0;
+}
+
+.inner {
+    padding-top: 10px;
+    display: flex;
+}
+
+/* #wrap-login-invite input[type=submit] {
+    margin-top: 10px;
+    width: 55%;
+    padding-top: 10px;
+} */
+
+.login-inner-formline {
+    padding-top: 25px;
+    font-size: 20px;
+}
+
+.login-form-label {
+    text-align: center;
+} 
+
+.btn-login {
+    width: 90px;
+    height: 40px;
+    /* background-color: #187202;     */
+    border-radius: 5px;    
+}
+
+.text-danger {
+    position: relative;
+    top: -10px;
+    left: 3px;
+    font-size: 12px;
+}
+
+
+/* Create the blue navigation bar */
+.topnavbar {
+    /*background-color: #3b5998;*/
+    font-size: 22px;
+    padding: 5px 10px;
+}
+
+/* Define what each icon button should look like */
+.topbutton {
+    color: black;
+    display: inline-block; /* Inline elements with width and height. TL;DR they make the icon buttons stack from left-to-right instead of top-to-bottom */
+    position: relative; /* All 'absolute'ly positioned elements are relative to this one */
+    padding: 2px 5px; /* Add some padding so it looks nice */
+}
+
+    .topbutton > a:hover {
+        cursor: pointer;
+    }
+
+/* Make the badge float in the top right corner of the button */
+.topbutton__badge {
+    background-color: #fa3e3e;
+    border-radius: 2px;
+    color: white;
+    padding: 1px 3px;
+    font-size: 11px;
+    position: absolute; /* Position the badge within the relatively positioned button */
+    top: 0;
+    right: 0;
+}
+
+#btnSearchBrands {
+    width: 70px;
+    height: 30px;
+    border-radius: 2px;
+}
+
+.row_searchResult {
+    line-height: 10px;
+}
+.details .form-group > .gr1 {
+    font-weight: 400;
+  }
