@@ -72,6 +72,52 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*--------------------*/
+.row-header {
+  border-bottom: black;
+  padding: 10px 0px 0px 0px;
+}
+
+.header-adress {
+  margin: 0px 0px 0px 0px;
+  padding: 5px;
+  display: inline-block;
+}
+.header-adress-text {
+  font-size: 10px;
+  display: inline;
+}
+
+.header-middle {
+  text-align: center;
+}
+
+.header-right-part {
+  text-align: right;
+}
+
+.wrapper {
+  min-height: 100%; /*чтобы оболочка wrapper была на всю высоту экрана*/
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1 1 auto;
+}
+
+#btnSearchBrands {
+  width: 70px;
+  height: 30px;
+  border-radius: 2px;
+  padding: 3px 0px 10px 0px;
+  background-color: blanchedalmond;
+}
+
+.btn-addtocart:hover {
+  cursor: pointer;
+}
+
 .mad {
   max-width: 300px;
   margin: auto;
@@ -110,4 +156,125 @@ h1, h2, h3, h4, h5, h6 {
 }
 .mad-btn:hover {
   background-color: green;
+}
+
+.login-invite {
+  width: 300px;
+  margin: auto;
+  position: relative;
+  top: 150px;
+  text-align: center;
+  padding: 9px;
+}
+
+.wrap-login-invite {
+  background-color: #e1dac7;
+  padding: 5px 20px;
+  border: 3px solid #CCC;
+  height: 300px;
+}
+
+.wrap-login-header {
+  background-color: #e1dac7;
+  height: 25px;
+  font-weight: 500;
+  font-size: 26px;
+  padding-top: 0px;
+}
+
+.inner {
+  margin: 15px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+  align-content: center;
+}
+
+.login-inner-formline {
+  padding: 1px 0px 0px 0px;
+  font-size: 18px;
+  margin: 0 auto;
+}
+.login-inner-formline > input {
+  padding: 5px 0px 0px 0px;
+  font-size: 14px;
+  margin: 10px 0px 10px 0px;
+}
+
+.btn-login {
+  width: 60px;
+  height: 30px;
+  margin-top: 0px;
+  background-color: #187202;
+  border-radius: 5px;
+  color: #ffffff;
+}
+
+.btn-register {
+  width: auto;
+  height: 30px;
+  background-color: #187202;
+  border-radius: 5px;
+  margin-top: -25px;
+  color: #ffffff;
+}
+
+.btn-confirm {
+  width: 50px;
+  height: 30px;
+  background-color: #187202;
+  border-radius: 5px;
+  margin-top: -25px;
+  color: #ffffff;
+}
+
+.waitmodal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.8) url("http://i.stack.imgur.com/FhHRx.gif") 50% 50% no-repeat;
+}
+
+/* When the body has the loading class, we turn
+   the scrollbar off with overflow:hidden */
+body.loading .waitmodal {
+  overflow: hidden;
+}
+
+/* Anytime the body has the loading class, our
+   modal element will be visible */
+body.loading .waitmodal {
+  display: block;
+}
+
+.topnavbar {
+  font-size: 22px;
+  padding: 5px 10px;
+}
+
+.topbutton {
+  color: black;
+  display: inline-block; /* Inline elements with width and height. TL;DR they make the icon buttons stack from left-to-right instead of top-to-bottom */
+  position: relative; /* All 'absolute'ly positioned elements are relative to this one */
+  padding: 2px 5px; /* Add some padding so it looks nice */
+}
+.topbutton__badge {
+  background-color: #fa3e3e;
+  border-radius: 2px;
+  color: white;
+  padding: 1px 3px;
+  font-size: 11px;
+  position: absolute; /* Position the badge within the relatively positioned button */
+  top: 0;
+  right: 0;
+}
+.topbutton > a:hover {
+  cursor: pointer;
+}
+
+.searchBrandForm {
+  width: 75%;
+  padding-top: 5px;
 }

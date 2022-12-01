@@ -1,0 +1,61 @@
+.login-invite {
+    width: 300px;       
+    margin: auto;
+    position: relative;
+    top: 150px;
+    text-align: center;
+    padding: 9px;
+}
+.wrap-login-invite {
+    background-color: #e1dac7;    
+    padding: 5px 20px;
+    border: 3px solid #CCC;
+    height: 300px;
+}
+.wrap-login-header {
+    background-color: #e1dac7;
+    height: 25px;
+    font-weight: 500;
+    font-size: 26px;
+    padding-top: 0px;
+}
+.inner {
+    margin: 15px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    align-content: center;
+}
+.login-inner-formline {
+    padding: 1px 0px 0px 0px;
+    font-size: 18px;    
+    margin: 0 auto;
+    >input {
+        padding: 5px 0px 0px 0px;
+        font-size: 14px;    
+        margin: 10px 0px 10px 0px;    
+    }
+}
+.btn-login {
+    width: 60px;
+    height: 30px;
+    margin-top: 0px;
+    background-color: #187202;     
+    border-radius: 5px;
+    color: #ffffff;
+}
+.btn-register {
+    width: auto;
+    height: 30px;
+    background-color: #187202;     
+    border-radius: 5px;
+    margin-top: -25px;
+    color: #ffffff
+}
+
+.btn-confirm {
+    width: 50px;
+    height: 30px;
+    background-color: #187202;
+    border-radius: 5px;
+    margin-top: -25px;
+    color: #ffffff
+}

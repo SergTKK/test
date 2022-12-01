@@ -1,0 +1,299 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Автомагазин на Таманской</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/fontello.css">
+    <link rel="stylesheet" href="/css/site.css">
+<style id="inert-style">
+[inert] {
+  pointer-events: none;
+  cursor: default;
+}
+
+[inert], [inert] * {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+</style></head>
+<body>
+    <header>
+        <!-- _Layout header -->
+        <div class="container">
+            <div class="row row-header">
+                <div class="col-3">
+                    <div>
+                        <i class="fa fa-map-pin header-adress"></i>
+                        <div class="header-adress-text">г.Темрюк ул.Таманская д.6</div>
+                    </div>
+                </div>
+                
+                <div class="col-5 header-middle">
+                    <img src="images/logo.png">
+                </div>
+                
+                <div class="col-4">
+                    <div class="header-right-part">
+                            <div style="text-align: right">
+                                <form method="post" action="/Login/Logout">
+                                    Sergey
+                                    <input style="margin-bottom: 3px;" class="btn btn-link" value="Выход" type="submit">
+                                <input name="__RequestVerificationToken" type="hidden" value="CfDJ8INJ1qw7_1xHipkpk9FOMoMov2dKELSOq5TnU5bfPcXSSixxnVljt6r1tU-j8oDw18mbRekOpQeTM0LbaL4qMoUJoN_EWjFl28HYk9vCI5GFcVA782QxV0h7Wag0KYd4tJUAnQR_jjvNDEW2F0egRXO8h5t1pHzq2posljVSZfYgBwZQYRcsKQzOcfZSdvAwIw"></form>
+                            </div>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- _Layout.cshtml -->
+    <div class="wrapper">
+        <div class="content">
+            <div class="container">
+                
+
+
+
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/images/logo_ico.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/site.css">
+    <link href="/lib/jquery-ui-1.13.0.custom/jquery-ui.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Личный кабинет</title>
+
+
+    <header>
+        <div class="row" id="lcMain">
+        </div>
+    </header>
+<div class="row">
+   
+
+</div>
+
+    <div class="col">
+        <nav class="navbar navbar-expand-lg" style="background-color: blanchedalmond" aria-label="Tenth navbar example">
+            <div class="container-fluid">
+                <form>
+                    <div style="display: inline-block">
+                        <input class="form-control" type="search" placeholder="Введите артикул" id="searchArtikul" aria-label="Search" name="Articul" value="">
+                    </div>
+                    <div style="display: inline-block">
+                        <a class="btn" onclick="searchFunction()"><i class="icon-search"></i>Поиск</a>
+                    </div>
+                </form>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample08" aria-controls="navbarsExample08" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                
+                <div class="topnavbar">
+                    <div class="topbutton">
+                        <a onclick="busketList()"><i class="fa fa-shopping-cart"></i><span id="busketCounter" class="topbutton__badge">2</span></a>
+                    </div>
+                    <div class="topbutton">
+                        <a onclick="orderList()"><i class="fa fa-list"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+        
+        <div id="result" style="margin: 0px 10px 0px 10px">
+<link rel="stylesheet" href="/css/chosen.css">
+<script src="/chosen/chosen.jquery.min.js"></script>
+
+<!--Search-->
+<!--asp-controller="Search" asp-action="SearchBrandResult" asp-route-Articul="n0138157" asp-route-idClient="158"-->
+
+<div class="waitmodal"><!-- Place at bottom of page --></div>
+
+<form method="post" enctype="multipart/form-data" class="searchBrandForm" style="width: 75%; padding-top: 5px;">
+    <select id="selBrands" multiple="true" class="form-control brand-chosen" placeholder="Select Some Options" name="SelectedBrand" style="display: none;">
+    <option value="AJUSA">AJUSA</option>
+<option value="AUDI/VOLKSWAGEN">AUDI/VOLKSWAGEN</option>
+<option value="AUTO-GUR">AUTO-GUR</option>
+<option value="AUTOMOTOR FRANCE">AUTOMOTOR FRANCE</option>
+<option value="AVERS">AVERS</option>
+<option value="BENTLEY">BENTLEY</option>
+<option value="BUGATTI">BUGATTI</option>
+<option value="CORTECO">CORTECO</option>
+<option value="ELRING">ELRING</option>
+<option value="ELWIS ROYAL">ELWIS ROYAL</option>
+<option value="FEBEST">FEBEST</option>
+<option value="FEBI">FEBI</option>
+<option value="FORD">FORD</option>
+<option value="GENERAL MOTORS">GENERAL MOTORS</option>
+<option value="GM">GM</option>
+<option value="GRASS">GRASS</option>
+<option value="HYUNDAI/KIA">HYUNDAI/KIA</option>
+<option value="INFINITI">INFINITI</option>
+<option value="KIA/HYUNDAI">KIA/HYUNDAI</option>
+<option value="LADA">LADA</option>
+<option value="LAMBORGHINI">LAMBORGHINI</option>
+<option value="MAN">MAN</option>
+<option value="MASUMA">MASUMA</option>
+<option value="MITSUBISHI">MITSUBISHI</option>
+<option value="MOBIS">MOBIS</option>
+<option value="NISSAN">NISSAN</option>
+<option value="NONAME">NONAME</option>
+<option value="OEM">OEM</option>
+<option value="OPEL">OPEL</option>
+<option value="PAYEN">PAYEN</option>
+<option value="PORSCHE">PORSCHE</option>
+<option value="PRC">PRC</option>
+<option value="REINZ">REINZ</option>
+<option value="REMSA">REMSA</option>
+<option value="RENAULT">RENAULT</option>
+<option value="RTS">RTS</option>
+<option value="SWAG">SWAG</option>
+<option value="TRIALLI">TRIALLI</option>
+<option value="VAG">VAG</option>
+<option value="VAG REMAN">VAG REMAN</option>
+<option value="VAZ">VAZ</option>
+<option value="VICTOR REINZ">VICTOR REINZ</option>
+<option value="VICTOR REINZ TRUCK">VICTOR REINZ TRUCK</option>
+<option value="VOLVO">VOLVO</option>
+<option value="VW GROUP">VW GROUP</option>
+<option value="АВТОВАЗ">АВТОВАЗ</option>
+<option value="АВТОВАЗАГРЕГАТ">АВТОВАЗАГРЕГАТ</option>
+<option value="АВТОДЕТАЛЬ">АВТОДЕТАЛЬ</option>
+<option value="АНАЛОГИ ПРОЧИЕ (БРЭНД НЕИЗВЕСТЕН). ВНИМАНИЕ!!! ТОЛЬКО ДЛЯ ИНФОРМАЦИИ! ВОЗМОЖНЫ ОШИБКИ!!!">АНАЛОГИ ПРОЧИЕ (БРЭНД НЕИЗВЕСТЕН). ВНИМАНИЕ!!! ТОЛЬКО ДЛЯ ИНФОРМАЦИИ! ВОЗМОЖНЫ ОШИБКИ!!!</option>
+<option value="Выбрать все">Выбрать все</option>
+<option value="ОЕМ">ОЕМ</option>
+<option value="РОССИЯ">РОССИЯ</option>
+<option value="РФ">РФ</option>
+</select><div class="chosen-container chosen-container-multi" title="" id="selBrands_chosen" style="width: 500px;"><ul class="chosen-choices">
+  <li class="search-field">
+    <input class="chosen-search-input default" type="text" autocomplete="off" value="Select Some Options" style="width: 147.125px;">
+  </li>
+</ul>
+<div class="chosen-drop">
+  <ul class="chosen-results"></ul>
+</div>
+</div>
+<div style="display: inline; padding: 20px 0px 2px 0px;">
+    <button style="padding: 3px 0px 10px 0px; background-color: blanchedalmond;" class="btn"  id="btnSearchBrands" onclick="searchResult();return false;">Искать</button>
+</div>
+   
+<input name="__RequestVerificationToken" type="hidden" value="CfDJ8INJ1qw7_1xHipkpk9FOMoNmYnbf_7sb2wP1Gyxajp9sI16kcb_kzHkJxl739fJmGZ1iDXdjHiedH0z1rLEqvRplAIkxr-vSzpsZWWlUnU5AmCBQC2gCfaXfyVjYeqLzLk4cND1GlPBq8atp-bUWw_DROSJIcZ54DLKKJEaznLs0QA3XtGHV0Ob5b-KwguYFYg"></form>
+
+<script>
+    $body = $("body");
+
+    $(document).on({
+        ajaxStart: function() { $body.addClass("loading");    },
+        ajaxStop: function() { $body.removeClass("loading"); }    
+    });
+</script>
+
+<script type="text/javascript">
+    $(function () {
+        console.log("chosen");
+        $('.brand-chosen').chosen();
+    })
+</script>
+
+<script type="text/javascript">
+    var searchResult = function() {
+        var selbr = $('#selBrands').val();
+        var data = new FormData();
+        var allBrands = '[{"nameOfBrand":"AUTO-GUR","warehouseName":7},{"nameOfBrand":"AUTOMOTOR FRANCE","warehouseName":7},{"nameOfBrand":"AVERS","warehouseName":7},{"nameOfBrand":"BENTLEY","warehouseName":7},{"nameOfBrand":"BUGATTI","warehouseName":7},{"nameOfBrand":"ELRING","warehouseName":7},{"nameOfBrand":"FEBI","warehouseName":7},{"nameOfBrand":"GM","warehouseName":7},{"nameOfBrand":"HYUNDAI/KIA","warehouseName":7},{"nameOfBrand":"INFINITI","warehouseName":7},{"nameOfBrand":"KIA/HYUNDAI","warehouseName":7},{"nameOfBrand":"LADA","warehouseName":7},{"nameOfBrand":"LAMBORGHINI","warehouseName":7},{"nameOfBrand":"MITSUBISHI","warehouseName":7},{"nameOfBrand":"MOBIS","warehouseName":7},{"nameOfBrand":"NISSAN","warehouseName":7},{"nameOfBrand":"OPEL","warehouseName":7},{"nameOfBrand":"PAYEN","warehouseName":7},{"nameOfBrand":"PORSCHE","warehouseName":7},{"nameOfBrand":"REINZ","warehouseName":7},{"nameOfBrand":"REMSA","warehouseName":7},{"nameOfBrand":"RTS","warehouseName":7},{"nameOfBrand":"VAG","warehouseName":7},{"nameOfBrand":"VAG REMAN","warehouseName":7},{"nameOfBrand":"VAZ","warehouseName":7},{"nameOfBrand":"VICTOR REINZ","warehouseName":7},{"nameOfBrand":"VICTOR REINZ TRUCK","warehouseName":7},{"nameOfBrand":"VOLVO","warehouseName":7},{"nameOfBrand":"VW GROUP","warehouseName":7},{"nameOfBrand":"\u0410\u0412\u0422\u041E\u0412\u0410\u0417","warehouseName":7},{"nameOfBrand":"\u0410\u0412\u0422\u041E\u0412\u0410\u0417\u0410\u0413\u0420\u0415\u0413\u0410\u0422","warehouseName":7},{"nameOfBrand":"\u0410\u0412\u0422\u041E\u0414\u0415\u0422\u0410\u041B\u042C","warehouseName":7},{"nameOfBrand":"VAG","warehouseName":6},{"nameOfBrand":"PORSCHE","warehouseName":6},{"nameOfBrand":"OPEL","warehouseName":6},{"nameOfBrand":"AVERS","warehouseName":6},{"nameOfBrand":"AUTOMOTOR FRANCE","warehouseName":6},{"nameOfBrand":"\u0420\u0424","warehouseName":6},{"nameOfBrand":"PRC","warehouseName":6},{"nameOfBrand":"AUTO-GUR","warehouseName":8},{"nameOfBrand":"AVERS","warehouseName":8},{"nameOfBrand":"BENTLEY","warehouseName":8},{"nameOfBrand":"PORSCHE","warehouseName":8},{"nameOfBrand":"VAG","warehouseName":8},{"nameOfBrand":"VAG","warehouseName":13},{"nameOfBrand":"NISSAN","warehouseName":13},{"nameOfBrand":"RENAULT","warehouseName":13},{"nameOfBrand":"FORD","warehouseName":13},{"nameOfBrand":"PORSCHE","warehouseName":13},{"nameOfBrand":"\u0410\u0412\u0422\u041E\u0414\u0415\u0422\u0410\u041B\u042C","warehouseName":13},{"nameOfBrand":"\u041E\u0415\u041C","warehouseName":13},{"nameOfBrand":"GRASS","warehouseName":13},{"nameOfBrand":"AVERS","warehouseName":13},{"nameOfBrand":"GENERAL MOTORS","warehouseName":13},{"nameOfBrand":"MAN","warehouseName":13},{"nameOfBrand":"FEBEST","warehouseName":13},{"nameOfBrand":"OEM","warehouseName":13},{"nameOfBrand":"VICTOR REINZ","warehouseName":13},{"nameOfBrand":"ELRING","warehouseName":13},{"nameOfBrand":"BENTLEY","warehouseName":13},{"nameOfBrand":"\u0420\u041E\u0421\u0421\u0418\u042F","warehouseName":13},{"nameOfBrand":"TRIALLI","warehouseName":13},{"nameOfBrand":"\u0410\u0412\u0422\u041E\u0412\u0410\u0417","warehouseName":13},{"nameOfBrand":"VAG","warehouseName":10},{"nameOfBrand":"FORD","warehouseName":10},{"nameOfBrand":"AVERS","warehouseName":10},{"nameOfBrand":"AUDI/VOLKSWAGEN","warehouseName":5},{"nameOfBrand":"AUDI/VOLKSWAGEN","warehouseName":5},{"nameOfBrand":"AUDI/VOLKSWAGEN","warehouseName":5},{"nameOfBrand":"AUDI/VOLKSWAGEN","warehouseName":5},{"nameOfBrand":"AUDI/VOLKSWAGEN","warehouseName":5},{"nameOfBrand":"AUDI/VOLKSWAGEN","warehouseName":5},{"nameOfBrand":"\u0410\u041D\u0410\u041B\u041E\u0413\u0418 \u041F\u0420\u041E\u0427\u0418\u0415 (\u0411\u0420\u042D\u041D\u0414 \u041D\u0415\u0418\u0417\u0412\u0415\u0421\u0422\u0415\u041D). \u0412\u041D\u0418\u041C\u0410\u041D\u0418\u0415!!! \u0422\u041E\u041B\u042C\u041A\u041E \u0414\u041B\u042F \u0418\u041D\u0424\u041E\u0420\u041C\u0410\u0426\u0418\u0418! \u0412\u041E\u0417\u041C\u041E\u0416\u041D\u042B \u041E\u0428\u0418\u0411\u041A\u0418!!!","warehouseName":5},{"nameOfBrand":"AJUSA","warehouseName":9},{"nameOfBrand":"AVERS","warehouseName":9},{"nameOfBrand":"CORTECO","warehouseName":9},{"nameOfBrand":"ELRING","warehouseName":9},{"nameOfBrand":"ELRING","warehouseName":9},{"nameOfBrand":"ELWIS ROYAL","warehouseName":9},{"nameOfBrand":"FEBI","warehouseName":9},{"nameOfBrand":"MASUMA","warehouseName":9},{"nameOfBrand":"PAYEN","warehouseName":9},{"nameOfBrand":"PORSCHE","warehouseName":9},{"nameOfBrand":"SWAG","warehouseName":9},{"nameOfBrand":"VAG","warehouseName":9},{"nameOfBrand":"VAG","warehouseName":9},{"nameOfBrand":"VAG","warehouseName":2},{"nameOfBrand":"PORSCHE","warehouseName":2},{"nameOfBrand":"AVERS","warehouseName":2},{"nameOfBrand":"OEM","warehouseName":2},{"nameOfBrand":"NONAME","warehouseName":2},{"nameOfBrand":"PORSCHE","warehouseName":4},{"nameOfBrand":"PORSCHE","warehouseName":4},{"nameOfBrand":"PORSCHE","warehouseName":4},{"nameOfBrand":"VAG","warehouseName":4},{"nameOfBrand":"VAG","warehouseName":4},{"nameOfBrand":"VAG","warehouseName":4},{"nameOfBrand":"AVERS","warehouseName":11},{"nameOfBrand":"BENTLEY","warehouseName":11},{"nameOfBrand":"PORSCHE","warehouseName":11},{"nameOfBrand":"VAG","warehouseName":11}]';
+        var articul = '"n0138157"';
+        var idClient = '"158"';
+        data.append("allBrands", allBrands);
+        data.append("articul", articul);
+        data.append("idClient", idClient);
+        data.append("selectedBrands",selbr);
+        $.ajax({
+            type: "POST",
+            url: '/Search/SearchItems',
+            processData: false,
+            contentType: false,
+            data: data,
+            success: function () {
+                console.log("success ");
+            },
+            error: function () {
+                console.log("error");
+            }
+        }).done(function(result) {
+            $('#result2').html(result);
+        });
+    }
+</script>
+
+</div>
+
+        <div id="result2"></div>
+        
+        <script type="text/javascript">
+            var searchFunction = function search() {
+                var art = $('#searchArtikul').val();
+                $('#result').empty();
+                $('#result').load('/Search/Search?Articul=' + art + '&idClient=' + 158);
+            }
+        </script>
+        
+        <script type="text/javascript">
+            var busketList = function() {
+                $('#result2').html('');
+                $('#result').load('/Busket/BusketList');
+            }
+        </script>
+        
+        <script type="text/javascript">
+            var orderList = function() {
+                $('#result').empty();
+                $('#result').load('/Order/ListOrders');
+            }
+        </script>
+
+    </div>
+
+   
+
+
+  
+
+<!-- Visual Studio Browser Link -->
+<script type="text/javascript" src="/_vs/browserLink" async="async" id="__browserLink_initializationData" data-requestid="7ebf1ce70cc944db93515e329ed5b97c" data-requestmappingfromserver="false" data-connecturl="http://localhost:56791/002b34c977b3445ea0fd15fec93a50e6/browserLink"></script>
+<!-- End Browser Link -->
+
+<script src="/_framework/aspnetcore-browser-refresh.js"></script>
+
+
+
+
+
+            </div>
+        </div>
+
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer_row">
+                    <div class="footer_text">
+                        <p class="float-end"><a href="#">Back to top</a></p>
+                        <p>© 2022 <a href="#">1 пункт</a> · <a href="#">2 пункт</a></p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <script src="/js/bootstrap.bundle.js"></script>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/site.js"></script>
+    
+
+
+
+<live-preview-root></live-preview-root></body>

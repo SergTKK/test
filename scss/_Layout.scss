@@ -1,0 +1,37 @@
+.row-header {
+    border-bottom: black;
+    padding: 10px 0px 0px 0px;
+}
+.header-adress {
+    margin: 0px 0px 0px 0px;    
+    padding: 5px;
+    display: inline-block;
+    &-text {
+        font-size: 10px;
+        display: inline;    
+    }
+}
+.header-middle {
+    text-align: center;
+}
+.header-right-part {
+    text-align: right;
+}
+.wrapper {
+    min-height: 100%; /*чтобы оболочка wrapper была на всю высоту экрана*/
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+.content {
+    flex: 1 1 auto;
+}
+.footer {
+
+}
+.footer_row {
+
+}
+.footer_text {
+
+}
