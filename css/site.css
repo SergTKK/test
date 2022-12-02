@@ -278,3 +278,20 @@ body.loading .waitmodal {
   width: 75%;
   padding-top: 5px;
 }
+
+.table th, .table td {
+  padding: 3px;
+}
+
+.table {
+  border: 1px solid black;
+}
+.table tr {
+  transition: all 0.3s;
+}
+.table tr:hover {
+  background: #f8ddb4;
+}
+.table th {
+  background: #f8ddb4;
+}

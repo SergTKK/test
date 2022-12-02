@@ -2,3 +2,21 @@
     width: 75%;
     padding-top: 5px;
 }
+
+
+.table th, .table td {
+    padding: 3px;
+}
+
+.table {
+    border: 1px solid black;
+    & tr {
+        transition: all 0.3s;
+        &:hover {
+            background: #f8ddb4;
+        }
+    }
+    & th {
+        background: #f8ddb4;
+    }
+}
