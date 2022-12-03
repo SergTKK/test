@@ -1,26 +1,4 @@
-<html lang="en"><head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Автомагазин на Таманской</title>
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/css/fontello.css">
-    <link rel="stylesheet" href="/css/site.css">
-<style id="inert-style">
-[inert] {
-  pointer-events: none;
-  cursor: default;
-}
-
-[inert], [inert] * {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-</style></head>
-<body class="">
+<body class="modal-open" style="overflow: hidden; padding-right: 17px;">
     <header>
         <!-- _Layout header -->
         <div class="container">
@@ -42,7 +20,7 @@
                                 <form method="post" action="/Login/Logout">
                                     Sergey
                                     <input style="margin-bottom: 3px;" class="btn btn-link" value="Выход" type="submit">
-                                <input name="__RequestVerificationToken" type="hidden" value="CfDJ8L77QKzPGs5LmdHgwvCSLBL_7WbRFMUnEyPIE8-RZUEXcaKTg3NsAB9yiLH64-krvU3mok5l2Zalvvhr22P1EHvC12FIAmLAdGZLhKZi1a2Fu8f2IBGvKNq68v0cK8ji1WbqHtgS1I9imH9QV8tHTJSq3ZNyUwNYJ1v4Y-nUpOmI81qEUJ1RQDsSxFNgDTL20Q"></form>
+                                <input name="__RequestVerificationToken" type="hidden" value="CfDJ8L77QKzPGs5LmdHgwvCSLBItTxr9hWz_i5gjkZBtj2joBJmy_9HTScLn_p_onmwfyTzK1PaL-wVJzcHkIwdfUjJiCLA-TAifRmxusk5U5ioUQ3hApOLYgLuZGQ5knhQ2yJGjt38KPHN2V38muRtThfeHOoUKRUDzawPTgNA5T_pM-KuPVE0jUW39mtHDnZ-EtQ"></form>
                             </div>
                     </div>
                    
@@ -96,7 +74,7 @@
                 
                 <div class="topnavbar">
                     <div class="topbutton">
-                        <a onclick="busketList()"><i class="fa fa-shopping-cart"></i><span id="busketCounter" class="topbutton__badge">2</span></a>
+                        <a onclick="busketList()"><i class="fa fa-shopping-cart"></i><span id="busketCounter" class="topbutton__badge">3</span></a>
                     </div>
                     <div class="topbutton">
                         <a onclick="orderList()"><i class="fa fa-list"></i></a>
@@ -112,8 +90,6 @@
 
 <!--Search-->
 <!--asp-controller="Search" asp-action="SearchBrandResult" asp-route-Articul="n0138157" asp-route-idClient="158"-->
-
-<div class="waitmodal"><!-- Place at bottom of page --></div>
 
 <form method="post" enctype="multipart/form-data" class="searchBrandForm">
     <select id="selBrands" multiple="true" class="form-control brand-chosen" placeholder="Select Some Options" name="SelectedBrand" style="display: none;">
@@ -183,7 +159,9 @@
 </div></div>
 
     <button class="btn" id="btnSearchBrands" onclick="searchResult();return false;">Искать</button>
-<input name="__RequestVerificationToken" type="hidden" value="CfDJ8L77QKzPGs5LmdHgwvCSLBJYKd2j7MFAirx3Ff-GOn7HD4f_hzeb8i_s_PsGmffUFTiEm1yobqTMNt6bxXwuxkxVpzFnuVe2LY3DcNsF_RlC3iUAP2NUe4SeVrvGaVXLl4-Ux4yJupwHOOsegJXlYueQUmpBbN0l1Yiswxej0HXLe9s9naPEfx69ndtmOjP0Xg"></form>
+<input name="__RequestVerificationToken" type="hidden" value="CfDJ8L77QKzPGs5LmdHgwvCSLBIJt7FhIq6qslFkwbgs4JO1YtqdaKxNEvJoRmxQxAZsmF2_Thj0MGX6EN4KYK--uHoAgSVJ7Sr5r8jVZIdKWAjmpE56AFs2Y3wLMk-aRrxO_SOJJDKPghyN2jdJzPciIVILsbqovmYmJfD77BW6Rlftr-1KNP-L6-VhSl4wRBRu9Q"></form>
+
+<div class="waitmodal"><!-- Place at bottom of page --></div>
 
 <script>
     $body = $("body");
@@ -205,7 +183,7 @@
     var searchResult = function() {
         var selbr = $('#selBrands').val();
         var data = new FormData();
-        var allBrands = '[{"nameOfBrand":"AUTO-GUR","warehouseName":7},{"nameOfBrand":"AUTOMOTOR FRANCE","warehouseName":7},{"nameOfBrand":"AVERS","warehouseName":7},{"nameOfBrand":"BENTLEY","warehouseName":7},{"nameOfBrand":"BUGATTI","warehouseName":7},{"nameOfBrand":"ELRING","warehouseName":7},{"nameOfBrand":"FEBI","warehouseName":7},{"nameOfBrand":"GM","warehouseName":7},{"nameOfBrand":"HYUNDAI /KIA","warehouseName":7},{"nameOfBrand":"HYUNDAI/KIA","warehouseName":7},{"nameOfBrand":"INFINITI","warehouseName":7},{"nameOfBrand":"KIA/HYUNDAI","warehouseName":7},{"nameOfBrand":"LADA","warehouseName":7},{"nameOfBrand":"LAMBORGHINI","warehouseName":7},{"nameOfBrand":"MITSUBISHI","warehouseName":7},{"nameOfBrand":"MOBIS","warehouseName":7},{"nameOfBrand":"NISSAN","warehouseName":7},{"nameOfBrand":"OPEL","warehouseName":7},{"nameOfBrand":"PAYEN","warehouseName":7},{"nameOfBrand":"PORSCHE","warehouseName":7},{"nameOfBrand":"REINZ","warehouseName":7},{"nameOfBrand":"REMSA","warehouseName":7},{"nameOfBrand":"RTS","warehouseName":7},{"nameOfBrand":"VAG","warehouseName":7},{"nameOfBrand":"VAG REMAN","warehouseName":7},{"nameOfBrand":"VAZ","warehouseName":7},{"nameOfBrand":"VICTOR REINZ","warehouseName":7},{"nameOfBrand":"VICTOR REINZ TRUCK","warehouseName":7},{"nameOfBrand":"VOLVO","warehouseName":7},{"nameOfBrand":"VW GROUP","warehouseName":7},{"nameOfBrand":"\u0410\u0412\u0422\u041E\u0412\u0410\u0417","warehouseName":7},{"nameOfBrand":"\u0410\u0412\u0422\u041E\u0412\u0410\u0417\u0410\u0413\u0420\u0415\u0413\u0410\u0422","warehouseName":7},{"nameOfBrand":"\u0410\u0412\u0422\u041E\u0414\u0415\u0422\u0410\u041B\u042C","warehouseName":7},{"nameOfBrand":"VAG","warehouseName":6},{"nameOfBrand":"PORSCHE","warehouseName":6},{"nameOfBrand":"OPEL","warehouseName":6},{"nameOfBrand":"AVERS","warehouseName":6},{"nameOfBrand":"AUTOMOTOR FRANCE","warehouseName":6},{"nameOfBrand":"\u0420\u0424","warehouseName":6},{"nameOfBrand":"PRC","warehouseName":6},{"nameOfBrand":"AUTO-GUR","warehouseName":8},{"nameOfBrand":"AVERS","warehouseName":8},{"nameOfBrand":"BENTLEY","warehouseName":8},{"nameOfBrand":"PORSCHE","warehouseName":8},{"nameOfBrand":"VAG","warehouseName":8},{"nameOfBrand":"VAG","warehouseName":13},{"nameOfBrand":"NISSAN","warehouseName":13},{"nameOfBrand":"RENAULT","warehouseName":13},{"nameOfBrand":"FORD","warehouseName":13},{"nameOfBrand":"PORSCHE","warehouseName":13},{"nameOfBrand":"\u0410\u0412\u0422\u041E\u0414\u0415\u0422\u0410\u041B\u042C","warehouseName":13},{"nameOfBrand":"\u041E\u0415\u041C","warehouseName":13},{"nameOfBrand":"GRASS","warehouseName":13},{"nameOfBrand":"AVERS","warehouseName":13},{"nameOfBrand":"GENERAL MOTORS","warehouseName":13},{"nameOfBrand":"MAN","warehouseName":13},{"nameOfBrand":"FEBEST","warehouseName":13},{"nameOfBrand":"OEM","warehouseName":13},{"nameOfBrand":"VICTOR REINZ","warehouseName":13},{"nameOfBrand":"ELRING","warehouseName":13},{"nameOfBrand":"BENTLEY","warehouseName":13},{"nameOfBrand":"\u041A\u0410\u041C\u0410\u0417","warehouseName":13},{"nameOfBrand":"\u0420\u041E\u0421\u0421\u0418\u042F","warehouseName":13},{"nameOfBrand":"TRIALLI","warehouseName":13},{"nameOfBrand":"\u0410\u0412\u0422\u041E\u0412\u0410\u0417","warehouseName":13},{"nameOfBrand":"VAG","warehouseName":10},{"nameOfBrand":"FORD","warehouseName":10},{"nameOfBrand":"AVERS","warehouseName":10},{"nameOfBrand":"VAG","warehouseName":1},{"nameOfBrand":"PORSCHE","warehouseName":1},{"nameOfBrand":"AVERS","warehouseName":1},{"nameOfBrand":"O.E.M.","warehouseName":1},{"nameOfBrand":"NONAME","warehouseName":1},{"nameOfBrand":"AUDI/VOLKSWAGEN","warehouseName":5},{"nameOfBrand":"AUDI/VOLKSWAGEN","warehouseName":5},{"nameOfBrand":"AUDI/VOLKSWAGEN","warehouseName":5},{"nameOfBrand":"AUDI/VOLKSWAGEN","warehouseName":5},{"nameOfBrand":"AUDI/VOLKSWAGEN","warehouseName":5},{"nameOfBrand":"AUDI/VOLKSWAGEN","warehouseName":5},{"nameOfBrand":"\u0410\u041D\u0410\u041B\u041E\u0413\u0418 \u041F\u0420\u041E\u0427\u0418\u0415 (\u0411\u0420\u042D\u041D\u0414 \u041D\u0415\u0418\u0417\u0412\u0415\u0421\u0422\u0415\u041D). \u0412\u041D\u0418\u041C\u0410\u041D\u0418\u0415!!! \u0422\u041E\u041B\u042C\u041A\u041E \u0414\u041B\u042F \u0418\u041D\u0424\u041E\u0420\u041C\u0410\u0426\u0418\u0418! \u0412\u041E\u0417\u041C\u041E\u0416\u041D\u042B \u041E\u0428\u0418\u0411\u041A\u0418!!!","warehouseName":5},{"nameOfBrand":"AJUSA","warehouseName":9},{"nameOfBrand":"AVERS","warehouseName":9},{"nameOfBrand":"CORTECO","warehouseName":9},{"nameOfBrand":"ELRING","warehouseName":9},{"nameOfBrand":"ELRING","warehouseName":9},{"nameOfBrand":"ELWIS ROYAL","warehouseName":9},{"nameOfBrand":"FEBI","warehouseName":9},{"nameOfBrand":"MASUMA","warehouseName":9},{"nameOfBrand":"PAYEN","warehouseName":9},{"nameOfBrand":"PORSCHE","warehouseName":9},{"nameOfBrand":"SWAG","warehouseName":9},{"nameOfBrand":"VAG","warehouseName":9},{"nameOfBrand":"VAG","warehouseName":9},{"nameOfBrand":"VAG","warehouseName":2},{"nameOfBrand":"PORSCHE","warehouseName":2},{"nameOfBrand":"AVERS","warehouseName":2},{"nameOfBrand":"OEM","warehouseName":2},{"nameOfBrand":"NONAME","warehouseName":2},{"nameOfBrand":"AVERS","warehouseName":4},{"nameOfBrand":"AVERS","warehouseName":4},{"nameOfBrand":"PORSCHE","warehouseName":4},{"nameOfBrand":"PORSCHE","warehouseName":4},{"nameOfBrand":"PORSCHE","warehouseName":4},{"nameOfBrand":"VAG","warehouseName":4},{"nameOfBrand":"VAG","warehouseName":4},{"nameOfBrand":"VAG","warehouseName":4},{"nameOfBrand":"AVERS","warehouseName":11},{"nameOfBrand":"BENTLEY","warehouseName":11},{"nameOfBrand":"PORSCHE","warehouseName":11},{"nameOfBrand":"VAG","warehouseName":11}]';
+        var allBrands = '[{"nameOfBrand":"AUTO-GUR","warehouseName":7},{"nameOfBrand":"AUTOMOTOR FRANCE","warehouseName":7},{"nameOfBrand":"AVERS","warehouseName":7},{"nameOfBrand":"BENTLEY","warehouseName":7},{"nameOfBrand":"BUGATTI","warehouseName":7},{"nameOfBrand":"ELRING","warehouseName":7},{"nameOfBrand":"FEBI","warehouseName":7},{"nameOfBrand":"GM","warehouseName":7},{"nameOfBrand":"HYUNDAI /KIA","warehouseName":7},{"nameOfBrand":"HYUNDAI/KIA","warehouseName":7},{"nameOfBrand":"INFINITI","warehouseName":7},{"nameOfBrand":"KIA/HYUNDAI","warehouseName":7},{"nameOfBrand":"LADA","warehouseName":7},{"nameOfBrand":"LAMBORGHINI","warehouseName":7},{"nameOfBrand":"MITSUBISHI","warehouseName":7},{"nameOfBrand":"MOBIS","warehouseName":7},{"nameOfBrand":"NISSAN","warehouseName":7},{"nameOfBrand":"OPEL","warehouseName":7},{"nameOfBrand":"PAYEN","warehouseName":7},{"nameOfBrand":"PORSCHE","warehouseName":7},{"nameOfBrand":"REINZ","warehouseName":7},{"nameOfBrand":"REMSA","warehouseName":7},{"nameOfBrand":"RTS","warehouseName":7},{"nameOfBrand":"VAG","warehouseName":7},{"nameOfBrand":"VAG REMAN","warehouseName":7},{"nameOfBrand":"VAZ","warehouseName":7},{"nameOfBrand":"VICTOR REINZ","warehouseName":7},{"nameOfBrand":"VICTOR REINZ TRUCK","warehouseName":7},{"nameOfBrand":"VOLVO","warehouseName":7},{"nameOfBrand":"VW GROUP","warehouseName":7},{"nameOfBrand":"\u0410\u0412\u0422\u041E\u0412\u0410\u0417","warehouseName":7},{"nameOfBrand":"\u0410\u0412\u0422\u041E\u0412\u0410\u0417\u0410\u0413\u0420\u0415\u0413\u0410\u0422","warehouseName":7},{"nameOfBrand":"\u0410\u0412\u0422\u041E\u0414\u0415\u0422\u0410\u041B\u042C","warehouseName":7},{"nameOfBrand":"VAG","warehouseName":6},{"nameOfBrand":"PORSCHE","warehouseName":6},{"nameOfBrand":"OPEL","warehouseName":6},{"nameOfBrand":"AVERS","warehouseName":6},{"nameOfBrand":"AUTOMOTOR FRANCE","warehouseName":6},{"nameOfBrand":"\u0420\u0424","warehouseName":6},{"nameOfBrand":"PRC","warehouseName":6},{"nameOfBrand":"AUTO-GUR","warehouseName":8},{"nameOfBrand":"AVERS","warehouseName":8},{"nameOfBrand":"BENTLEY","warehouseName":8},{"nameOfBrand":"PORSCHE","warehouseName":8},{"nameOfBrand":"VAG","warehouseName":8},{"nameOfBrand":"VAG","warehouseName":13},{"nameOfBrand":"NISSAN","warehouseName":13},{"nameOfBrand":"RENAULT","warehouseName":13},{"nameOfBrand":"FORD","warehouseName":13},{"nameOfBrand":"PORSCHE","warehouseName":13},{"nameOfBrand":"\u0410\u0412\u0422\u041E\u0414\u0415\u0422\u0410\u041B\u042C","warehouseName":13},{"nameOfBrand":"\u041E\u0415\u041C","warehouseName":13},{"nameOfBrand":"GRASS","warehouseName":13},{"nameOfBrand":"AVERS","warehouseName":13},{"nameOfBrand":"GENERAL MOTORS","warehouseName":13},{"nameOfBrand":"MAN","warehouseName":13},{"nameOfBrand":"FEBEST","warehouseName":13},{"nameOfBrand":"OEM","warehouseName":13},{"nameOfBrand":"VICTOR REINZ","warehouseName":13},{"nameOfBrand":"ELRING","warehouseName":13},{"nameOfBrand":"BENTLEY","warehouseName":13},{"nameOfBrand":"\u041A\u0410\u041C\u0410\u0417","warehouseName":13},{"nameOfBrand":"\u0420\u041E\u0421\u0421\u0418\u042F","warehouseName":13},{"nameOfBrand":"TRIALLI","warehouseName":13},{"nameOfBrand":"\u0410\u0412\u0422\u041E\u0412\u0410\u0417","warehouseName":13},{"nameOfBrand":"VAG","warehouseName":10},{"nameOfBrand":"FORD","warehouseName":10},{"nameOfBrand":"AVERS","warehouseName":10},{"nameOfBrand":"VAG","warehouseName":1},{"nameOfBrand":"PORSCHE","warehouseName":1},{"nameOfBrand":"AVERS","warehouseName":1},{"nameOfBrand":"O.E.M.","warehouseName":1},{"nameOfBrand":"NONAME","warehouseName":1},{"nameOfBrand":"AUDI/VOLKSWAGEN","warehouseName":5},{"nameOfBrand":"AUDI/VOLKSWAGEN","warehouseName":5},{"nameOfBrand":"AUDI/VOLKSWAGEN","warehouseName":5},{"nameOfBrand":"AUDI/VOLKSWAGEN","warehouseName":5},{"nameOfBrand":"AUDI/VOLKSWAGEN","warehouseName":5},{"nameOfBrand":"AUDI/VOLKSWAGEN","warehouseName":5},{"nameOfBrand":"\u0410\u041D\u0410\u041B\u041E\u0413\u0418 \u041F\u0420\u041E\u0427\u0418\u0415 (\u0411\u0420\u042D\u041D\u0414 \u041D\u0415\u0418\u0417\u0412\u0415\u0421\u0422\u0415\u041D). \u0412\u041D\u0418\u041C\u0410\u041D\u0418\u0415!!! \u0422\u041E\u041B\u042C\u041A\u041E \u0414\u041B\u042F \u0418\u041D\u0424\u041E\u0420\u041C\u0410\u0426\u0418\u0418! \u0412\u041E\u0417\u041C\u041E\u0416\u041D\u042B \u041E\u0428\u0418\u0411\u041A\u0418!!!","warehouseName":5},{"nameOfBrand":"AJUSA","warehouseName":9},{"nameOfBrand":"AVERS","warehouseName":9},{"nameOfBrand":"CORTECO","warehouseName":9},{"nameOfBrand":"ELRING","warehouseName":9},{"nameOfBrand":"ELRING","warehouseName":9},{"nameOfBrand":"ELWIS ROYAL","warehouseName":9},{"nameOfBrand":"FEBI","warehouseName":9},{"nameOfBrand":"MASUMA","warehouseName":9},{"nameOfBrand":"PAYEN","warehouseName":9},{"nameOfBrand":"PORSCHE","warehouseName":9},{"nameOfBrand":"SWAG","warehouseName":9},{"nameOfBrand":"VAG","warehouseName":9},{"nameOfBrand":"VAG","warehouseName":9},{"nameOfBrand":"VAG","warehouseName":9},{"nameOfBrand":"VAG","warehouseName":2},{"nameOfBrand":"PORSCHE","warehouseName":2},{"nameOfBrand":"AVERS","warehouseName":2},{"nameOfBrand":"OEM","warehouseName":2},{"nameOfBrand":"NONAME","warehouseName":2},{"nameOfBrand":"AVERS","warehouseName":4},{"nameOfBrand":"AVERS","warehouseName":4},{"nameOfBrand":"PORSCHE","warehouseName":4},{"nameOfBrand":"PORSCHE","warehouseName":4},{"nameOfBrand":"PORSCHE","warehouseName":4},{"nameOfBrand":"VAG","warehouseName":4},{"nameOfBrand":"VAG","warehouseName":4},{"nameOfBrand":"VAG","warehouseName":4},{"nameOfBrand":"AVERS","warehouseName":11},{"nameOfBrand":"BENTLEY","warehouseName":11},{"nameOfBrand":"PORSCHE","warehouseName":11},{"nameOfBrand":"VAG","warehouseName":11}]';
         var articul = '"n0138157"';
         var idClient = '"158"';
         data.append("allBrands", allBrands);
@@ -253,8 +231,8 @@
     }   
 </style>
 
-<div style="padding-top: 5px;">
-    <table id="searchItemsResult" class="table">
+<div>
+    <table id="searchItemsResult" class="table table-bordered">
         
         <thead>
         <tr>
@@ -274,54 +252,32 @@
                 <td>AUDI</td>
                 <td>N0138157</td>
                 <td>103</td>
-                <td>06.12.2022</td>
+                <td>07.12.2022</td>
                 <td>Mikado</td>
                 <td id="idItem">
-                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A5,%22WarehouseName%22%3A%22%D0%A1.-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3%22,%22Id%22%3A%22gaun0138157%22,%22Brand%22%3A%22Audi%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%22n0138157%22,%22NameOfPart%22%3A%22%D0%9A%D0%BE%D0%BB%D1%8C%D1%86%D0%BE%20%D1%83%D0%BF%D0%BB%D0%BE%D1%82%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5%20%D1%81%D0%BB%D0%B8%D0%B2%D0%BD%D0%BE%D0%B9%20%D0%BF%D1%80%D0%BE%D0%B1%D0%BA%D0%B8.%22,%22Quantity%22%3A%2210%22,%22DeliveryTime%22%3A%2206.12.2022%22,%22Price%22%3A76.07,%22OwnWarehouse%22%3Atrue,%22OriginalFlag%22%3A1,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A103.0,%22Percent%22%3A%22%D0%BD%2F%D0%B4%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3A%221%22,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A0,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn-addtocart"><i class="icon-cart-plus"></i></a>
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A5,%22WarehouseName%22%3A%22%D0%A1.-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3%22,%22Id%22%3A%22gaun0138157%22,%22Brand%22%3A%22Audi%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%22n0138157%22,%22NameOfPart%22%3A%22%D0%9A%D0%BE%D0%BB%D1%8C%D1%86%D0%BE%20%D1%83%D0%BF%D0%BB%D0%BE%D1%82%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5%20%D1%81%D0%BB%D0%B8%D0%B2%D0%BD%D0%BE%D0%B9%20%D0%BF%D1%80%D0%BE%D0%B1%D0%BA%D0%B8.%22,%22Quantity%22%3A%2210%22,%22DeliveryTime%22%3A%2207.12.2022%22,%22Price%22%3A76.07,%22OwnWarehouse%22%3Atrue,%22OriginalFlag%22%3A1,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A103.0,%22Percent%22%3A%22%D0%BD%2F%D0%B4%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3A%221%22,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A0,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn-addtocart"><i class="icon-cart-plus"></i></a>
                 </td>
             </tr>
             <tr class="row_searchResult">
                 <td>Прокладка сливной пробки / dichtring n0138157</td>
                 <td>VAG</td>
                 <td>N0138157</td>
-                <td>185</td>
-                <td>08.12.2022</td>
+                <td>123</td>
+                <td>09.12.2022</td>
                 <td>Berg</td>
                 <td id="idItem">
-                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A14,%22WarehouseName%22%3A%22AVTS%22,%22Id%22%3A%22420306%22,%22Brand%22%3A%22VAG%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%22N0138157%22,%22NameOfPart%22%3A%22%D0%9F%D0%A0%D0%9E%D0%9A%D0%9B%D0%90%D0%94%D0%9A%D0%90%20%D0%A1%D0%9B%D0%98%D0%92%D0%9D%D0%9E%D0%99%20%D0%9F%D0%A0%D0%9E%D0%91%D0%9A%D0%98%20%2F%20DICHTRING%20N0138157%22,%22Quantity%22%3A%2230%22,%22DeliveryTime%22%3A%2208.12.2022%22,%22Price%22%3A137.0,%22OwnWarehouse%22%3Afalse,%22OriginalFlag%22%3A1,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A185.0,%22Percent%22%3A%2286%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3Anull,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A110840259,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn-addtocart"><i class="icon-cart-plus"></i></a>
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A14,%22WarehouseName%22%3A%22NBZ%22,%22Id%22%3A%22420306%22,%22Brand%22%3A%22VAG%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%22N0138157%22,%22NameOfPart%22%3A%22%D0%9F%D0%A0%D0%9E%D0%9A%D0%9B%D0%90%D0%94%D0%9A%D0%90%20%D0%A1%D0%9B%D0%98%D0%92%D0%9D%D0%9E%D0%99%20%D0%9F%D0%A0%D0%9E%D0%91%D0%9A%D0%98%20%2F%20DICHTRING%20N0138157%22,%22Quantity%22%3A%221%22,%22DeliveryTime%22%3A%2209.12.2022%22,%22Price%22%3A90.5,%22OwnWarehouse%22%3Afalse,%22OriginalFlag%22%3A1,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A123.0,%22Percent%22%3A%2286%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3Anull,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A11136669,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn-addtocart"><i class="icon-cart-plus"></i></a>
                 </td>
             </tr>
             <tr class="row_searchResult">
                 <td>Прокладка сливной пробки / dichtring n0138157</td>
                 <td>VAG</td>
                 <td>N0138157</td>
-                <td>202</td>
+                <td>132</td>
                 <td>10.12.2022</td>
                 <td>Berg</td>
                 <td id="idItem">
-                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A14,%22WarehouseName%22%3A%22PGD%22,%22Id%22%3A%22420306%22,%22Brand%22%3A%22VAG%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%22N0138157%22,%22NameOfPart%22%3A%22%D0%9F%D0%A0%D0%9E%D0%9A%D0%9B%D0%90%D0%94%D0%9A%D0%90%20%D0%A1%D0%9B%D0%98%D0%92%D0%9D%D0%9E%D0%99%20%D0%9F%D0%A0%D0%9E%D0%91%D0%9A%D0%98%20%2F%20DICHTRING%20N0138157%22,%22Quantity%22%3A%2230%22,%22DeliveryTime%22%3A%2210.12.2022%22,%22Price%22%3A148.9,%22OwnWarehouse%22%3Afalse,%22OriginalFlag%22%3A1,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A202.0,%22Percent%22%3A%2246%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3Anull,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A70208745,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn-addtocart"><i class="icon-cart-plus"></i></a>
-                </td>
-            </tr>
-            <tr class="row_searchResult">
-                <td>Прокладка сливной пробки / dichtring n0138157</td>
-                <td>VAG</td>
-                <td>N0138157</td>
-                <td>216</td>
-                <td>09.12.2022</td>
-                <td>Berg</td>
-                <td id="idItem">
-                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A14,%22WarehouseName%22%3A%22%D0%90%D0%90%D0%90%22,%22Id%22%3A%22420306%22,%22Brand%22%3A%22VAG%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%22N0138157%22,%22NameOfPart%22%3A%22%D0%9F%D0%A0%D0%9E%D0%9A%D0%9B%D0%90%D0%94%D0%9A%D0%90%20%D0%A1%D0%9B%D0%98%D0%92%D0%9D%D0%9E%D0%99%20%D0%9F%D0%A0%D0%9E%D0%91%D0%9A%D0%98%20%2F%20DICHTRING%20N0138157%22,%22Quantity%22%3A%2250%22,%22DeliveryTime%22%3A%2209.12.2022%22,%22Price%22%3A160.0,%22OwnWarehouse%22%3Afalse,%22OriginalFlag%22%3A1,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A216.0,%22Percent%22%3A%2264%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3Anull,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A94203483,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn-addtocart"><i class="icon-cart-plus"></i></a>
-                </td>
-            </tr>
-            <tr class="row_searchResult">
-                <td>Прокладка сливной пробки / dichtring n0138157</td>
-                <td>VAG</td>
-                <td>N0138157</td>
-                <td>216</td>
-                <td>09.12.2022</td>
-                <td>Berg</td>
-                <td id="idItem">
-                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A14,%22WarehouseName%22%3A%22RTY%22,%22Id%22%3A%22420306%22,%22Brand%22%3A%22VAG%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%22N0138157%22,%22NameOfPart%22%3A%22%D0%9F%D0%A0%D0%9E%D0%9A%D0%9B%D0%90%D0%94%D0%9A%D0%90%20%D0%A1%D0%9B%D0%98%D0%92%D0%9D%D0%9E%D0%99%20%D0%9F%D0%A0%D0%9E%D0%91%D0%9A%D0%98%20%2F%20DICHTRING%20N0138157%22,%22Quantity%22%3A%2250%22,%22DeliveryTime%22%3A%2209.12.2022%22,%22Price%22%3A160.0,%22OwnWarehouse%22%3Afalse,%22OriginalFlag%22%3A1,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A216.0,%22Percent%22%3A%2289%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3Anull,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A100282785,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn-addtocart"><i class="icon-cart-plus"></i></a>
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A14,%22WarehouseName%22%3A%22PGD%22,%22Id%22%3A%22420306%22,%22Brand%22%3A%22VAG%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%22N0138157%22,%22NameOfPart%22%3A%22%D0%9F%D0%A0%D0%9E%D0%9A%D0%9B%D0%90%D0%94%D0%9A%D0%90%20%D0%A1%D0%9B%D0%98%D0%92%D0%9D%D0%9E%D0%99%20%D0%9F%D0%A0%D0%9E%D0%91%D0%9A%D0%98%20%2F%20DICHTRING%20N0138157%22,%22Quantity%22%3A%221%22,%22DeliveryTime%22%3A%2210.12.2022%22,%22Price%22%3A97.19,%22OwnWarehouse%22%3Afalse,%22OriginalFlag%22%3A1,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A132.0,%22Percent%22%3A%2246%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3Anull,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A70208745,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn-addtocart"><i class="icon-cart-plus"></i></a>
                 </td>
             </tr>
             <tr class="row_searchResult">
@@ -343,7 +299,40 @@
                 <td>09.12.2022</td>
                 <td>Berg</td>
                 <td id="idItem">
-                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A14,%22WarehouseName%22%3A%22HND%22,%22Id%22%3A%22420306%22,%22Brand%22%3A%22VAG%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%22N0138157%22,%22NameOfPart%22%3A%22%D0%9F%D0%A0%D0%9E%D0%9A%D0%9B%D0%90%D0%94%D0%9A%D0%90%20%D0%A1%D0%9B%D0%98%D0%92%D0%9D%D0%9E%D0%99%20%D0%9F%D0%A0%D0%9E%D0%91%D0%9A%D0%98%20%2F%20DICHTRING%20N0138157%22,%22Quantity%22%3A%224%22,%22DeliveryTime%22%3A%2209.12.2022%22,%22Price%22%3A169.0,%22OwnWarehouse%22%3Afalse,%22OriginalFlag%22%3A1,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A229.0,%22Percent%22%3A%2291%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3Anull,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A19008033,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn-addtocart"><i class="icon-cart-plus"></i></a>
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A14,%22WarehouseName%22%3A%22HND%22,%22Id%22%3A%22420306%22,%22Brand%22%3A%22VAG%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%22N0138157%22,%22NameOfPart%22%3A%22%D0%9F%D0%A0%D0%9E%D0%9A%D0%9B%D0%90%D0%94%D0%9A%D0%90%20%D0%A1%D0%9B%D0%98%D0%92%D0%9D%D0%9E%D0%99%20%D0%9F%D0%A0%D0%9E%D0%91%D0%9A%D0%98%20%2F%20DICHTRING%20N0138157%22,%22Quantity%22%3A%223%22,%22DeliveryTime%22%3A%2209.12.2022%22,%22Price%22%3A169.0,%22OwnWarehouse%22%3Afalse,%22OriginalFlag%22%3A1,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A229.0,%22Percent%22%3A%2291%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3Anull,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A19008033,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn-addtocart"><i class="icon-cart-plus"></i></a>
+                </td>
+            </tr>
+            <tr class="row_searchResult">
+                <td>Прокладка сливной пробки / dichtring n0138157</td>
+                <td>VAG</td>
+                <td>N0138157</td>
+                <td>234</td>
+                <td>09.12.2022</td>
+                <td>Berg</td>
+                <td id="idItem">
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A14,%22WarehouseName%22%3A%22%D0%90%D0%90%D0%90%22,%22Id%22%3A%22420306%22,%22Brand%22%3A%22VAG%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%22N0138157%22,%22NameOfPart%22%3A%22%D0%9F%D0%A0%D0%9E%D0%9A%D0%9B%D0%90%D0%94%D0%9A%D0%90%20%D0%A1%D0%9B%D0%98%D0%92%D0%9D%D0%9E%D0%99%20%D0%9F%D0%A0%D0%9E%D0%91%D0%9A%D0%98%20%2F%20DICHTRING%20N0138157%22,%22Quantity%22%3A%2250%22,%22DeliveryTime%22%3A%2209.12.2022%22,%22Price%22%3A173.0,%22OwnWarehouse%22%3Afalse,%22OriginalFlag%22%3A1,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A234.0,%22Percent%22%3A%2264%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3Anull,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A94203483,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn-addtocart"><i class="icon-cart-plus"></i></a>
+                </td>
+            </tr>
+            <tr class="row_searchResult">
+                <td>Прокладка сливной пробки / dichtring n0138157</td>
+                <td>VAG</td>
+                <td>N0138157</td>
+                <td>234</td>
+                <td>09.12.2022</td>
+                <td>Berg</td>
+                <td id="idItem">
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A14,%22WarehouseName%22%3A%22RTY%22,%22Id%22%3A%22420306%22,%22Brand%22%3A%22VAG%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%22N0138157%22,%22NameOfPart%22%3A%22%D0%9F%D0%A0%D0%9E%D0%9A%D0%9B%D0%90%D0%94%D0%9A%D0%90%20%D0%A1%D0%9B%D0%98%D0%92%D0%9D%D0%9E%D0%99%20%D0%9F%D0%A0%D0%9E%D0%91%D0%9A%D0%98%20%2F%20DICHTRING%20N0138157%22,%22Quantity%22%3A%2250%22,%22DeliveryTime%22%3A%2209.12.2022%22,%22Price%22%3A173.0,%22OwnWarehouse%22%3Afalse,%22OriginalFlag%22%3A1,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A234.0,%22Percent%22%3A%2289%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3Anull,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A100282785,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn-addtocart"><i class="icon-cart-plus"></i></a>
+                </td>
+            </tr>
+            <tr class="row_searchResult">
+                <td>Прокладка сливной пробки / dichtring n0138157</td>
+                <td>VAG</td>
+                <td>N0138157</td>
+                <td>237</td>
+                <td>08.12.2022</td>
+                <td>Berg</td>
+                <td id="idItem">
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A14,%22WarehouseName%22%3A%22UHG%22,%22Id%22%3A%22420306%22,%22Brand%22%3A%22VAG%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%22N0138157%22,%22NameOfPart%22%3A%22%D0%9F%D0%A0%D0%9E%D0%9A%D0%9B%D0%90%D0%94%D0%9A%D0%90%20%D0%A1%D0%9B%D0%98%D0%92%D0%9D%D0%9E%D0%99%20%D0%9F%D0%A0%D0%9E%D0%91%D0%9A%D0%98%20%2F%20DICHTRING%20N0138157%22,%22Quantity%22%3A%2216%22,%22DeliveryTime%22%3A%2208.12.2022%22,%22Price%22%3A175.08,%22OwnWarehouse%22%3Afalse,%22OriginalFlag%22%3A1,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A237.0,%22Percent%22%3A%2292%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3Anull,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A32921115,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn-addtocart"><i class="icon-cart-plus"></i></a>
                 </td>
             </tr>
             <tr class="row_searchResult">
@@ -394,11 +383,11 @@
                 <td>Прокладка сливной пробки / dichtring n0138157</td>
                 <td>VAG</td>
                 <td>N0138157</td>
-                <td>266</td>
+                <td>265</td>
                 <td>06.12.2022</td>
                 <td>Berg</td>
                 <td id="idItem">
-                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A14,%22WarehouseName%22%3A%22BMS%22,%22Id%22%3A%22420306%22,%22Brand%22%3A%22VAG%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%22N0138157%22,%22NameOfPart%22%3A%22%D0%9F%D0%A0%D0%9E%D0%9A%D0%9B%D0%90%D0%94%D0%9A%D0%90%20%D0%A1%D0%9B%D0%98%D0%92%D0%9D%D0%9E%D0%99%20%D0%9F%D0%A0%D0%9E%D0%91%D0%9A%D0%98%20%2F%20DICHTRING%20N0138157%22,%22Quantity%22%3A%224%22,%22DeliveryTime%22%3A%2206.12.2022%22,%22Price%22%3A196.75,%22OwnWarehouse%22%3Afalse,%22OriginalFlag%22%3A1,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A266.0,%22Percent%22%3A%2287%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3Anull,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A38497175,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn-addtocart"><i class="icon-cart-plus"></i></a>
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A14,%22WarehouseName%22%3A%22BMS%22,%22Id%22%3A%22420306%22,%22Brand%22%3A%22VAG%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%22N0138157%22,%22NameOfPart%22%3A%22%D0%9F%D0%A0%D0%9E%D0%9A%D0%9B%D0%90%D0%94%D0%9A%D0%90%20%D0%A1%D0%9B%D0%98%D0%92%D0%9D%D0%9E%D0%99%20%D0%9F%D0%A0%D0%9E%D0%91%D0%9A%D0%98%20%2F%20DICHTRING%20N0138157%22,%22Quantity%22%3A%224%22,%22DeliveryTime%22%3A%2206.12.2022%22,%22Price%22%3A196.0,%22OwnWarehouse%22%3Afalse,%22OriginalFlag%22%3A1,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A265.0,%22Percent%22%3A%2287%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3Anull,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A38497175,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn-addtocart"><i class="icon-cart-plus"></i></a>
                 </td>
             </tr>
             <tr class="row_searchResult">
@@ -406,10 +395,10 @@
                 <td>VAG</td>
                 <td>N0138157</td>
                 <td>267</td>
-                <td>16.12.2022</td>
+                <td>10.12.2022</td>
                 <td>Berg</td>
                 <td id="idItem">
-                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A14,%22WarehouseName%22%3A%22ACW%22,%22Id%22%3A%22420306%22,%22Brand%22%3A%22VAG%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%22N0138157%22,%22NameOfPart%22%3A%22%D0%9F%D0%A0%D0%9E%D0%9A%D0%9B%D0%90%D0%94%D0%9A%D0%90%20%D0%A1%D0%9B%D0%98%D0%92%D0%9D%D0%9E%D0%99%20%D0%9F%D0%A0%D0%9E%D0%91%D0%9A%D0%98%20%2F%20DICHTRING%20N0138157%22,%22Quantity%22%3A%2248%22,%22DeliveryTime%22%3A%2216.12.2022%22,%22Price%22%3A197.42,%22OwnWarehouse%22%3Afalse,%22OriginalFlag%22%3A1,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A267.0,%22Percent%22%3A%2261%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3Anull,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A29617743,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn-addtocart"><i class="icon-cart-plus"></i></a>
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A14,%22WarehouseName%22%3A%22ACW%22,%22Id%22%3A%22420306%22,%22Brand%22%3A%22VAG%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%22N0138157%22,%22NameOfPart%22%3A%22%D0%9F%D0%A0%D0%9E%D0%9A%D0%9B%D0%90%D0%94%D0%9A%D0%90%20%D0%A1%D0%9B%D0%98%D0%92%D0%9D%D0%9E%D0%99%20%D0%9F%D0%A0%D0%9E%D0%91%D0%9A%D0%98%20%2F%20DICHTRING%20N0138157%22,%22Quantity%22%3A%2248%22,%22DeliveryTime%22%3A%2210.12.2022%22,%22Price%22%3A197.42,%22OwnWarehouse%22%3Afalse,%22OriginalFlag%22%3A1,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A267.0,%22Percent%22%3A%2261%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3Anull,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A29617743,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn-addtocart"><i class="icon-cart-plus"></i></a>
                 </td>
             </tr>
             <tr class="row_searchResult">
@@ -438,11 +427,11 @@
                 <td>Прокладка сливной пробки / dichtring n0138157</td>
                 <td>VAG</td>
                 <td>N0138157</td>
-                <td>287</td>
-                <td>09.12.2022</td>
+                <td>286</td>
+                <td>10.12.2022</td>
                 <td>Berg</td>
                 <td id="idItem">
-                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A14,%22WarehouseName%22%3A%22RSB%22,%22Id%22%3A%22420306%22,%22Brand%22%3A%22VAG%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%22N0138157%22,%22NameOfPart%22%3A%22%D0%9F%D0%A0%D0%9E%D0%9A%D0%9B%D0%90%D0%94%D0%9A%D0%90%20%D0%A1%D0%9B%D0%98%D0%92%D0%9D%D0%9E%D0%99%20%D0%9F%D0%A0%D0%9E%D0%91%D0%9A%D0%98%20%2F%20DICHTRING%20N0138157%22,%22Quantity%22%3A%22200%22,%22DeliveryTime%22%3A%2209.12.2022%22,%22Price%22%3A212.13,%22OwnWarehouse%22%3Afalse,%22OriginalFlag%22%3A1,%22Kratnost%22%3A%2210%22,%22Sale_cena%22%3A287.0,%22Percent%22%3A%2290%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3Anull,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A179875638,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn-addtocart"><i class="icon-cart-plus"></i></a>
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A14,%22WarehouseName%22%3A%22RSB%22,%22Id%22%3A%22420306%22,%22Brand%22%3A%22VAG%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%22N0138157%22,%22NameOfPart%22%3A%22%D0%9F%D0%A0%D0%9E%D0%9A%D0%9B%D0%90%D0%94%D0%9A%D0%90%20%D0%A1%D0%9B%D0%98%D0%92%D0%9D%D0%9E%D0%99%20%D0%9F%D0%A0%D0%9E%D0%91%D0%9A%D0%98%20%2F%20DICHTRING%20N0138157%22,%22Quantity%22%3A%22200%22,%22DeliveryTime%22%3A%2210.12.2022%22,%22Price%22%3A211.42,%22OwnWarehouse%22%3Afalse,%22OriginalFlag%22%3A1,%22Kratnost%22%3A%2210%22,%22Sale_cena%22%3A286.0,%22Percent%22%3A%2290%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3Anull,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A179875638,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn-addtocart"><i class="icon-cart-plus"></i></a>
                 </td>
             </tr>
             <tr class="row_searchResult">
@@ -460,22 +449,11 @@
                 <td>Прокладка сливной пробки / dichtring n0138157</td>
                 <td>VAG</td>
                 <td>N0138157</td>
-                <td>321</td>
+                <td>323</td>
                 <td>09.12.2022</td>
                 <td>Berg</td>
                 <td id="idItem">
-                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A14,%22WarehouseName%22%3A%22GHK%22,%22Id%22%3A%22420306%22,%22Brand%22%3A%22VAG%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%22N0138157%22,%22NameOfPart%22%3A%22%D0%9F%D0%A0%D0%9E%D0%9A%D0%9B%D0%90%D0%94%D0%9A%D0%90%20%D0%A1%D0%9B%D0%98%D0%92%D0%9D%D0%9E%D0%99%20%D0%9F%D0%A0%D0%9E%D0%91%D0%9A%D0%98%20%2F%20DICHTRING%20N0138157%22,%22Quantity%22%3A%2211%22,%22DeliveryTime%22%3A%2209.12.2022%22,%22Price%22%3A237.32,%22OwnWarehouse%22%3Afalse,%22OriginalFlag%22%3A1,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A321.0,%22Percent%22%3A%2269%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3Anull,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A136510677,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn-addtocart"><i class="icon-cart-plus"></i></a>
-                </td>
-            </tr>
-            <tr class="row_searchResult">
-                <td>Прокладка сливной пробки / dichtring n0138157</td>
-                <td>VAG</td>
-                <td>N0138157</td>
-                <td>324</td>
-                <td>09.12.2022</td>
-                <td>Berg</td>
-                <td id="idItem">
-                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A14,%22WarehouseName%22%3A%22UTT%22,%22Id%22%3A%22420306%22,%22Brand%22%3A%22VAG%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%22N0138157%22,%22NameOfPart%22%3A%22%D0%9F%D0%A0%D0%9E%D0%9A%D0%9B%D0%90%D0%94%D0%9A%D0%90%20%D0%A1%D0%9B%D0%98%D0%92%D0%9D%D0%9E%D0%99%20%D0%9F%D0%A0%D0%9E%D0%91%D0%9A%D0%98%20%2F%20DICHTRING%20N0138157%22,%22Quantity%22%3A%2231%22,%22DeliveryTime%22%3A%2209.12.2022%22,%22Price%22%3A239.33,%22OwnWarehouse%22%3Afalse,%22OriginalFlag%22%3A1,%22Kratnost%22%3A%2210%22,%22Sale_cena%22%3A324.0,%22Percent%22%3A%2266%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3Anull,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A40543989,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn-addtocart"><i class="icon-cart-plus"></i></a>
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A14,%22WarehouseName%22%3A%22UTT%22,%22Id%22%3A%22420306%22,%22Brand%22%3A%22VAG%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%22N0138157%22,%22NameOfPart%22%3A%22%D0%9F%D0%A0%D0%9E%D0%9A%D0%9B%D0%90%D0%94%D0%9A%D0%90%20%D0%A1%D0%9B%D0%98%D0%92%D0%9D%D0%9E%D0%99%20%D0%9F%D0%A0%D0%9E%D0%91%D0%9A%D0%98%20%2F%20DICHTRING%20N0138157%22,%22Quantity%22%3A%2230%22,%22DeliveryTime%22%3A%2209.12.2022%22,%22Price%22%3A238.52,%22OwnWarehouse%22%3Afalse,%22OriginalFlag%22%3A1,%22Kratnost%22%3A%2210%22,%22Sale_cena%22%3A323.0,%22Percent%22%3A%2266%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3Anull,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A40543989,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn-addtocart"><i class="icon-cart-plus"></i></a>
                 </td>
             </tr>
             <tr class="row_searchResult">
@@ -498,17 +476,6 @@
                 <td>Berg</td>
                 <td id="idItem">
                     <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A14,%22WarehouseName%22%3A%22JFZ%22,%22Id%22%3A%22420306%22,%22Brand%22%3A%22VAG%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%22N0138157%22,%22NameOfPart%22%3A%22%D0%9F%D0%A0%D0%9E%D0%9A%D0%9B%D0%90%D0%94%D0%9A%D0%90%20%D0%A1%D0%9B%D0%98%D0%92%D0%9D%D0%9E%D0%99%20%D0%9F%D0%A0%D0%9E%D0%91%D0%9A%D0%98%20%2F%20DICHTRING%20N0138157%22,%22Quantity%22%3A%2220%22,%22DeliveryTime%22%3A%2209.12.2022%22,%22Price%22%3A241.2,%22OwnWarehouse%22%3Afalse,%22OriginalFlag%22%3A1,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A326.0,%22Percent%22%3A%2291%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3Anull,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A11325633,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn-addtocart"><i class="icon-cart-plus"></i></a>
-                </td>
-            </tr>
-            <tr class="row_searchResult">
-                <td>Прокладка сливной пробки / dichtring n0138157</td>
-                <td>VAG</td>
-                <td>N0138157</td>
-                <td>330</td>
-                <td>10.12.2022</td>
-                <td>Berg</td>
-                <td id="idItem">
-                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A14,%22WarehouseName%22%3A%22GGP%22,%22Id%22%3A%22420306%22,%22Brand%22%3A%22VAG%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%22N0138157%22,%22NameOfPart%22%3A%22%D0%9F%D0%A0%D0%9E%D0%9A%D0%9B%D0%90%D0%94%D0%9A%D0%90%20%D0%A1%D0%9B%D0%98%D0%92%D0%9D%D0%9E%D0%99%20%D0%9F%D0%A0%D0%9E%D0%91%D0%9A%D0%98%20%2F%20DICHTRING%20N0138157%22,%22Quantity%22%3A%2246%22,%22DeliveryTime%22%3A%2210.12.2022%22,%22Price%22%3A243.84,%22OwnWarehouse%22%3Afalse,%22OriginalFlag%22%3A1,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A330.0,%22Percent%22%3A%2278%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3Anull,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A5085317,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn-addtocart"><i class="icon-cart-plus"></i></a>
                 </td>
             </tr>
             <tr class="row_searchResult">
@@ -549,17 +516,6 @@
                 <td>VAG</td>
                 <td>N0138157</td>
                 <td>347</td>
-                <td>09.12.2022</td>
-                <td>Berg</td>
-                <td id="idItem">
-                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A14,%22WarehouseName%22%3A%22SRS%22,%22Id%22%3A%22420306%22,%22Brand%22%3A%22VAG%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%22N0138157%22,%22NameOfPart%22%3A%22%D0%9F%D0%A0%D0%9E%D0%9A%D0%9B%D0%90%D0%94%D0%9A%D0%90%20%D0%A1%D0%9B%D0%98%D0%92%D0%9D%D0%9E%D0%99%20%D0%9F%D0%A0%D0%9E%D0%91%D0%9A%D0%98%20%2F%20DICHTRING%20N0138157%22,%22Quantity%22%3A%221%22,%22DeliveryTime%22%3A%2209.12.2022%22,%22Price%22%3A256.4,%22OwnWarehouse%22%3Afalse,%22OriginalFlag%22%3A1,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A347.0,%22Percent%22%3A%2279%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3Anull,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A166267302,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn-addtocart"><i class="icon-cart-plus"></i></a>
-                </td>
-            </tr>
-            <tr class="row_searchResult">
-                <td>Прокладка сливной пробки / dichtring n0138157</td>
-                <td>VAG</td>
-                <td>N0138157</td>
-                <td>347</td>
                 <td>16.12.2022</td>
                 <td>Berg</td>
                 <td id="idItem">
@@ -592,22 +548,33 @@
                 <td>Прокладка сливной пробки / dichtring n0138157</td>
                 <td>VAG</td>
                 <td>N0138157</td>
-                <td>355</td>
-                <td>13.02.2023</td>
+                <td>362</td>
+                <td>10.12.2022</td>
                 <td>Berg</td>
                 <td id="idItem">
-                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A14,%22WarehouseName%22%3A%22%D0%AD%D0%BC%D0%B8%D1%80%D0%B0%D1%82%D1%8B-6%22,%22Id%22%3A%22420306%22,%22Brand%22%3A%22VAG%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%22N0138157%22,%22NameOfPart%22%3A%22%D0%9F%D0%A0%D0%9E%D0%9A%D0%9B%D0%90%D0%94%D0%9A%D0%90%20%D0%A1%D0%9B%D0%98%D0%92%D0%9D%D0%9E%D0%99%20%D0%9F%D0%A0%D0%9E%D0%91%D0%9A%D0%98%20%2F%20DICHTRING%20N0138157%22,%22Quantity%22%3A%222158%22,%22DeliveryTime%22%3A%2213.02.2023%22,%22Price%22%3A262.83,%22OwnWarehouse%22%3Afalse,%22OriginalFlag%22%3A1,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A355.0,%22Percent%22%3A%221%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3Anull,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A176091276,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn-addtocart"><i class="icon-cart-plus"></i></a>
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A14,%22WarehouseName%22%3A%22GGP%22,%22Id%22%3A%22420306%22,%22Brand%22%3A%22VAG%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%22N0138157%22,%22NameOfPart%22%3A%22%D0%9F%D0%A0%D0%9E%D0%9A%D0%9B%D0%90%D0%94%D0%9A%D0%90%20%D0%A1%D0%9B%D0%98%D0%92%D0%9D%D0%9E%D0%99%20%D0%9F%D0%A0%D0%9E%D0%91%D0%9A%D0%98%20%2F%20DICHTRING%20N0138157%22,%22Quantity%22%3A%2246%22,%22DeliveryTime%22%3A%2210.12.2022%22,%22Price%22%3A267.96,%22OwnWarehouse%22%3Afalse,%22OriginalFlag%22%3A1,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A362.0,%22Percent%22%3A%2278%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3Anull,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A5085317,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn-addtocart"><i class="icon-cart-plus"></i></a>
                 </td>
             </tr>
             <tr class="row_searchResult">
                 <td>Прокладка сливной пробки / dichtring n0138157</td>
                 <td>VAG</td>
                 <td>N0138157</td>
-                <td>375</td>
+                <td>376</td>
+                <td>08.12.2022</td>
+                <td>Berg</td>
+                <td id="idItem">
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A14,%22WarehouseName%22%3A%22AVTS%22,%22Id%22%3A%22420306%22,%22Brand%22%3A%22VAG%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%22N0138157%22,%22NameOfPart%22%3A%22%D0%9F%D0%A0%D0%9E%D0%9A%D0%9B%D0%90%D0%94%D0%9A%D0%90%20%D0%A1%D0%9B%D0%98%D0%92%D0%9D%D0%9E%D0%99%20%D0%9F%D0%A0%D0%9E%D0%91%D0%9A%D0%98%20%2F%20DICHTRING%20N0138157%22,%22Quantity%22%3A%2230%22,%22DeliveryTime%22%3A%2208.12.2022%22,%22Price%22%3A278.46,%22OwnWarehouse%22%3Afalse,%22OriginalFlag%22%3A1,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A376.0,%22Percent%22%3A%2286%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3Anull,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A110840259,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn-addtocart"><i class="icon-cart-plus"></i></a>
+                </td>
+            </tr>
+            <tr class="row_searchResult">
+                <td>Прокладка сливной пробки / dichtring n0138157</td>
+                <td>VAG</td>
+                <td>N0138157</td>
+                <td>378</td>
                 <td>13.12.2022</td>
                 <td>Berg</td>
                 <td id="idItem">
-                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A14,%22WarehouseName%22%3A%22AKR%22,%22Id%22%3A%22420306%22,%22Brand%22%3A%22VAG%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%22N0138157%22,%22NameOfPart%22%3A%22%D0%9F%D0%A0%D0%9E%D0%9A%D0%9B%D0%90%D0%94%D0%9A%D0%90%20%D0%A1%D0%9B%D0%98%D0%92%D0%9D%D0%9E%D0%99%20%D0%9F%D0%A0%D0%9E%D0%91%D0%9A%D0%98%20%2F%20DICHTRING%20N0138157%22,%22Quantity%22%3A%222%22,%22DeliveryTime%22%3A%2213.12.2022%22,%22Price%22%3A277.2,%22OwnWarehouse%22%3Afalse,%22OriginalFlag%22%3A1,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A375.0,%22Percent%22%3A%2270%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3Anull,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A146681517,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn-addtocart"><i class="icon-cart-plus"></i></a>
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A14,%22WarehouseName%22%3A%22AKR%22,%22Id%22%3A%22420306%22,%22Brand%22%3A%22VAG%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%22N0138157%22,%22NameOfPart%22%3A%22%D0%9F%D0%A0%D0%9E%D0%9A%D0%9B%D0%90%D0%94%D0%9A%D0%90%20%D0%A1%D0%9B%D0%98%D0%92%D0%9D%D0%9E%D0%99%20%D0%9F%D0%A0%D0%9E%D0%91%D0%9A%D0%98%20%2F%20DICHTRING%20N0138157%22,%22Quantity%22%3A%222%22,%22DeliveryTime%22%3A%2213.12.2022%22,%22Price%22%3A279.6,%22OwnWarehouse%22%3Afalse,%22OriginalFlag%22%3A1,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A378.0,%22Percent%22%3A%2270%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3Anull,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A146681517,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn-addtocart"><i class="icon-cart-plus"></i></a>
                 </td>
             </tr>
             <tr class="row_searchResult">
@@ -670,10 +637,10 @@
                 <td>PORSCHE</td>
                 <td>N0138157</td>
                 <td>510</td>
-                <td>16.12.2022</td>
+                <td>10.12.2022</td>
                 <td>Berg</td>
                 <td id="idItem">
-                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A14,%22WarehouseName%22%3A%22ACW%22,%22Id%22%3A%22175664491%22,%22Brand%22%3A%22PORSCHE%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%22N0138157%22,%22NameOfPart%22%3A%22%D0%9F%D1%80%D0%BE%D0%BA%D0%BB%D0%B0%D0%B4%D0%BA%D0%B0%20%D1%81%D0%BB%D0%B8%D0%B2%D0%BD%D0%BE%D0%B9%20%D0%BF%D1%80%D0%BE%D0%B1%D0%BA%D0%B8%20%20N0138157%22,%22Quantity%22%3A%22214%22,%22DeliveryTime%22%3A%2216.12.2022%22,%22Price%22%3A377.1,%22OwnWarehouse%22%3Afalse,%22OriginalFlag%22%3A1,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A510.0,%22Percent%22%3A%2261%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3Anull,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A29617743,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn-addtocart"><i class="icon-cart-plus"></i></a>
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A14,%22WarehouseName%22%3A%22ACW%22,%22Id%22%3A%22175664491%22,%22Brand%22%3A%22PORSCHE%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%22N0138157%22,%22NameOfPart%22%3A%22%D0%9F%D1%80%D0%BE%D0%BA%D0%BB%D0%B0%D0%B4%D0%BA%D0%B0%20%D1%81%D0%BB%D0%B8%D0%B2%D0%BD%D0%BE%D0%B9%20%D0%BF%D1%80%D0%BE%D0%B1%D0%BA%D0%B8%20%20N0138157%22,%22Quantity%22%3A%22214%22,%22DeliveryTime%22%3A%2210.12.2022%22,%22Price%22%3A377.1,%22OwnWarehouse%22%3Afalse,%22OriginalFlag%22%3A1,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A510.0,%22Percent%22%3A%2261%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3Anull,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A29617743,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn-addtocart"><i class="icon-cart-plus"></i></a>
                 </td>
             </tr>
             <tr class="row_searchResult">
@@ -685,6 +652,17 @@
                 <td>Berg</td>
                 <td id="idItem">
                     <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A14,%22WarehouseName%22%3A%22AVL%22,%22Id%22%3A%22420306%22,%22Brand%22%3A%22VAG%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%22N0138157%22,%22NameOfPart%22%3A%22%D0%9F%D0%A0%D0%9E%D0%9A%D0%9B%D0%90%D0%94%D0%9A%D0%90%20%D0%A1%D0%9B%D0%98%D0%92%D0%9D%D0%9E%D0%99%20%D0%9F%D0%A0%D0%9E%D0%91%D0%9A%D0%98%20%2F%20DICHTRING%20N0138157%22,%22Quantity%22%3A%221%22,%22DeliveryTime%22%3A%2210.12.2022%22,%22Price%22%3A396.26,%22OwnWarehouse%22%3Afalse,%22OriginalFlag%22%3A1,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A535.0,%22Percent%22%3A%2261%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3Anull,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A156486321,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn-addtocart"><i class="icon-cart-plus"></i></a>
+                </td>
+            </tr>
+            <tr class="row_searchResult">
+                <td>Прокладка сливной пробки / dichtring n0138157</td>
+                <td>VAG</td>
+                <td>N0138157</td>
+                <td>555</td>
+                <td>09.12.2022</td>
+                <td>Berg</td>
+                <td id="idItem">
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A14,%22WarehouseName%22%3A%22GHK%22,%22Id%22%3A%22420306%22,%22Brand%22%3A%22VAG%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%22N0138157%22,%22NameOfPart%22%3A%22%D0%9F%D0%A0%D0%9E%D0%9A%D0%9B%D0%90%D0%94%D0%9A%D0%90%20%D0%A1%D0%9B%D0%98%D0%92%D0%9D%D0%9E%D0%99%20%D0%9F%D0%A0%D0%9E%D0%91%D0%9A%D0%98%20%2F%20DICHTRING%20N0138157%22,%22Quantity%22%3A%221%22,%22DeliveryTime%22%3A%2209.12.2022%22,%22Price%22%3A410.4,%22OwnWarehouse%22%3Afalse,%22OriginalFlag%22%3A1,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A555.0,%22Percent%22%3A%2269%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3Anull,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A136510677,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn-addtocart"><i class="icon-cart-plus"></i></a>
                 </td>
             </tr>
             <tr class="row_searchResult">
@@ -758,10 +736,10 @@
                 <td>SASIC</td>
                 <td>3130270</td>
                 <td>11</td>
-                <td>03.12.2022</td>
+                <td>05.12.2022</td>
                 <td>Mikado</td>
                 <td id="idItem">
-                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A5,%22WarehouseName%22%3A%22%D0%90%D0%BD%D0%B0%D0%BF%D0%B0%22,%22Id%22%3A%22xsas-3130270%22,%22Brand%22%3A%22SASIC%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%223130270%22,%22NameOfPart%22%3A%22%D0%9A%D0%BE%D0%BB%D1%8C%D1%86%D0%BE%20%D1%83%D0%BF%D0%BB%D0%BE%D1%82%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5%20Citroen,%20Peugeot.%22,%22Quantity%22%3A%2210%22,%22DeliveryTime%22%3A%2203.12.2022%22,%22Price%22%3A8.0,%22OwnWarehouse%22%3Atrue,%22OriginalFlag%22%3A0,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A11.0,%22Percent%22%3A%22%D0%BD%2F%D0%B4%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3A%22223%22,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A0,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn-addtocart"><i class="icon-cart-plus"></i></a>
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A5,%22WarehouseName%22%3A%22%D0%90%D0%BD%D0%B0%D0%BF%D0%B0%22,%22Id%22%3A%22xsas-3130270%22,%22Brand%22%3A%22SASIC%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%223130270%22,%22NameOfPart%22%3A%22%D0%9A%D0%BE%D0%BB%D1%8C%D1%86%D0%BE%20%D1%83%D0%BF%D0%BB%D0%BE%D1%82%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5%20Citroen,%20Peugeot.%22,%22Quantity%22%3A%2210%22,%22DeliveryTime%22%3A%2205.12.2022%22,%22Price%22%3A8.0,%22OwnWarehouse%22%3Atrue,%22OriginalFlag%22%3A0,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A11.0,%22Percent%22%3A%22%D0%BD%2F%D0%B4%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3A%22223%22,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A0,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn-addtocart"><i class="icon-cart-plus"></i></a>
                 </td>
             </tr>
             <tr class="row_searchResult">
@@ -769,10 +747,10 @@
                 <td>SASIC</td>
                 <td>3130270</td>
                 <td>11</td>
-                <td>03.12.2022</td>
+                <td>05.12.2022</td>
                 <td>Mikado</td>
                 <td id="idItem">
-                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A5,%22WarehouseName%22%3A%22%D0%9D%D0%BE%D0%B2%D0%BE%D1%80%D0%BE%D1%81%D1%81%D0%B8%D0%B9%D1%81%D0%BA%22,%22Id%22%3A%22xsas-3130270%22,%22Brand%22%3A%22SASIC%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%223130270%22,%22NameOfPart%22%3A%22%D0%9A%D0%BE%D0%BB%D1%8C%D1%86%D0%BE%20%D1%83%D0%BF%D0%BB%D0%BE%D1%82%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5%20Citroen,%20Peugeot.%22,%22Quantity%22%3A%2210%22,%22DeliveryTime%22%3A%2203.12.2022%22,%22Price%22%3A8.0,%22OwnWarehouse%22%3Atrue,%22OriginalFlag%22%3A0,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A11.0,%22Percent%22%3A%22%D0%BD%2F%D0%B4%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3A%22123%22,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A0,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn-addtocart"><i class="icon-cart-plus"></i></a>
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A5,%22WarehouseName%22%3A%22%D0%9D%D0%BE%D0%B2%D0%BE%D1%80%D0%BE%D1%81%D1%81%D0%B8%D0%B9%D1%81%D0%BA%22,%22Id%22%3A%22xsas-3130270%22,%22Brand%22%3A%22SASIC%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%223130270%22,%22NameOfPart%22%3A%22%D0%9A%D0%BE%D0%BB%D1%8C%D1%86%D0%BE%20%D1%83%D0%BF%D0%BB%D0%BE%D1%82%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5%20Citroen,%20Peugeot.%22,%22Quantity%22%3A%2210%22,%22DeliveryTime%22%3A%2205.12.2022%22,%22Price%22%3A8.0,%22OwnWarehouse%22%3Atrue,%22OriginalFlag%22%3A0,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A11.0,%22Percent%22%3A%22%D0%BD%2F%D0%B4%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3A%22123%22,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A0,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn-addtocart"><i class="icon-cart-plus"></i></a>
                 </td>
             </tr>
             <tr class="row_searchResult">
@@ -780,10 +758,10 @@
                 <td>SASIC</td>
                 <td>3130270</td>
                 <td>11</td>
-                <td>03.12.2022</td>
+                <td>05.12.2022</td>
                 <td>Mikado</td>
                 <td id="idItem">
-                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A5,%22WarehouseName%22%3A%22%D0%9A%D1%80%D0%B0%D1%81%D0%BD%D0%BE%D0%B4%D0%B0%D1%80%22,%22Id%22%3A%22xsas-3130270%22,%22Brand%22%3A%22SASIC%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%223130270%22,%22NameOfPart%22%3A%22%D0%9A%D0%BE%D0%BB%D1%8C%D1%86%D0%BE%20%D1%83%D0%BF%D0%BB%D0%BE%D1%82%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5%20Citroen,%20Peugeot.%22,%22Quantity%22%3A%226%22,%22DeliveryTime%22%3A%2203.12.2022%22,%22Price%22%3A8.0,%22OwnWarehouse%22%3Atrue,%22OriginalFlag%22%3A0,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A11.0,%22Percent%22%3A%22%D0%BD%2F%D0%B4%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3A%2223%22,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A0,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn-addtocart"><i class="icon-cart-plus"></i></a>
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A5,%22WarehouseName%22%3A%22%D0%9A%D1%80%D0%B0%D1%81%D0%BD%D0%BE%D0%B4%D0%B0%D1%80%22,%22Id%22%3A%22xsas-3130270%22,%22Brand%22%3A%22SASIC%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%223130270%22,%22NameOfPart%22%3A%22%D0%9A%D0%BE%D0%BB%D1%8C%D1%86%D0%BE%20%D1%83%D0%BF%D0%BB%D0%BE%D1%82%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5%20Citroen,%20Peugeot.%22,%22Quantity%22%3A%223%22,%22DeliveryTime%22%3A%2205.12.2022%22,%22Price%22%3A8.0,%22OwnWarehouse%22%3Atrue,%22OriginalFlag%22%3A0,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A11.0,%22Percent%22%3A%22%D0%BD%2F%D0%B4%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3A%2223%22,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A0,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn-addtocart"><i class="icon-cart-plus"></i></a>
                 </td>
             </tr>
             <tr class="row_searchResult">
@@ -802,54 +780,10 @@
                 <td>SASIC</td>
                 <td>3130270</td>
                 <td>11</td>
-                <td>05.12.2022</td>
+                <td>06.12.2022</td>
                 <td>Mikado</td>
                 <td id="idItem">
-                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A5,%22WarehouseName%22%3A%22%D0%92%D0%BE%D0%BB%D0%B3%D0%BE%D0%B3%D1%80%D0%B0%D0%B4%22,%22Id%22%3A%22xsas-3130270%22,%22Brand%22%3A%22SASIC%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%223130270%22,%22NameOfPart%22%3A%22%D0%9A%D0%BE%D0%BB%D1%8C%D1%86%D0%BE%20%D1%83%D0%BF%D0%BB%D0%BE%D1%82%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5%20Citroen,%20Peugeot.%22,%22Quantity%22%3A%2210%22,%22DeliveryTime%22%3A%2205.12.2022%22,%22Price%22%3A8.0,%22OwnWarehouse%22%3Atrue,%22OriginalFlag%22%3A0,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A11.0,%22Percent%22%3A%22%D0%BD%2F%D0%B4%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3A%2234%22,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A0,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn-addtocart"><i class="icon-cart-plus"></i></a>
-                </td>
-            </tr>
-            <tr class="row_searchResult">
-                <td>Кольцо уплотнительное citroen, peugeot.</td>
-                <td>SASIC</td>
-                <td>3130270</td>
-                <td>11</td>
-                <td>05.12.2022</td>
-                <td>Mikado</td>
-                <td id="idItem">
-                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A5,%22WarehouseName%22%3A%22%D0%9F%D1%8F%D1%82%D0%B8%D0%B3%D0%BE%D1%80%D1%81%D0%BA%22,%22Id%22%3A%22xsas-3130270%22,%22Brand%22%3A%22SASIC%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%223130270%22,%22NameOfPart%22%3A%22%D0%9A%D0%BE%D0%BB%D1%8C%D1%86%D0%BE%20%D1%83%D0%BF%D0%BB%D0%BE%D1%82%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5%20Citroen,%20Peugeot.%22,%22Quantity%22%3A%227%22,%22DeliveryTime%22%3A%2205.12.2022%22,%22Price%22%3A8.0,%22OwnWarehouse%22%3Atrue,%22OriginalFlag%22%3A0,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A11.0,%22Percent%22%3A%22%D0%BD%2F%D0%B4%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3A%2226%22,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A0,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn-addtocart"><i class="icon-cart-plus"></i></a>
-                </td>
-            </tr>
-            <tr class="row_searchResult">
-                <td>Кольцо уплотнительное citroen, peugeot.</td>
-                <td>SASIC</td>
-                <td>3130270</td>
-                <td>11</td>
-                <td>05.12.2022</td>
-                <td>Mikado</td>
-                <td id="idItem">
-                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A5,%22WarehouseName%22%3A%22%D0%A1%D1%82%D0%B0%D0%B2%D1%80%D0%BE%D0%BF%D0%BE%D0%BB%D1%8C%22,%22Id%22%3A%22xsas-3130270%22,%22Brand%22%3A%22SASIC%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%223130270%22,%22NameOfPart%22%3A%22%D0%9A%D0%BE%D0%BB%D1%8C%D1%86%D0%BE%20%D1%83%D0%BF%D0%BB%D0%BE%D1%82%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5%20Citroen,%20Peugeot.%22,%22Quantity%22%3A%2210%22,%22DeliveryTime%22%3A%2205.12.2022%22,%22Price%22%3A8.0,%22OwnWarehouse%22%3Atrue,%22OriginalFlag%22%3A0,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A11.0,%22Percent%22%3A%22%D0%BD%2F%D0%B4%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3A%22126%22,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A0,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn-addtocart"><i class="icon-cart-plus"></i></a>
-                </td>
-            </tr>
-            <tr class="row_searchResult">
-                <td>Кольцо уплотнительное citroen, peugeot.</td>
-                <td>SASIC</td>
-                <td>3130270</td>
-                <td>11</td>
-                <td>05.12.2022</td>
-                <td>Mikado</td>
-                <td id="idItem">
-                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A5,%22WarehouseName%22%3A%22%D0%A1%D0%B0%D1%80%D0%B0%D1%82%D0%BE%D0%B2%22,%22Id%22%3A%22xsas-3130270%22,%22Brand%22%3A%22SASIC%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%223130270%22,%22NameOfPart%22%3A%22%D0%9A%D0%BE%D0%BB%D1%8C%D1%86%D0%BE%20%D1%83%D0%BF%D0%BB%D0%BE%D1%82%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5%20Citroen,%20Peugeot.%22,%22Quantity%22%3A%2210%22,%22DeliveryTime%22%3A%2205.12.2022%22,%22Price%22%3A8.0,%22OwnWarehouse%22%3Atrue,%22OriginalFlag%22%3A0,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A11.0,%22Percent%22%3A%22%D0%BD%2F%D0%B4%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3A%2264%22,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A0,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn-addtocart"><i class="icon-cart-plus"></i></a>
-                </td>
-            </tr>
-            <tr class="row_searchResult">
-                <td>Кольцо уплотнительное citroen, peugeot.</td>
-                <td>SASIC</td>
-                <td>3130270</td>
-                <td>11</td>
-                <td>05.12.2022</td>
-                <td>Mikado</td>
-                <td id="idItem">
-                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A5,%22WarehouseName%22%3A%22%D0%A1%D0%B0%D0%BC%D0%B0%D1%80%D0%B0%22,%22Id%22%3A%22xsas-3130270%22,%22Brand%22%3A%22SASIC%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%223130270%22,%22NameOfPart%22%3A%22%D0%9A%D0%BE%D0%BB%D1%8C%D1%86%D0%BE%20%D1%83%D0%BF%D0%BB%D0%BE%D1%82%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5%20Citroen,%20Peugeot.%22,%22Quantity%22%3A%2210%22,%22DeliveryTime%22%3A%2205.12.2022%22,%22Price%22%3A8.0,%22OwnWarehouse%22%3Atrue,%22OriginalFlag%22%3A0,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A11.0,%22Percent%22%3A%22%D0%BD%2F%D0%B4%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3A%2263%22,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A0,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn-addtocart"><i class="icon-cart-plus"></i></a>
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A5,%22WarehouseName%22%3A%22%D0%92%D0%BE%D0%BB%D0%B3%D0%BE%D0%B3%D1%80%D0%B0%D0%B4%22,%22Id%22%3A%22xsas-3130270%22,%22Brand%22%3A%22SASIC%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%223130270%22,%22NameOfPart%22%3A%22%D0%9A%D0%BE%D0%BB%D1%8C%D1%86%D0%BE%20%D1%83%D0%BF%D0%BB%D0%BE%D1%82%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5%20Citroen,%20Peugeot.%22,%22Quantity%22%3A%2210%22,%22DeliveryTime%22%3A%2206.12.2022%22,%22Price%22%3A8.0,%22OwnWarehouse%22%3Atrue,%22OriginalFlag%22%3A0,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A11.0,%22Percent%22%3A%22%D0%BD%2F%D0%B4%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3A%2234%22,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A0,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn-addtocart"><i class="icon-cart-plus"></i></a>
                 </td>
             </tr>
             <tr class="row_searchResult">
@@ -860,7 +794,40 @@
                 <td>06.12.2022</td>
                 <td>Mikado</td>
                 <td id="idItem">
-                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A5,%22WarehouseName%22%3A%22%D0%90%D1%81%D1%82%D1%80%D0%B0%D1%85%D0%B0%D0%BD%D1%8C%22,%22Id%22%3A%22xsas-3130270%22,%22Brand%22%3A%22SASIC%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%223130270%22,%22NameOfPart%22%3A%22%D0%9A%D0%BE%D0%BB%D1%8C%D1%86%D0%BE%20%D1%83%D0%BF%D0%BB%D0%BE%D1%82%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5%20Citroen,%20Peugeot.%22,%22Quantity%22%3A%226%22,%22DeliveryTime%22%3A%2206.12.2022%22,%22Price%22%3A8.0,%22OwnWarehouse%22%3Atrue,%22OriginalFlag%22%3A0,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A11.0,%22Percent%22%3A%22%D0%BD%2F%D0%B4%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3A%2230%22,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A0,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn-addtocart"><i class="icon-cart-plus"></i></a>
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A5,%22WarehouseName%22%3A%22%D0%9F%D1%8F%D1%82%D0%B8%D0%B3%D0%BE%D1%80%D1%81%D0%BA%22,%22Id%22%3A%22xsas-3130270%22,%22Brand%22%3A%22SASIC%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%223130270%22,%22NameOfPart%22%3A%22%D0%9A%D0%BE%D0%BB%D1%8C%D1%86%D0%BE%20%D1%83%D0%BF%D0%BB%D0%BE%D1%82%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5%20Citroen,%20Peugeot.%22,%22Quantity%22%3A%227%22,%22DeliveryTime%22%3A%2206.12.2022%22,%22Price%22%3A8.0,%22OwnWarehouse%22%3Atrue,%22OriginalFlag%22%3A0,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A11.0,%22Percent%22%3A%22%D0%BD%2F%D0%B4%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3A%2226%22,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A0,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn-addtocart"><i class="icon-cart-plus"></i></a>
+                </td>
+            </tr>
+            <tr class="row_searchResult">
+                <td>Кольцо уплотнительное citroen, peugeot.</td>
+                <td>SASIC</td>
+                <td>3130270</td>
+                <td>11</td>
+                <td>06.12.2022</td>
+                <td>Mikado</td>
+                <td id="idItem">
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A5,%22WarehouseName%22%3A%22%D0%A1%D1%82%D0%B0%D0%B2%D1%80%D0%BE%D0%BF%D0%BE%D0%BB%D1%8C%22,%22Id%22%3A%22xsas-3130270%22,%22Brand%22%3A%22SASIC%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%223130270%22,%22NameOfPart%22%3A%22%D0%9A%D0%BE%D0%BB%D1%8C%D1%86%D0%BE%20%D1%83%D0%BF%D0%BB%D0%BE%D1%82%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5%20Citroen,%20Peugeot.%22,%22Quantity%22%3A%2210%22,%22DeliveryTime%22%3A%2206.12.2022%22,%22Price%22%3A8.0,%22OwnWarehouse%22%3Atrue,%22OriginalFlag%22%3A0,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A11.0,%22Percent%22%3A%22%D0%BD%2F%D0%B4%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3A%22126%22,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A0,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn-addtocart"><i class="icon-cart-plus"></i></a>
+                </td>
+            </tr>
+            <tr class="row_searchResult">
+                <td>Кольцо уплотнительное citroen, peugeot.</td>
+                <td>SASIC</td>
+                <td>3130270</td>
+                <td>11</td>
+                <td>06.12.2022</td>
+                <td>Mikado</td>
+                <td id="idItem">
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A5,%22WarehouseName%22%3A%22%D0%A1%D0%B0%D1%80%D0%B0%D1%82%D0%BE%D0%B2%22,%22Id%22%3A%22xsas-3130270%22,%22Brand%22%3A%22SASIC%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%223130270%22,%22NameOfPart%22%3A%22%D0%9A%D0%BE%D0%BB%D1%8C%D1%86%D0%BE%20%D1%83%D0%BF%D0%BB%D0%BE%D1%82%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5%20Citroen,%20Peugeot.%22,%22Quantity%22%3A%2210%22,%22DeliveryTime%22%3A%2206.12.2022%22,%22Price%22%3A8.0,%22OwnWarehouse%22%3Atrue,%22OriginalFlag%22%3A0,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A11.0,%22Percent%22%3A%22%D0%BD%2F%D0%B4%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3A%2264%22,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A0,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn-addtocart"><i class="icon-cart-plus"></i></a>
+                </td>
+            </tr>
+            <tr class="row_searchResult">
+                <td>Кольцо уплотнительное citroen, peugeot.</td>
+                <td>SASIC</td>
+                <td>3130270</td>
+                <td>11</td>
+                <td>06.12.2022</td>
+                <td>Mikado</td>
+                <td id="idItem">
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A5,%22WarehouseName%22%3A%22%D0%A1%D0%B0%D0%BC%D0%B0%D1%80%D0%B0%22,%22Id%22%3A%22xsas-3130270%22,%22Brand%22%3A%22SASIC%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%223130270%22,%22NameOfPart%22%3A%22%D0%9A%D0%BE%D0%BB%D1%8C%D1%86%D0%BE%20%D1%83%D0%BF%D0%BB%D0%BE%D1%82%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5%20Citroen,%20Peugeot.%22,%22Quantity%22%3A%2210%22,%22DeliveryTime%22%3A%2206.12.2022%22,%22Price%22%3A8.0,%22OwnWarehouse%22%3Atrue,%22OriginalFlag%22%3A0,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A11.0,%22Percent%22%3A%22%D0%BD%2F%D0%B4%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3A%2263%22,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A0,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn-addtocart"><i class="icon-cart-plus"></i></a>
                 </td>
             </tr>
             <tr class="row_searchResult">
@@ -871,7 +838,7 @@
                 <td>07.12.2022</td>
                 <td>Mikado</td>
                 <td id="idItem">
-                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A5,%22WarehouseName%22%3A%22%D0%9A%D0%A0%D0%A0-2%22,%22Id%22%3A%22xsas-3130270%22,%22Brand%22%3A%22SASIC%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%223130270%22,%22NameOfPart%22%3A%22%D0%9A%D0%BE%D0%BB%D1%8C%D1%86%D0%BE%20%D1%83%D0%BF%D0%BB%D0%BE%D1%82%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5%20Citroen,%20Peugeot.%22,%22Quantity%22%3A%2210%22,%22DeliveryTime%22%3A%2207.12.2022%22,%22Price%22%3A8.0,%22OwnWarehouse%22%3Atrue,%22OriginalFlag%22%3A0,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A11.0,%22Percent%22%3A%22%D0%BD%2F%D0%B4%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3A%2282%22,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A0,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn-addtocart"><i class="icon-cart-plus"></i></a>
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A5,%22WarehouseName%22%3A%22%D0%90%D1%81%D1%82%D1%80%D0%B0%D1%85%D0%B0%D0%BD%D1%8C%22,%22Id%22%3A%22xsas-3130270%22,%22Brand%22%3A%22SASIC%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%223130270%22,%22NameOfPart%22%3A%22%D0%9A%D0%BE%D0%BB%D1%8C%D1%86%D0%BE%20%D1%83%D0%BF%D0%BB%D0%BE%D1%82%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5%20Citroen,%20Peugeot.%22,%22Quantity%22%3A%226%22,%22DeliveryTime%22%3A%2207.12.2022%22,%22Price%22%3A8.0,%22OwnWarehouse%22%3Atrue,%22OriginalFlag%22%3A0,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A11.0,%22Percent%22%3A%22%D0%BD%2F%D0%B4%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3A%2230%22,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A0,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn-addtocart"><i class="icon-cart-plus"></i></a>
                 </td>
             </tr>
             <tr class="row_searchResult">
@@ -882,7 +849,7 @@
                 <td>08.12.2022</td>
                 <td>Mikado</td>
                 <td id="idItem">
-                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A5,%22WarehouseName%22%3A%22%D0%9A%D0%A0%D0%A0-3%22,%22Id%22%3A%22xsas-3130270%22,%22Brand%22%3A%22SASIC%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%223130270%22,%22NameOfPart%22%3A%22%D0%9A%D0%BE%D0%BB%D1%8C%D1%86%D0%BE%20%D1%83%D0%BF%D0%BB%D0%BE%D1%82%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5%20Citroen,%20Peugeot.%22,%22Quantity%22%3A%2210%22,%22DeliveryTime%22%3A%2208.12.2022%22,%22Price%22%3A8.0,%22OwnWarehouse%22%3Atrue,%22OriginalFlag%22%3A0,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A11.0,%22Percent%22%3A%22%D0%BD%2F%D0%B4%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3A%2292%22,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A0,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn-addtocart"><i class="icon-cart-plus"></i></a>
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A5,%22WarehouseName%22%3A%22%D0%9A%D0%A0%D0%A0-2%22,%22Id%22%3A%22xsas-3130270%22,%22Brand%22%3A%22SASIC%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%223130270%22,%22NameOfPart%22%3A%22%D0%9A%D0%BE%D0%BB%D1%8C%D1%86%D0%BE%20%D1%83%D0%BF%D0%BB%D0%BE%D1%82%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5%20Citroen,%20Peugeot.%22,%22Quantity%22%3A%2210%22,%22DeliveryTime%22%3A%2208.12.2022%22,%22Price%22%3A8.0,%22OwnWarehouse%22%3Atrue,%22OriginalFlag%22%3A0,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A11.0,%22Percent%22%3A%22%D0%BD%2F%D0%B4%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3A%2282%22,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A0,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn-addtocart"><i class="icon-cart-plus"></i></a>
                 </td>
             </tr>
             <tr class="row_searchResult">
@@ -890,10 +857,21 @@
                 <td>SASIC</td>
                 <td>3130270</td>
                 <td>11</td>
-                <td>08.12.2022</td>
+                <td>09.12.2022</td>
                 <td>Mikado</td>
                 <td id="idItem">
-                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A5,%22WarehouseName%22%3A%22%D0%9A%D0%A0%D0%A0-4%D1%84%22,%22Id%22%3A%22xsas-3130270%22,%22Brand%22%3A%22SASIC%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%223130270%22,%22NameOfPart%22%3A%22%D0%9A%D0%BE%D0%BB%D1%8C%D1%86%D0%BE%20%D1%83%D0%BF%D0%BB%D0%BE%D1%82%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5%20Citroen,%20Peugeot.%22,%22Quantity%22%3A%2210%22,%22DeliveryTime%22%3A%2208.12.2022%22,%22Price%22%3A8.0,%22OwnWarehouse%22%3Atrue,%22OriginalFlag%22%3A0,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A11.0,%22Percent%22%3A%22%D0%BD%2F%D0%B4%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3A%22182%22,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A0,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn-addtocart"><i class="icon-cart-plus"></i></a>
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A5,%22WarehouseName%22%3A%22%D0%9A%D0%A0%D0%A0-3%22,%22Id%22%3A%22xsas-3130270%22,%22Brand%22%3A%22SASIC%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%223130270%22,%22NameOfPart%22%3A%22%D0%9A%D0%BE%D0%BB%D1%8C%D1%86%D0%BE%20%D1%83%D0%BF%D0%BB%D0%BE%D1%82%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5%20Citroen,%20Peugeot.%22,%22Quantity%22%3A%2210%22,%22DeliveryTime%22%3A%2209.12.2022%22,%22Price%22%3A8.0,%22OwnWarehouse%22%3Atrue,%22OriginalFlag%22%3A0,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A11.0,%22Percent%22%3A%22%D0%BD%2F%D0%B4%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3A%2292%22,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A0,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn-addtocart"><i class="icon-cart-plus"></i></a>
+                </td>
+            </tr>
+            <tr class="row_searchResult">
+                <td>Кольцо уплотнительное citroen, peugeot.</td>
+                <td>SASIC</td>
+                <td>3130270</td>
+                <td>11</td>
+                <td>09.12.2022</td>
+                <td>Mikado</td>
+                <td id="idItem">
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A5,%22WarehouseName%22%3A%22%D0%9A%D0%A0%D0%A0-4%D1%84%22,%22Id%22%3A%22xsas-3130270%22,%22Brand%22%3A%22SASIC%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%223130270%22,%22NameOfPart%22%3A%22%D0%9A%D0%BE%D0%BB%D1%8C%D1%86%D0%BE%20%D1%83%D0%BF%D0%BB%D0%BE%D1%82%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5%20Citroen,%20Peugeot.%22,%22Quantity%22%3A%2210%22,%22DeliveryTime%22%3A%2209.12.2022%22,%22Price%22%3A8.0,%22OwnWarehouse%22%3Atrue,%22OriginalFlag%22%3A0,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A11.0,%22Percent%22%3A%22%D0%BD%2F%D0%B4%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3A%22182%22,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A0,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn-addtocart"><i class="icon-cart-plus"></i></a>
                 </td>
             </tr>
             <tr class="row_searchResult">
@@ -901,10 +879,10 @@
                 <td>ELWIS ROYAL</td>
                 <td>5244247</td>
                 <td>18</td>
-                <td>03.12.2022</td>
+                <td>05.12.2022</td>
                 <td>Mikado</td>
                 <td id="idItem">
-                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A5,%22WarehouseName%22%3A%22%D0%9D%D0%BE%D0%B2%D0%BE%D1%80%D0%BE%D1%81%D1%81%D0%B8%D0%B9%D1%81%D0%BA%22,%22Id%22%3A%22xes-5244247%22,%22Brand%22%3A%22ELWIS%20ROYAL%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%225244247%22,%22NameOfPart%22%3A%22%D0%9F%D1%80%D0%BE%D0%BA%D0%BB%D0%B0%D0%B4%D0%BA%D0%B0.%22,%22Quantity%22%3A%221%22,%22DeliveryTime%22%3A%2203.12.2022%22,%22Price%22%3A12.91,%22OwnWarehouse%22%3Atrue,%22OriginalFlag%22%3A0,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A18.0,%22Percent%22%3A%22%D0%BD%2F%D0%B4%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3A%22123%22,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A0,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn-addtocart"><i class="icon-cart-plus"></i></a>
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A5,%22WarehouseName%22%3A%22%D0%9D%D0%BE%D0%B2%D0%BE%D1%80%D0%BE%D1%81%D1%81%D0%B8%D0%B9%D1%81%D0%BA%22,%22Id%22%3A%22xes-5244247%22,%22Brand%22%3A%22ELWIS%20ROYAL%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%225244247%22,%22NameOfPart%22%3A%22%D0%9F%D1%80%D0%BE%D0%BA%D0%BB%D0%B0%D0%B4%D0%BA%D0%B0.%22,%22Quantity%22%3A%221%22,%22DeliveryTime%22%3A%2205.12.2022%22,%22Price%22%3A12.91,%22OwnWarehouse%22%3Atrue,%22OriginalFlag%22%3A0,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A18.0,%22Percent%22%3A%22%D0%BD%2F%D0%B4%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3A%22123%22,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A0,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn-addtocart"><i class="icon-cart-plus"></i></a>
                 </td>
             </tr>
             <tr class="row_searchResult">
@@ -934,32 +912,10 @@
                 <td>ELWIS ROYAL</td>
                 <td>5244247</td>
                 <td>18</td>
-                <td>05.12.2022</td>
+                <td>06.12.2022</td>
                 <td>Mikado</td>
                 <td id="idItem">
-                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A5,%22WarehouseName%22%3A%22%D0%92%D0%BE%D0%BB%D0%B3%D0%BE%D0%B3%D1%80%D0%B0%D0%B4%22,%22Id%22%3A%22xes-5244247%22,%22Brand%22%3A%22ELWIS%20ROYAL%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%225244247%22,%22NameOfPart%22%3A%22%D0%9F%D1%80%D0%BE%D0%BA%D0%BB%D0%B0%D0%B4%D0%BA%D0%B0.%22,%22Quantity%22%3A%221%22,%22DeliveryTime%22%3A%2205.12.2022%22,%22Price%22%3A12.91,%22OwnWarehouse%22%3Atrue,%22OriginalFlag%22%3A0,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A18.0,%22Percent%22%3A%22%D0%BD%2F%D0%B4%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3A%2234%22,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A0,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn-addtocart"><i class="icon-cart-plus"></i></a>
-                </td>
-            </tr>
-            <tr class="row_searchResult">
-                <td>Прокладка.</td>
-                <td>ELWIS ROYAL</td>
-                <td>5244247</td>
-                <td>18</td>
-                <td>05.12.2022</td>
-                <td>Mikado</td>
-                <td id="idItem">
-                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A5,%22WarehouseName%22%3A%22%D0%A1%D0%B0%D1%80%D0%B0%D1%82%D0%BE%D0%B2%22,%22Id%22%3A%22xes-5244247%22,%22Brand%22%3A%22ELWIS%20ROYAL%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%225244247%22,%22NameOfPart%22%3A%22%D0%9F%D1%80%D0%BE%D0%BA%D0%BB%D0%B0%D0%B4%D0%BA%D0%B0.%22,%22Quantity%22%3A%221%22,%22DeliveryTime%22%3A%2205.12.2022%22,%22Price%22%3A12.91,%22OwnWarehouse%22%3Atrue,%22OriginalFlag%22%3A0,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A18.0,%22Percent%22%3A%22%D0%BD%2F%D0%B4%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3A%2264%22,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A0,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn-addtocart"><i class="icon-cart-plus"></i></a>
-                </td>
-            </tr>
-            <tr class="row_searchResult">
-                <td>Прокладка.</td>
-                <td>ELWIS ROYAL</td>
-                <td>5244247</td>
-                <td>18</td>
-                <td>05.12.2022</td>
-                <td>Mikado</td>
-                <td id="idItem">
-                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A5,%22WarehouseName%22%3A%22%D0%A1%D0%B0%D0%BC%D0%B0%D1%80%D0%B0%22,%22Id%22%3A%22xes-5244247%22,%22Brand%22%3A%22ELWIS%20ROYAL%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%225244247%22,%22NameOfPart%22%3A%22%D0%9F%D1%80%D0%BE%D0%BA%D0%BB%D0%B0%D0%B4%D0%BA%D0%B0.%22,%22Quantity%22%3A%222%22,%22DeliveryTime%22%3A%2205.12.2022%22,%22Price%22%3A12.91,%22OwnWarehouse%22%3Atrue,%22OriginalFlag%22%3A0,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A18.0,%22Percent%22%3A%22%D0%BD%2F%D0%B4%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3A%2263%22,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A0,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn-addtocart"><i class="icon-cart-plus"></i></a>
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A5,%22WarehouseName%22%3A%22%D0%92%D0%BE%D0%BB%D0%B3%D0%BE%D0%B3%D1%80%D0%B0%D0%B4%22,%22Id%22%3A%22xes-5244247%22,%22Brand%22%3A%22ELWIS%20ROYAL%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%225244247%22,%22NameOfPart%22%3A%22%D0%9F%D1%80%D0%BE%D0%BA%D0%BB%D0%B0%D0%B4%D0%BA%D0%B0.%22,%22Quantity%22%3A%221%22,%22DeliveryTime%22%3A%2206.12.2022%22,%22Price%22%3A12.91,%22OwnWarehouse%22%3Atrue,%22OriginalFlag%22%3A0,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A18.0,%22Percent%22%3A%22%D0%BD%2F%D0%B4%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3A%2234%22,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A0,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn-addtocart"><i class="icon-cart-plus"></i></a>
                 </td>
             </tr>
             <tr class="row_searchResult">
@@ -970,7 +926,29 @@
                 <td>06.12.2022</td>
                 <td>Mikado</td>
                 <td id="idItem">
-                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A5,%22WarehouseName%22%3A%22%D0%A1.-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3%22,%22Id%22%3A%22xes-5244247%22,%22Brand%22%3A%22ELWIS%20ROYAL%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%225244247%22,%22NameOfPart%22%3A%22%D0%9F%D1%80%D0%BE%D0%BA%D0%BB%D0%B0%D0%B4%D0%BA%D0%B0.%22,%22Quantity%22%3A%2210%22,%22DeliveryTime%22%3A%2206.12.2022%22,%22Price%22%3A12.91,%22OwnWarehouse%22%3Atrue,%22OriginalFlag%22%3A0,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A18.0,%22Percent%22%3A%22%D0%BD%2F%D0%B4%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3A%221%22,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A0,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn-addtocart"><i class="icon-cart-plus"></i></a>
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A5,%22WarehouseName%22%3A%22%D0%A1%D0%B0%D1%80%D0%B0%D1%82%D0%BE%D0%B2%22,%22Id%22%3A%22xes-5244247%22,%22Brand%22%3A%22ELWIS%20ROYAL%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%225244247%22,%22NameOfPart%22%3A%22%D0%9F%D1%80%D0%BE%D0%BA%D0%BB%D0%B0%D0%B4%D0%BA%D0%B0.%22,%22Quantity%22%3A%221%22,%22DeliveryTime%22%3A%2206.12.2022%22,%22Price%22%3A12.91,%22OwnWarehouse%22%3Atrue,%22OriginalFlag%22%3A0,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A18.0,%22Percent%22%3A%22%D0%BD%2F%D0%B4%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3A%2264%22,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A0,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn-addtocart"><i class="icon-cart-plus"></i></a>
+                </td>
+            </tr>
+            <tr class="row_searchResult">
+                <td>Прокладка.</td>
+                <td>ELWIS ROYAL</td>
+                <td>5244247</td>
+                <td>18</td>
+                <td>06.12.2022</td>
+                <td>Mikado</td>
+                <td id="idItem">
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A5,%22WarehouseName%22%3A%22%D0%A1%D0%B0%D0%BC%D0%B0%D1%80%D0%B0%22,%22Id%22%3A%22xes-5244247%22,%22Brand%22%3A%22ELWIS%20ROYAL%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%225244247%22,%22NameOfPart%22%3A%22%D0%9F%D1%80%D0%BE%D0%BA%D0%BB%D0%B0%D0%B4%D0%BA%D0%B0.%22,%22Quantity%22%3A%222%22,%22DeliveryTime%22%3A%2206.12.2022%22,%22Price%22%3A12.91,%22OwnWarehouse%22%3Atrue,%22OriginalFlag%22%3A0,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A18.0,%22Percent%22%3A%22%D0%BD%2F%D0%B4%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3A%2263%22,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A0,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn-addtocart"><i class="icon-cart-plus"></i></a>
+                </td>
+            </tr>
+            <tr class="row_searchResult">
+                <td>Прокладка.</td>
+                <td>ELWIS ROYAL</td>
+                <td>5244247</td>
+                <td>18</td>
+                <td>07.12.2022</td>
+                <td>Mikado</td>
+                <td id="idItem">
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A5,%22WarehouseName%22%3A%22%D0%A1.-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3%22,%22Id%22%3A%22xes-5244247%22,%22Brand%22%3A%22ELWIS%20ROYAL%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%225244247%22,%22NameOfPart%22%3A%22%D0%9F%D1%80%D0%BE%D0%BA%D0%BB%D0%B0%D0%B4%D0%BA%D0%B0.%22,%22Quantity%22%3A%2210%22,%22DeliveryTime%22%3A%2207.12.2022%22,%22Price%22%3A12.91,%22OwnWarehouse%22%3Atrue,%22OriginalFlag%22%3A0,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A18.0,%22Percent%22%3A%22%D0%BD%2F%D0%B4%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3A%221%22,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A0,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn-addtocart"><i class="icon-cart-plus"></i></a>
                 </td>
             </tr>
             <tr class="row_searchResult">
@@ -978,10 +956,10 @@
                 <td>CORTECO</td>
                 <td>402129H</td>
                 <td>22</td>
-                <td>06.12.2022</td>
+                <td>07.12.2022</td>
                 <td>Mikado</td>
                 <td id="idItem">
-                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A5,%22WarehouseName%22%3A%22%D0%A1.-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3%22,%22Id%22%3A%22xc-402129h%22,%22Brand%22%3A%22CORTECO%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%22402129h%22,%22NameOfPart%22%3A%22%D0%9A%D0%BE%D0%BB%D1%8C%D1%86%D0%BE%20%D1%83%D0%BF%D0%BB%D0%BE%D1%82%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5%20%D0%BF%D1%80%D0%BE%D0%B1%D0%BA%D0%B8.%22,%22Quantity%22%3A%223%22,%22DeliveryTime%22%3A%2206.12.2022%22,%22Price%22%3A16.2,%22OwnWarehouse%22%3Atrue,%22OriginalFlag%22%3A0,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A22.0,%22Percent%22%3A%22%D0%BD%2F%D0%B4%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3A%221%22,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A0,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn-addtocart"><i class="icon-cart-plus"></i></a>
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A5,%22WarehouseName%22%3A%22%D0%A1.-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3%22,%22Id%22%3A%22xc-402129h%22,%22Brand%22%3A%22CORTECO%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%22402129h%22,%22NameOfPart%22%3A%22%D0%9A%D0%BE%D0%BB%D1%8C%D1%86%D0%BE%20%D1%83%D0%BF%D0%BB%D0%BE%D1%82%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5%20%D0%BF%D1%80%D0%BE%D0%B1%D0%BA%D0%B8.%22,%22Quantity%22%3A%223%22,%22DeliveryTime%22%3A%2207.12.2022%22,%22Price%22%3A16.2,%22OwnWarehouse%22%3Atrue,%22OriginalFlag%22%3A0,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A22.0,%22Percent%22%3A%22%D0%BD%2F%D0%B4%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3A%221%22,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A0,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn-addtocart"><i class="icon-cart-plus"></i></a>
                 </td>
             </tr>
             <tr class="row_searchResult">
@@ -992,7 +970,18 @@
                 <td>05.12.2022</td>
                 <td>Mikado</td>
                 <td id="idItem">
-                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A5,%22WarehouseName%22%3A%22%D0%A1%D1%82%D0%B0%D0%B2%D1%80%D0%BE%D0%BF%D0%BE%D0%BB%D1%8C%22,%22Id%22%3A%22xvr-41-72029-30%22,%22Brand%22%3A%22VICTOR%20REINZ%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%22417202930%22,%22NameOfPart%22%3A%22%D0%9A%D0%BE%D0%BB%D1%8C%D1%86%D0%BE%20%D1%83%D0%BF%D0%BB%D0%BE%D1%82%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5%20%D0%BF%D1%80%D0%BE%D0%B1%D0%BA%D0%B8%20%D0%BC%D0%B0%D1%81%D0%BB%D0%BE%D1%81%D0%BB%D0%B8%D0%B2%D0%BD%D0%BE%D0%B3%D0%BE%20%D0%BE%D1%82%D0%B2%D0%B5%D1%80%D1%81%D1%82%D0%B8%D1%8F.%22,%22Quantity%22%3A%222%22,%22DeliveryTime%22%3A%2205.12.2022%22,%22Price%22%3A16.36,%22OwnWarehouse%22%3Atrue,%22OriginalFlag%22%3A0,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A23.0,%22Percent%22%3A%22%D0%BD%2F%D0%B4%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3A%22126%22,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A0,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn-addtocart"><i class="icon-cart-plus"></i></a>
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A5,%22WarehouseName%22%3A%22%D0%9D%D0%BE%D0%B2%D0%BE%D1%80%D0%BE%D1%81%D1%81%D0%B8%D0%B9%D1%81%D0%BA%22,%22Id%22%3A%22xvr-41-72029-30%22,%22Brand%22%3A%22VICTOR%20REINZ%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%22417202930%22,%22NameOfPart%22%3A%22%D0%9A%D0%BE%D0%BB%D1%8C%D1%86%D0%BE%20%D1%83%D0%BF%D0%BB%D0%BE%D1%82%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5%20%D0%BF%D1%80%D0%BE%D0%B1%D0%BA%D0%B8%20%D0%BC%D0%B0%D1%81%D0%BB%D0%BE%D1%81%D0%BB%D0%B8%D0%B2%D0%BD%D0%BE%D0%B3%D0%BE%20%D0%BE%D1%82%D0%B2%D0%B5%D1%80%D1%81%D1%82%D0%B8%D1%8F.%22,%22Quantity%22%3A%222%22,%22DeliveryTime%22%3A%2205.12.2022%22,%22Price%22%3A16.36,%22OwnWarehouse%22%3Atrue,%22OriginalFlag%22%3A0,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A23.0,%22Percent%22%3A%22%D0%BD%2F%D0%B4%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3A%22123%22,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A0,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn-addtocart"><i class="icon-cart-plus"></i></a>
+                </td>
+            </tr>
+            <tr class="row_searchResult">
+                <td>Кольцо уплотнительное пробки маслосливного отверстия.</td>
+                <td>VICTOR REINZ</td>
+                <td>417202930</td>
+                <td>23</td>
+                <td>05.12.2022</td>
+                <td>Mikado</td>
+                <td id="idItem">
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A5,%22WarehouseName%22%3A%22%D0%A0%D0%BE%D1%81%D1%82%D0%BE%D0%B2%20%D0%94%22,%22Id%22%3A%22xvr-41-72029-30%22,%22Brand%22%3A%22VICTOR%20REINZ%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%22417202930%22,%22NameOfPart%22%3A%22%D0%9A%D0%BE%D0%BB%D1%8C%D1%86%D0%BE%20%D1%83%D0%BF%D0%BB%D0%BE%D1%82%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5%20%D0%BF%D1%80%D0%BE%D0%B1%D0%BA%D0%B8%20%D0%BC%D0%B0%D1%81%D0%BB%D0%BE%D1%81%D0%BB%D0%B8%D0%B2%D0%BD%D0%BE%D0%B3%D0%BE%20%D0%BE%D1%82%D0%B2%D0%B5%D1%80%D1%81%D1%82%D0%B8%D1%8F.%22,%22Quantity%22%3A%229%22,%22DeliveryTime%22%3A%2205.12.2022%22,%22Price%22%3A16.36,%22OwnWarehouse%22%3Atrue,%22OriginalFlag%22%3A0,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A23.0,%22Percent%22%3A%22%D0%BD%2F%D0%B4%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3A%2261%22,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A0,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn-addtocart"><i class="icon-cart-plus"></i></a>
                 </td>
             </tr>
             <tr class="row_searchResult">
@@ -1003,7 +992,29 @@
                 <td>06.12.2022</td>
                 <td>Mikado</td>
                 <td id="idItem">
-                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A5,%22WarehouseName%22%3A%22%D0%A1.-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3%22,%22Id%22%3A%22xvr-41-72029-30%22,%22Brand%22%3A%22VICTOR%20REINZ%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%22417202930%22,%22NameOfPart%22%3A%22%D0%9A%D0%BE%D0%BB%D1%8C%D1%86%D0%BE%20%D1%83%D0%BF%D0%BB%D0%BE%D1%82%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5%20%D0%BF%D1%80%D0%BE%D0%B1%D0%BA%D0%B8%20%D0%BC%D0%B0%D1%81%D0%BB%D0%BE%D1%81%D0%BB%D0%B8%D0%B2%D0%BD%D0%BE%D0%B3%D0%BE%20%D0%BE%D1%82%D0%B2%D0%B5%D1%80%D1%81%D1%82%D0%B8%D1%8F.%22,%22Quantity%22%3A%2210%22,%22DeliveryTime%22%3A%2206.12.2022%22,%22Price%22%3A16.36,%22OwnWarehouse%22%3Atrue,%22OriginalFlag%22%3A0,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A23.0,%22Percent%22%3A%22%D0%BD%2F%D0%B4%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3A%221%22,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A0,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn-addtocart"><i class="icon-cart-plus"></i></a>
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A5,%22WarehouseName%22%3A%22%D0%A1%D1%82%D0%B0%D0%B2%D1%80%D0%BE%D0%BF%D0%BE%D0%BB%D1%8C%22,%22Id%22%3A%22xvr-41-72029-30%22,%22Brand%22%3A%22VICTOR%20REINZ%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%22417202930%22,%22NameOfPart%22%3A%22%D0%9A%D0%BE%D0%BB%D1%8C%D1%86%D0%BE%20%D1%83%D0%BF%D0%BB%D0%BE%D1%82%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5%20%D0%BF%D1%80%D0%BE%D0%B1%D0%BA%D0%B8%20%D0%BC%D0%B0%D1%81%D0%BB%D0%BE%D1%81%D0%BB%D0%B8%D0%B2%D0%BD%D0%BE%D0%B3%D0%BE%20%D0%BE%D1%82%D0%B2%D0%B5%D1%80%D1%81%D1%82%D0%B8%D1%8F.%22,%22Quantity%22%3A%222%22,%22DeliveryTime%22%3A%2206.12.2022%22,%22Price%22%3A16.36,%22OwnWarehouse%22%3Atrue,%22OriginalFlag%22%3A0,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A23.0,%22Percent%22%3A%22%D0%BD%2F%D0%B4%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3A%22126%22,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A0,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn-addtocart"><i class="icon-cart-plus"></i></a>
+                </td>
+            </tr>
+            <tr class="row_searchResult">
+                <td>Кольцо уплотнительное пробки маслосливного отверстия.</td>
+                <td>VICTOR REINZ</td>
+                <td>417202930</td>
+                <td>23</td>
+                <td>06.12.2022</td>
+                <td>Mikado</td>
+                <td id="idItem">
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A5,%22WarehouseName%22%3A%22%D0%A1%D0%B0%D1%80%D0%B0%D1%82%D0%BE%D0%B2%22,%22Id%22%3A%22xvr-41-72029-30%22,%22Brand%22%3A%22VICTOR%20REINZ%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%22417202930%22,%22NameOfPart%22%3A%22%D0%9A%D0%BE%D0%BB%D1%8C%D1%86%D0%BE%20%D1%83%D0%BF%D0%BB%D0%BE%D1%82%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5%20%D0%BF%D1%80%D0%BE%D0%B1%D0%BA%D0%B8%20%D0%BC%D0%B0%D1%81%D0%BB%D0%BE%D1%81%D0%BB%D0%B8%D0%B2%D0%BD%D0%BE%D0%B3%D0%BE%20%D0%BE%D1%82%D0%B2%D0%B5%D1%80%D1%81%D1%82%D0%B8%D1%8F.%22,%22Quantity%22%3A%225%22,%22DeliveryTime%22%3A%2206.12.2022%22,%22Price%22%3A16.36,%22OwnWarehouse%22%3Atrue,%22OriginalFlag%22%3A0,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A23.0,%22Percent%22%3A%22%D0%BD%2F%D0%B4%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3A%2264%22,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A0,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn-addtocart"><i class="icon-cart-plus"></i></a>
+                </td>
+            </tr>
+            <tr class="row_searchResult">
+                <td>Кольцо уплотнительное пробки маслосливного отверстия.</td>
+                <td>VICTOR REINZ</td>
+                <td>417202930</td>
+                <td>23</td>
+                <td>07.12.2022</td>
+                <td>Mikado</td>
+                <td id="idItem">
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A5,%22WarehouseName%22%3A%22%D0%A1.-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3%22,%22Id%22%3A%22xvr-41-72029-30%22,%22Brand%22%3A%22VICTOR%20REINZ%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%22417202930%22,%22NameOfPart%22%3A%22%D0%9A%D0%BE%D0%BB%D1%8C%D1%86%D0%BE%20%D1%83%D0%BF%D0%BB%D0%BE%D1%82%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5%20%D0%BF%D1%80%D0%BE%D0%B1%D0%BA%D0%B8%20%D0%BC%D0%B0%D1%81%D0%BB%D0%BE%D1%81%D0%BB%D0%B8%D0%B2%D0%BD%D0%BE%D0%B3%D0%BE%20%D0%BE%D1%82%D0%B2%D0%B5%D1%80%D1%81%D1%82%D0%B8%D1%8F.%22,%22Quantity%22%3A%2210%22,%22DeliveryTime%22%3A%2207.12.2022%22,%22Price%22%3A16.36,%22OwnWarehouse%22%3Atrue,%22OriginalFlag%22%3A0,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A23.0,%22Percent%22%3A%22%D0%BD%2F%D0%B4%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3A%221%22,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A0,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn-addtocart"><i class="icon-cart-plus"></i></a>
                 </td>
             </tr>
             <tr class="row_searchResult">
@@ -1011,10 +1022,10 @@
                 <td>AJUSA</td>
                 <td>18001000</td>
                 <td>54</td>
-                <td>03.12.2022</td>
+                <td>05.12.2022</td>
                 <td>Mikado</td>
                 <td id="idItem">
-                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A5,%22WarehouseName%22%3A%22%D0%90%D0%BD%D0%B0%D0%BF%D0%B0%22,%22Id%22%3A%22xaj-18001000%22,%22Brand%22%3A%22AJUSA%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%2218001000%22,%22NameOfPart%22%3A%22%D0%A8%D0%B0%D0%B9%D0%B1%D0%B0.%22,%22Quantity%22%3A%221%22,%22DeliveryTime%22%3A%2203.12.2022%22,%22Price%22%3A40.0,%22OwnWarehouse%22%3Atrue,%22OriginalFlag%22%3A0,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A54.0,%22Percent%22%3A%22%D0%BD%2F%D0%B4%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3A%22223%22,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A0,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn-addtocart"><i class="icon-cart-plus"></i></a>
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A5,%22WarehouseName%22%3A%22%D0%90%D0%BD%D0%B0%D0%BF%D0%B0%22,%22Id%22%3A%22xaj-18001000%22,%22Brand%22%3A%22AJUSA%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%2218001000%22,%22NameOfPart%22%3A%22%D0%A8%D0%B0%D0%B9%D0%B1%D0%B0.%22,%22Quantity%22%3A%221%22,%22DeliveryTime%22%3A%2205.12.2022%22,%22Price%22%3A40.0,%22OwnWarehouse%22%3Atrue,%22OriginalFlag%22%3A0,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A54.0,%22Percent%22%3A%22%D0%BD%2F%D0%B4%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3A%22223%22,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A0,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn-addtocart"><i class="icon-cart-plus"></i></a>
                 </td>
             </tr>
             <tr class="row_searchResult">
@@ -1033,10 +1044,10 @@
                 <td>AJUSA</td>
                 <td>18001000</td>
                 <td>54</td>
-                <td>05.12.2022</td>
+                <td>06.12.2022</td>
                 <td>Mikado</td>
                 <td id="idItem">
-                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A5,%22WarehouseName%22%3A%22%D0%9F%D1%8F%D1%82%D0%B8%D0%B3%D0%BE%D1%80%D1%81%D0%BA%22,%22Id%22%3A%22xaj-18001000%22,%22Brand%22%3A%22AJUSA%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%2218001000%22,%22NameOfPart%22%3A%22%D0%A8%D0%B0%D0%B9%D0%B1%D0%B0.%22,%22Quantity%22%3A%2210%22,%22DeliveryTime%22%3A%2205.12.2022%22,%22Price%22%3A40.0,%22OwnWarehouse%22%3Atrue,%22OriginalFlag%22%3A0,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A54.0,%22Percent%22%3A%22%D0%BD%2F%D0%B4%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3A%2226%22,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A0,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn-addtocart"><i class="icon-cart-plus"></i></a>
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A5,%22WarehouseName%22%3A%22%D0%9F%D1%8F%D1%82%D0%B8%D0%B3%D0%BE%D1%80%D1%81%D0%BA%22,%22Id%22%3A%22xaj-18001000%22,%22Brand%22%3A%22AJUSA%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%2218001000%22,%22NameOfPart%22%3A%22%D0%A8%D0%B0%D0%B9%D0%B1%D0%B0.%22,%22Quantity%22%3A%2210%22,%22DeliveryTime%22%3A%2206.12.2022%22,%22Price%22%3A40.0,%22OwnWarehouse%22%3Atrue,%22OriginalFlag%22%3A0,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A54.0,%22Percent%22%3A%22%D0%BD%2F%D0%B4%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3A%2226%22,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A0,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn-addtocart"><i class="icon-cart-plus"></i></a>
                 </td>
             </tr>
             <tr class="row_searchResult">
@@ -1044,10 +1055,10 @@
                 <td>AJUSA</td>
                 <td>18001000</td>
                 <td>54</td>
-                <td>06.12.2022</td>
+                <td>07.12.2022</td>
                 <td>Mikado</td>
                 <td id="idItem">
-                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A5,%22WarehouseName%22%3A%22%D0%90%D1%81%D1%82%D1%80%D0%B0%D1%85%D0%B0%D0%BD%D1%8C%22,%22Id%22%3A%22xaj-18001000%22,%22Brand%22%3A%22AJUSA%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%2218001000%22,%22NameOfPart%22%3A%22%D0%A8%D0%B0%D0%B9%D0%B1%D0%B0.%22,%22Quantity%22%3A%221%22,%22DeliveryTime%22%3A%2206.12.2022%22,%22Price%22%3A40.0,%22OwnWarehouse%22%3Atrue,%22OriginalFlag%22%3A0,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A54.0,%22Percent%22%3A%22%D0%BD%2F%D0%B4%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3A%2230%22,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A0,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn-addtocart"><i class="icon-cart-plus"></i></a>
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A5,%22WarehouseName%22%3A%22%D0%90%D1%81%D1%82%D1%80%D0%B0%D1%85%D0%B0%D0%BD%D1%8C%22,%22Id%22%3A%22xaj-18001000%22,%22Brand%22%3A%22AJUSA%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%2218001000%22,%22NameOfPart%22%3A%22%D0%A8%D0%B0%D0%B9%D0%B1%D0%B0.%22,%22Quantity%22%3A%221%22,%22DeliveryTime%22%3A%2207.12.2022%22,%22Price%22%3A40.0,%22OwnWarehouse%22%3Atrue,%22OriginalFlag%22%3A0,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A54.0,%22Percent%22%3A%22%D0%BD%2F%D0%B4%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3A%2230%22,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A0,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn-addtocart"><i class="icon-cart-plus"></i></a>
                 </td>
             </tr>
             <tr class="row_searchResult">
@@ -1055,10 +1066,10 @@
                 <td>AJUSA</td>
                 <td>18001200</td>
                 <td>91</td>
-                <td>06.12.2022</td>
+                <td>07.12.2022</td>
                 <td>Mikado</td>
                 <td id="idItem">
-                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A5,%22WarehouseName%22%3A%22%D0%A1.-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3%22,%22Id%22%3A%22xaj-18001200%22,%22Brand%22%3A%22AJUSA%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%2218001200%22,%22NameOfPart%22%3A%22%D0%A8%D0%B0%D0%B9%D0%B1%D0%B0.%22,%22Quantity%22%3A%2210%22,%22DeliveryTime%22%3A%2206.12.2022%22,%22Price%22%3A67.0,%22OwnWarehouse%22%3Atrue,%22OriginalFlag%22%3A0,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A91.0,%22Percent%22%3A%22%D0%BD%2F%D0%B4%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3A%221%22,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A0,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn-addtocart"><i class="icon-cart-plus"></i></a>
+                    <a onclick="showAddToBusket('https://localhost:44375/Busket/AddToBusketDetail?item=%7B%22postavschik%22%3A5,%22WarehouseName%22%3A%22%D0%A1.-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3%22,%22Id%22%3A%22xaj-18001200%22,%22Brand%22%3A%22AJUSA%22,%22NameItem%22%3Anull,%22ArtikulItem%22%3A%2218001200%22,%22NameOfPart%22%3A%22%D0%A8%D0%B0%D0%B9%D0%B1%D0%B0.%22,%22Quantity%22%3A%2210%22,%22DeliveryTime%22%3A%2207.12.2022%22,%22Price%22%3A67.0,%22OwnWarehouse%22%3Atrue,%22OriginalFlag%22%3A0,%22Kratnost%22%3A%221%22,%22Sale_cena%22%3A91.0,%22Percent%22%3A%22%D0%BD%2F%D0%B4%22,%22Color%22%3Anull,%22AllowReturn%22%3A0,%22selectedQuantity%22%3A0,%22AvtotoBaseCount%22%3Anull,%22AvtotoPartId%22%3A0,%22AvtotoSearchID%22%3Anull,%22AvtotoDeliveryPercent%22%3A0,%22AvtotoBackPercent%22%3A0,%22AvtotoName%22%3Anull,%22ArmtekKeyZak%22%3Anull,%22YugAvtoSupplierCode%22%3A0,%22PLWareHouseId%22%3A0,%22PLID%22%3Anull,%22MikadoStockID%22%3A%221%22,%22AS_SupplierTimeMin%22%3Anull,%22AS_SupplierTimeMax%22%3Anull,%22BergWarehouseId%22%3A0,%22BergDeliveryDate%22%3Anull,%22FavoritWHId%22%3Anull,%22id_sklad%22%3Anull,%22positions%22%3Anull%7D', 'Добавить позицию')" class="btn-addtocart"><i class="icon-cart-plus"></i></a>
                 </td>
             </tr>
         </tbody>
@@ -1066,16 +1077,91 @@
 </div>
 
 
-<div class="modal" tabindex="-1" id="addToBusketModalWindow" data-bs-backdrop="static" data-bs-keyboard="false">
-    <div class="modal-dialog modal-lg">
+<div class="modal show" tabindex="-1" id="addToBusketModalWindow" data-bs-backdrop="static" data-bs-keyboard="false" style="display: block; padding-left: 0px;" aria-modal="true" role="dialog">
+    <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">Header of modal window</h5>
+                <h5 class="modal-title">Добавить позицию</h5>
                 <button type="button" class="btn-close" id="btn-addClentModalWindow" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
 
+
+
+
+
+    <script type="text/javascript">
+        var putQuantity = function() {
+            var qua = $('#quantity').val().toString();
+            var data = new FormData();
+            var model = '{"postavschik":14,"warehouseName":"NBZ","id":"420306","brand":"VAG","nameItem":null,"artikulItem":"N0138157","nameOfPart":"\u041F\u0420\u041E\u041A\u041B\u0410\u0414\u041A\u0410 \u0421\u041B\u0418\u0412\u041D\u041E\u0419 \u041F\u0420\u041E\u0411\u041A\u0418 / DICHTRING N0138157","quantity":"1","deliveryTime":"09.12.2022","price":90.5,"ownWarehouse":false,"originalFlag":1,"kratnost":"1","sale_cena":123.0,"percent":"86","color":null,"allowReturn":0,"selectedQuantity":0,"avtotoBaseCount":null,"avtotoPartId":0,"avtotoSearchID":null,"avtotoDeliveryPercent":0,"avtotoBackPercent":0,"avtotoName":null,"armtekKeyZak":null,"yugAvtoSupplierCode":0,"plWareHouseId":0,"plid":null,"mikadoStockID":null,"aS_SupplierTimeMin":null,"aS_SupplierTimeMax":null,"bergWarehouseId":11136669,"bergDeliveryDate":null,"favoritWHId":null,"id_sklad":null,"positions":null}';
+            data.append("item",model);
+            data.append("quantity", qua);
+            $.ajax({
+                type: "POST",
+                url: '/Busket/AddToBusket',
+                processData: false,
+                contentType: false,
+                data: data,
+                success: function() {
+                    $('#addToBusketModalWindow').modal('hide');
+                    $('#busketCounter').load('/Busket/CountBusketItems');
+                },
+                error: function() {
+                    console.log("error");
+                }
+            });
+        }
+    </script>
+
+
+
+
+    <!-- Детали позиции -->
+
+    <div class="container mad">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="form-group-fg1">
+                    <label>Наименование</label>
+                    <label>прокладка сливной пробки / dichtring n0138157</label>
+                </div>
+                <div class="form-group fg2">
+                    <label>На складе</label>
+                    <label>1</label>
+                </div>
+                <div class="form-group fg3">
+                    <label>Кратность</label>
+                    <label>1</label>
+                </div>
+                <div class="form-group fg4">
+                    <label>Стоимость</label>
+                    <label>123,0</label>
+                </div>
+                <div class="form-group fg5">
+                    <label>Дата доставки</label>
+                    <label>09.12.2022</label>
+                </div>
+                <div>
+                    <input type="number" id="quantity" value="1">
+                </div>
+                <div class="form-group fg6">
+                    <input type="submit" value="Добавить" class="btn btn-success" onclick="putQuantity()">
+                </div>
             </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+</div>
         </div>
     </div>
 </div>
@@ -1114,7 +1200,7 @@
   
 
 <!-- Visual Studio Browser Link -->
-<script type="text/javascript" src="https://localhost:44399/2fb2650adfb3484aa8bc491013eec008/browserLink" async="async" id="__browserLink_initializationData" data-requestid="a83d37f2d12f4fa6b7263b630970d20a" data-requestmappingfromserver="False"></script>
+<script type="text/javascript" src="https://localhost:44399/5a857bfb24da4d7989c8712e383ba740/browserLink" async="async" id="__browserLink_initializationData" data-requestid="7eee608322cd48088fb5dc8271989ae5" data-requestmappingfromserver="False"></script>
 <!-- End Browser Link -->
 
 
@@ -1146,4 +1232,4 @@
 <script src="/_framework/aspnetcore-browser-refresh.js"></script>
 
 
-<live-preview-root></live-preview-root></body></html>
+<live-preview-root></live-preview-root><div class="modal-backdrop show"></div></body>
