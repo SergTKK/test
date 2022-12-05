@@ -1078,90 +1078,46 @@
 
 
 <div class="modal show" tabindex="-1" id="addToBusketModalWindow" data-bs-backdrop="static" data-bs-keyboard="false" style="display: block; padding-left: 0px;" aria-modal="true" role="dialog">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content" style="width: 350px;">
+            <div class="modal-header" style="height: 30px;">
                 <h5 class="modal-title">Добавить позицию</h5>
                 <button type="button" class="btn-close" id="btn-addClentModalWindow" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-
-
-
-
-
-    <script type="text/javascript">
-        var putQuantity = function() {
-            var qua = $('#quantity').val().toString();
-            var data = new FormData();
-            var model = '{"postavschik":14,"warehouseName":"NBZ","id":"420306","brand":"VAG","nameItem":null,"artikulItem":"N0138157","nameOfPart":"\u041F\u0420\u041E\u041A\u041B\u0410\u0414\u041A\u0410 \u0421\u041B\u0418\u0412\u041D\u041E\u0419 \u041F\u0420\u041E\u0411\u041A\u0418 / DICHTRING N0138157","quantity":"1","deliveryTime":"09.12.2022","price":90.5,"ownWarehouse":false,"originalFlag":1,"kratnost":"1","sale_cena":123.0,"percent":"86","color":null,"allowReturn":0,"selectedQuantity":0,"avtotoBaseCount":null,"avtotoPartId":0,"avtotoSearchID":null,"avtotoDeliveryPercent":0,"avtotoBackPercent":0,"avtotoName":null,"armtekKeyZak":null,"yugAvtoSupplierCode":0,"plWareHouseId":0,"plid":null,"mikadoStockID":null,"aS_SupplierTimeMin":null,"aS_SupplierTimeMax":null,"bergWarehouseId":11136669,"bergDeliveryDate":null,"favoritWHId":null,"id_sklad":null,"positions":null}';
-            data.append("item",model);
-            data.append("quantity", qua);
-            $.ajax({
-                type: "POST",
-                url: '/Busket/AddToBusket',
-                processData: false,
-                contentType: false,
-                data: data,
-                success: function() {
-                    $('#addToBusketModalWindow').modal('hide');
-                    $('#busketCounter').load('/Busket/CountBusketItems');
-                },
-                error: function() {
-                    console.log("error");
-                }
-            });
-        }
-    </script>
-
-
-
-
-    <!-- Детали позиции -->
-
-    <div class="container mad">
-        <div class="modal-content">
-            <div class="modal-body">
-                <div class="form-group-fg1">
-                    <label>Наименование</label>
-                    <label>прокладка сливной пробки / dichtring n0138157</label>
-                </div>
-                <div class="form-group fg2">
-                    <label>На складе</label>
-                    <label>1</label>
-                </div>
-                <div class="form-group fg3">
-                    <label>Кратность</label>
-                    <label>1</label>
-                </div>
-                <div class="form-group fg4">
-                    <label>Стоимость</label>
+               <div class="container-mad" style="width: 550px;">
+                   <div class="modal-content" >
+                       <div class="modal-body" >
+                           <div class="form-group-fg1">                    
+                               <label>прокладка сливной пробки / dichtring n0138157</label>
+                           </div>
+                        <div class="form-group-fg2">
+                                <label>На складе:</label>
+                                <label>1</label>
+                        </div>
+                        <div class="form-group-fg3">
+                                 <label>Кратность:</label>
+                                 <label>1</label>
+                        </div>
+                <div class="form-group-fg4">
+                    <label>Стоимость:</label>
                     <label>123,0</label>
                 </div>
-                <div class="form-group fg5">
-                    <label>Дата доставки</label>
+                <div class="form-group-fg5">
+                    <label>Дата доставки:</label>
                     <label>09.12.2022</label>
                 </div>
-                <div>
+                <div class="form-group-fg6">
                     <input type="number" id="quantity" value="1">
                 </div>
-                <div class="form-group fg6">
-                    <input type="submit" value="Добавить" class="btn btn-success" onclick="putQuantity()">
+                <div>
+                    <input type="submit" class="mad-btn" value="Добавить" onclick="putQuantity()">
                 </div>
             </div>
         </div>
 
-    </div>
-
-
-
-
-
-
-
-
-
-</div>
+               </div>
+            </div>
         </div>
     </div>
 </div>
