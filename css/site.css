@@ -132,25 +132,30 @@ h1, h2, h3, h4, h5, h6 {
   padding-bottom: 10px;
 }
 
-.modal .form-group {
+.form-group {
   padding-top: 10px;
+  text-align: center;
 }
-.modal .form-group-fg1 {
+
+.fg1 {
   padding-bottom: 10px;
   font-style: italic;
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: 600;
 }
-.modal .form-group-fg6 > input {
+
+.fg6 > input {
   width: 40px;
   padding-left: 10px;
 }
 
-.mad-input {
-  width: 50px;
+.mad-btn-wrap {
   text-align: center;
+  padding-top: 10px;
 }
 
 .mad-btn {
+  margin: auto;
   height: 25px;
   width: 70px;
   background-color: goldenrod;
