@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+<head>
+    <link href="~/css/validationColors.css" rel="stylesheet" />
+    <link href="/css/site.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="form-signin w-100 m-auto login-invite">
+        <div class="wrap-login-invite confirm-phone">
+            <div class="wrap-login-header confirm-header">
+                <span style="color: slategray;">Подтверждение</span>
+            </div>
+            <div class="inner">
+                <form asp-action="ConfirmPhone" asp-controller="Login" asp-route-id="@ViewBag.id" asp-antiforgery="true">
+                    <div asp-validation-summary="ModelOnly"></div>
+                    <div class="login-inner-formline">
+                        <label asp-for="Code">Введите код</label><br />
+                        <input asp-for="Code" />
+                        <span asp-validation-for="Code"></span>
+                    </div>
+                    <br />
+                    <div>
+                        <button type="submit" class="btn-confirm">ОК</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
