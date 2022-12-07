@@ -29,18 +29,23 @@
                     <div>
                         <i class="fa fa-map-pin header-adress"></i>
                         <div class="header-adress-text">г.Темрюк ул.Таманская д.6</div>
-                    </div>                                         
+                    </div>
                 </div>
-
+                
                 <div class="col-5 header-middle">
                     <img src="images/logo.png">
                 </div>
-
-                <div class="col-4 header-right-part">                        
-                            <form method="post" action="/Login/Logout">
-                                Sergey
-                                <input style="margin-bottom: 3px;" class="btn btn-link" value="Выход" type="submit">
-                            <input name="__RequestVerificationToken" type="hidden" value="CfDJ8INJ1qw7_1xHipkpk9FOMoNf-Gi-y9azZn_ah_hARmhYH4nP2B0LJYzPaQFPssw5n2IuP3pIRYwYSgCxSDabn_VOMifJThaHelsg1gvsxpvAEneEQISOTozpaIY_Wd-JngH0WBCEFjEiZ5SyELOIfBmLxYPgcFeG9zziLsJ22yieEyWpBeBWeoADjbwCoh-nkw"></form>                       
+                
+                <div class="col-4">
+                    <div class="header-right-part">
+                            <div style="text-align: right">
+                                <form method="post" action="/Login/Logout">
+                                    Sergey
+                                    <input style="margin-bottom: 3px;" class="btn btn-link" value="Выход" type="submit">
+                                <input name="__RequestVerificationToken" type="hidden" value="CfDJ8CWAIBaJkS1Mh2p6OC3LLS7lfS7x85oCloxjA-5eBe4zWBzNKFomob7aGqAZ7nCvhuP6w_QMPMqTz1lsqxucmy-_ffBEpHEfX_2RZLZQKsLRQ4h_hV1m_DBntUEaXz7jVf463N7AtgyLG41GdK8f1dKxXhG1diGcuz2XHBVu0isIAB3_Z9bpyoyfB25NpU58gQ"></form>
+                            </div>
+                    </div>
+                   
                 </div>
             </div>
         </div>
@@ -91,16 +96,467 @@
                 
                 <div class="topnavbar">
                     <div class="topbutton">
-                        <a onclick="busketList()"><i class="fa fa-shopping-cart"></i><span id="busketCounter" class="topbutton__badge">5</span></a>
+                        <a onclick="busketList()"><i class="fa fa-shopping-cart"></i><span id="busketCounter" class="topbutton__badge">4</span></a>
                     </div>
                     <div class="topbutton">
-                        <i class="fa fa-list"></i>
+                        <a onclick="orderList()"><i class="fa fa-list"></i></a>
                     </div>
                 </div>
 
             </div>
         </nav>
+        
+        <div id="result" style="margin: 20px 10px 0px 10px"><div>
+    <table class="table table-bordered" id="tableOfOrders">
+        <thead>
+        <tr>
+            <th>Дата заказа</th>
+            <th>Наименование</th>
+            <th>Артикул/производитель</th>
+            <th>Ожидается</th>
+            <th>Статус</th>
+            <th>Цена</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td id="idZakaz" style="display: none">2427</td>
+                <td>
+                    <div style="padding-left: 15px">
+                        <div class="row">10.11.2022</div>
+                        <div class="row">17:02</div>
+                    </div>
+                </td>
+                <td>
+                    ПРОКЛАДКА СЛИВНОЙ ПРОБКИ / DICHTRING N0138157
+                </td>
+                <td>
+                    <div style="padding-left: 15px">
+                        <div class="row">N0138157</div>
+                        <div class="row manuf">VAG</div>
+                    </div>
+                </td>
+                <td>15.11.2022</td>
+                <td>В заказе</td>
+                <td>132,00</td>
+            </tr>
+            <tr>
+                <td id="idZakaz" style="display: none">2417</td>
+                <td>
+                    <div style="padding-left: 15px">
+                        <div class="row">02.09.2022</div>
+                        <div class="row">21:56</div>
+                    </div>
+                </td>
+                <td>
+                    Жидкость ГУР "Power Steering Fluid", 0.355л
+                </td>
+                <td>
+                    <div style="padding-left: 15px">
+                        <div class="row">sp7030</div>
+                        <div class="row manuf">Step Up</div>
+                    </div>
+                </td>
+                <td>02.09.2022</td>
+                <td>Выдано</td>
+                <td>600,00</td>
+            </tr>
+            <tr>
+                <td id="idZakaz" style="display: none">2414</td>
+                <td>
+                    <div style="padding-left: 15px">
+                        <div class="row">27.08.2022</div>
+                        <div class="row">22:12</div>
+                    </div>
+                </td>
+                <td>
+                    Гидрокомпенсатор MITSUBISHI AIRTREK/OUTLANDER, DELICA/SPACE GEAR, GALANT, L200, LANCER, PAJERO
+                </td>
+                <td>
+                    <div style="padding-left: 15px">
+                        <div class="row">md377560</div>
+                        <div class="row manuf">Mitsubishi</div>
+                    </div>
+                </td>
+                <td>03.09.2022</td>
+                <td>В заказе</td>
+                <td>550,00</td>
+            </tr>
+            <tr>
+                <td id="idZakaz" style="display: none">2413</td>
+                <td>
+                    <div style="padding-left: 15px">
+                        <div class="row">27.08.2022</div>
+                        <div class="row">21:58</div>
+                    </div>
+                </td>
+                <td>
+                    Гидрокомпенсатор
+                </td>
+                <td>
+                    <div style="padding-left: 15px">
+                        <div class="row">md377560</div>
+                        <div class="row manuf">Mitsubishi</div>
+                    </div>
+                </td>
+                <td>08.09.2022</td>
+                <td>В заказе</td>
+                <td>400,00</td>
+            </tr>
+            <tr>
+                <td id="idZakaz" style="display: none">2412</td>
+                <td>
+                    <div style="padding-left: 15px">
+                        <div class="row">25.08.2022</div>
+                        <div class="row">14:59</div>
+                    </div>
+                </td>
+                <td>
+                    Лампа галоген" Vision HB4" 12В 51Вт
+                </td>
+                <td>
+                    <div style="padding-left: 15px">
+                        <div class="row">9006PRB1</div>
+                        <div class="row manuf">PHILIPS</div>
+                    </div>
+                </td>
+                <td>25.08.2022</td>
+                <td>Пришло со склада</td>
+                <td>499,00</td>
+            </tr>
+            <tr>
+                <td id="idZakaz" style="display: none">2411</td>
+                <td>
+                    <div style="padding-left: 15px">
+                        <div class="row">25.08.2022</div>
+                        <div class="row">14:59</div>
+                    </div>
+                </td>
+                <td>
+                    Лампа автомобильная PHILIPS Premium HB4 12V 55W P22d +30% блистер
+                </td>
+                <td>
+                    <div style="padding-left: 15px">
+                        <div class="row">9006PRB1</div>
+                        <div class="row manuf">PHILIPS</div>
+                    </div>
+                </td>
+                <td>31.08.2022</td>
+                <td>В заказе</td>
+                <td>500,00</td>
+            </tr>
+            <tr>
+                <td id="idZakaz" style="display: none">2408</td>
+                <td>
+                    <div style="padding-left: 15px">
+                        <div class="row">25.08.2022</div>
+                        <div class="row">14:48</div>
+                    </div>
+                </td>
+                <td>
+                    Лампа галоген" Vision HB4" 12В 51Вт
+                </td>
+                <td>
+                    <div style="padding-left: 15px">
+                        <div class="row">9006PRB1</div>
+                        <div class="row manuf">PHILIPS</div>
+                    </div>
+                </td>
+                <td>25.08.2022</td>
+                <td>В заказе</td>
+                <td>499,00</td>
+            </tr>
+            <tr>
+                <td id="idZakaz" style="display: none">2407</td>
+                <td>
+                    <div style="padding-left: 15px">
+                        <div class="row">25.08.2022</div>
+                        <div class="row">12:56</div>
+                    </div>
+                </td>
+                <td>
+                    пвапвапва
+                </td>
+                <td>
+                    <div style="padding-left: 15px">
+                        <div class="row">l5128al1e1</div>
+                        <div class="row manuf">ууфывфыв</div>
+                    </div>
+                </td>
+                <td>25.08.2022</td>
+                <td>В заказе</td>
+                <td>300,00</td>
+            </tr>
+            <tr>
+                <td id="idZakaz" style="display: none">2406</td>
+                <td>
+                    <div style="padding-left: 15px">
+                        <div class="row">25.08.2022</div>
+                        <div class="row">12:53</div>
+                    </div>
+                </td>
+                <td>
+                    Масло моторное синтетическое "Ultra 4T Scooter 10W-40", 1л
+                </td>
+                <td>
+                    <div style="padding-left: 15px">
+                        <div class="row">l5128al1e1</div>
+                        <div class="row manuf">Kixx</div>
+                    </div>
+                </td>
+                <td>25.08.2022</td>
+                <td>Склад-резерв</td>
+                <td>900,00</td>
+            </tr>
+            <tr>
+                <td id="idZakaz" style="display: none">2405</td>
+                <td>
+                    <div style="padding-left: 15px">
+                        <div class="row">25.08.2022</div>
+                        <div class="row">12:31</div>
+                    </div>
+                </td>
+                <td>
+                    Масло моторное полусинтетическое "G SL/CF 10W-40", 1л
+                </td>
+                <td>
+                    <div style="padding-left: 15px">
+                        <div class="row">L5316AL1E1</div>
+                        <div class="row manuf">Kixx</div>
+                    </div>
+                </td>
+                <td>25.08.2022</td>
+                <td>Склад-резерв</td>
+                <td>600,00</td>
+            </tr>
+            <tr>
+                <td id="idZakaz" style="display: none">2404</td>
+                <td>
+                    <div style="padding-left: 15px">
+                        <div class="row">25.08.2022</div>
+                        <div class="row">11:57</div>
+                    </div>
+                </td>
+                <td>
+                    Фильтр воздушный LADA Largus 1.6 16кл, Renault Logan, Sandero, Megane II, Nissan Almera G15 16 кл
+                </td>
+                <td>
+                    <div style="padding-left: 15px">
+                        <div class="row">FCR210138</div>
+                        <div class="row manuf">FRANCECAR</div>
+                    </div>
+                </td>
+                <td>25.08.2022</td>
+                <td>Склад-резерв</td>
+                <td>150,00</td>
+            </tr>
+            <tr>
+                <td id="idZakaz" style="display: none">2402</td>
+                <td>
+                    <div style="padding-left: 15px">
+                        <div class="row">22.08.2022</div>
+                        <div class="row">14:33</div>
+                    </div>
+                </td>
+                <td>
+                    Gazpromneft Hydraulic HLP 32 гидравлическое масло  Газпромнефть 10 л.
+                </td>
+                <td>
+                    <div style="padding-left: 15px">
+                        <div class="row">2389906843</div>
+                        <div class="row manuf">GAZPROMNEFT</div>
+                    </div>
+                </td>
+                <td>26.08.2022</td>
+                <td>В заказе</td>
+                <td>3050,00</td>
+            </tr>
+            <tr>
+                <td id="idZakaz" style="display: none">2273</td>
+                <td>
+                    <div style="padding-left: 15px">
+                        <div class="row">14.08.2022</div>
+                        <div class="row">12:29</div>
+                    </div>
+                </td>
+                <td>
+                    ремень поликлиновой! 1000мм\ Ford Escort 1.4/1.6 CVH 90-93, MB 208-508D 90-95
+                </td>
+                <td>
+                    <div style="padding-left: 15px">
+                        <div class="row">04E145933A</div>
+                        <div class="row manuf">VAG</div>
+                    </div>
+                </td>
+                <td>16.08.2022</td>
+                <td>Выдано</td>
+                <td>1290,00</td>
+            </tr>
+            <tr>
+                <td id="idZakaz" style="display: none">2033</td>
+                <td>
+                    <div style="padding-left: 15px">
+                        <div class="row">30.07.2022</div>
+                        <div class="row">15:56</div>
+                    </div>
+                </td>
+                <td>
+                    Фильтр топливный HYUNDAI Elantra-3 Solaris KIA Rio-3
+                </td>
+                <td>
+                    <div style="padding-left: 15px">
+                        <div class="row">311121R000</div>
+                        <div class="row manuf">Hyundai-KIA</div>
+                    </div>
+                </td>
+                <td>09.08.2022</td>
+                <td>Выдано</td>
+                <td>665,00</td>
+            </tr>
+            <tr>
+                <td id="idZakaz" style="display: none">2032</td>
+                <td>
+                    <div style="padding-left: 15px">
+                        <div class="row">30.07.2022</div>
+                        <div class="row">15:56</div>
+                    </div>
+                </td>
+                <td>
+                    ФИЛЬТР САЛОНА АНТИАЛЕРГЕННЫЙ
+                </td>
+                <td>
+                    <div style="padding-left: 15px">
+                        <div class="row">5Q0819669</div>
+                        <div class="row manuf">VAG</div>
+                    </div>
+                </td>
+                <td>05.08.2022</td>
+                <td>Выдано</td>
+                <td>1404,00</td>
+            </tr>
+            <tr>
+                <td id="idZakaz" style="display: none">543</td>
+                <td>
+                    <div style="padding-left: 15px">
+                        <div class="row">15.03.2022</div>
+                        <div class="row">10:03</div>
+                    </div>
+                </td>
+                <td>
+                    Фильтр масляный "MANN" VW Passat, Polo, Golf; Skoda Octavia, Fabia
+                </td>
+                <td>
+                    <div style="padding-left: 15px">
+                        <div class="row">W71295</div>
+                        <div class="row manuf">MANN-FILTER</div>
+                    </div>
+                </td>
+                <td>20.03.2022</td>
+                <td>Выдано</td>
+                <td>1191,00</td>
+            </tr>
+            <tr>
+                <td id="idZakaz" style="display: none">593</td>
+                <td>
+                    <div style="padding-left: 15px">
+                        <div class="row">15.03.2022</div>
+                        <div class="row">10:03</div>
+                    </div>
+                </td>
+                <td>
+                    Фильтр масляный "MANN" VW Passat, Polo, Golf; Skoda Octavia, Fabia
+                </td>
+                <td>
+                    <div style="padding-left: 15px">
+                        <div class="row">W71295</div>
+                        <div class="row manuf">MANN-FILTER</div>
+                    </div>
+                </td>
+                <td>20.03.2022</td>
+                <td>Выдано</td>
+                <td>1191,00</td>
+            </tr>
+            <tr>
+                <td id="idZakaz" style="display: none">464</td>
+                <td>
+                    <div style="padding-left: 15px">
+                        <div class="row">05.03.2022</div>
+                        <div class="row">19:19</div>
+                    </div>
+                </td>
+                <td>
+                    пробка резьбовая
+                </td>
+                <td>
+                    <div style="padding-left: 15px">
+                        <div class="row">n90288901</div>
+                        <div class="row manuf">VAG </div>
+                    </div>
+                </td>
+                <td>10.03.2022</td>
+                <td>Выдано</td>
+                <td>490,00</td>
+            </tr>
+            <tr>
+                <td id="idZakaz" style="display: none">463</td>
+                <td>
+                    <div style="padding-left: 15px">
+                        <div class="row">05.03.2022</div>
+                        <div class="row">19:19</div>
+                    </div>
+                </td>
+                <td>
+                    КОЛЬЦО СЛИВНОЙ ПРОБКИ ПОДДОНА VAG
+                </td>
+                <td>
+                    <div style="padding-left: 15px">
+                        <div class="row">n0138157</div>
+                        <div class="row manuf">VAG</div>
+                    </div>
+                </td>
+                <td>10.03.2022</td>
+                <td>Выдано</td>
+                <td>44,00</td>
+            </tr>
+            <tr>
+                <td id="idZakaz" style="display: none">462</td>
+                <td>
+                    <div style="padding-left: 15px">
+                        <div class="row">05.03.2022</div>
+                        <div class="row">19:19</div>
+                    </div>
+                </td>
+                <td>
+                    Фильтр воздушный
+                </td>
+                <td>
+                    <div style="padding-left: 15px">
+                        <div class="row">a31940</div>
+                        <div class="row manuf">Sakura</div>
+                    </div>
+                </td>
+                <td>10.03.2022</td>
+                <td>Выдано</td>
+                <td>1093,00</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
 
+    <a class="btn btn-outline-dark" onclick="nextPage()"><i class="icon-right-big"></i>Вперед</a>
+<script type="text/javascript">
+    var nextPage = function() {
+        var pageNumber = 2;
+        $('#result').load('/Order/ListOrders?page=' + pageNumber);
+    }
+
+    var prevPage = function() {
+        var pageNumber = 0;
+        $('#result').load('/Order/ListOrders?page=' + pageNumber);
+    }
+</script></div>
+
+        <div id="result2"></div>
         
         <script type="text/javascript">
             var searchFunction = function search() {
@@ -116,19 +572,23 @@
                 $('#result').load('/Busket/BusketList');
             }
         </script>
-
+        
+        <script type="text/javascript">
+            var orderList = function() {
+                $('#result').empty();
+                $('#result').load('/Order/ListOrders');
+            }
+        </script>
 
     </div>
 
-    <div id="result" style="margin: 0px 10px 0px 10px"></div>
-
-    <div id="result2"></div>
+   
 
 
   
 
 <!-- Visual Studio Browser Link -->
-<script type="text/javascript" src="/_vs/browserLink" async="async" id="__browserLink_initializationData" data-requestid="e3331b5ecac14d5d96406e0afef24611" data-requestmappingfromserver="false" data-connecturl="http://localhost:51081/80620853974a4ff7b02762e4b78d4b45/browserLink"></script>
+<script type="text/javascript" src="/_vs/browserLink" async="async" id="__browserLink_initializationData" data-requestid="54d6a655941a4887bdc15056112514c8" data-requestmappingfromserver="false" data-connecturl="http://localhost:50447/506d1f51a99044999486707362503d1d/browserLink"></script>
 <!-- End Browser Link -->
 
 <script src="/_framework/aspnetcore-browser-refresh.js"></script>
