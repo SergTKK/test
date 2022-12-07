@@ -106,6 +106,21 @@ h1, h2, h3, h4, h5, h6 {
   flex: 1 1 auto;
 }
 
+.me-1 {
+  color: black;
+}
+.me-1:hover {
+  background-color: #ebb800;
+}
+
+.me-2 {
+  background-color: #f5ce00;
+  color: black;
+}
+.me-2:hover {
+  background-color: #ebb800;
+}
+
 #btnSearchBrands {
   width: 70px;
   height: 30px;
