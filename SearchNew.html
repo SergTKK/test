@@ -1,0 +1,2348 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Автомагазин на Таманской</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/fontello.css">
+    <link rel="stylesheet" href="/css/site.css">
+<style id="inert-style">
+[inert] {
+  pointer-events: none;
+  cursor: default;
+}
+
+[inert], [inert] * {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+</style></head>
+<body>
+    <header>
+        <!-- _Layout header -->
+        <div class="container">
+            <div class="row row-header">
+                <div class="col-3">
+                    <div>
+                        <i class="fa fa-map-pin header-adress"></i>
+                        <div class="header-adress-text">г.Темрюк ул.Таманская д.6</div>
+                    </div>
+                </div>
+                
+                <div class="col-5 header-middle">
+                    <img src="images/logo.png">
+                </div>
+                
+                <div class="col-4">
+                    <div class="header-right-part">
+                            <div style="text-align: right">
+                                <form method="post" action="/Login/Logout">
+                                    Sergey
+                                    <input style="margin-bottom: 3px;" class="btn btn-link" value="Выход" type="submit">
+                                <input name="__RequestVerificationToken" type="hidden" value="CfDJ8L77QKzPGs5LmdHgwvCSLBIm7_1lLvKQ0P3xBdHg61zUqKxlQVFNC5lcMzhvF3zjrq2TdoU1H3KL-H-I4F9rkxK6lHeOBU1CUxW-YoIl5ksL79fsArYLr4Bw8HuWCZPgt6j3-sQvyXn4Vcm5FiJDxcgd2RRA3J7nJONzvIpYdxCFZswSj7gWTUsMSHsK18TC2g"></form>
+                            </div>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- _Layout.cshtml -->
+    <div class="wrapper">
+        <div class="content">
+            <div class="container">
+                
+
+
+
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/images/logo_ico.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/site.css">
+    <link href="/lib/jquery-ui-1.13.0.custom/jquery-ui.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Личный кабинет</title>
+
+
+    <header>
+        <div class="row" id="lcMain">
+        </div>
+    </header>
+<div class="row">
+   
+
+</div>
+
+    <div class="col">
+        <nav class="navbar navbar-expand-lg" style="background-color: blanchedalmond" aria-label="Tenth navbar example">
+            <div class="container-fluid">
+                <form>
+                    <div style="display: inline-block">
+                        <input class="form-control" type="search" placeholder="Введите артикул" id="searchArtikul" aria-label="Search" name="Articul" value="">
+                    </div>
+                    <div style="display: inline-block">
+                        <a class="btn" onclick="searchFunction()"><i class="icon-search"></i>Поиск</a>
+                    </div>
+                    <div style="display: inline-block">
+                        <a class="btn" onclick="searchFunction2()"><i class="icon-search">Поиск 2</i></a>
+                    </div>
+                </form>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample08" aria-controls="navbarsExample08" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                
+                <div class="topnavbar">
+                    <div class="topbutton">
+                        <a onclick="busketList()"><i class="fa fa-shopping-cart"></i><span id="busketCounter" class="topbutton__badge">5</span></a>
+                    </div>
+                    <div class="topbutton">
+                        <a onclick="orderList()"><i class="fa fa-list"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+        
+        <div id="result" style="margin: 20px 10px 0px 10px"><link rel="stylesheet" href="/css/fontello.css">
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+
+<div class="row" id="resultMainModul">
+            <div id="originalItem">
+                <table class="headerItems">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th></th>
+                            <th>В наличии</th>
+                            <th>Дата доставки</th>
+                            <th>Цена</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                </table>
+                <div class="inner">
+                    <div class="part">
+
+                            <table class="dataBlock">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div>CALORSTAT BY VERNET</div>
+                                            <div>TE7136105J</div>
+                                        </td>
+                                        <td>
+                                            <div>Термостат (в корпусе)</div>
+                                        </td>
+
+
+                                        <td>
+                                                <table class="visibleItems">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>оригинал_0</td>
+                                                            <td>Термостат (в корпусе)</td>
+                                                            <td>26.12.2022</td>
+                                                            <td>6082,00</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>оригинал_1</td>
+                                                            <td>Автокомпонент</td>
+                                                            <td>14.02.2023</td>
+                                                            <td>6627,00</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>оригинал_2</td>
+                                                            <td>Термостат (в корпусе)</td>
+                                                            <td>26.12.2022</td>
+                                                            <td>7641,00</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                    <table class="hiddenItems" style="display: none">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>23.12.2022</td>
+                                                                <td>5620,00</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>23.12.2022</td>
+                                                                <td>5737,00</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>23.12.2022</td>
+                                                                <td>5808,00</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>23.12.2022</td>
+                                                                <td>6292,00</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>24.12.2022</td>
+                                                                <td>6393,00</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>26.12.2022</td>
+                                                                <td>7196,00</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>22.12.2022</td>
+                                                                <td>9847,00</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>23.12.2022</td>
+                                                                <td>9847,00</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>25.12.2022</td>
+                                                                <td>11048,00</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                            <table class="moreItems">
+                                                <tbody>
+                                                <tr>
+                                                    <td class="more-label">
+                                                        <a id="ShowItems_" +="" i="" onclick="showItems(i)">ещё</a>
+                                                        <a id="HideItems_" +="" i="" onclick="hideItems(i)" style="display: none;">убрать</a>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table class="dataBlock">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div>ERA</div>
+                                            <div>TE7136105J</div>
+                                        </td>
+                                        <td>
+                                            <div>Термостат (в корпусе)</div>
+                                        </td>
+
+
+                                        <td>
+                                            <table class="moreItems">
+                                                <tbody>
+                                                <tr>
+                                                    <td class="more-label">
+                                                        <a id="ShowItems_" +="" i="" onclick="showItems(i)">ещё</a>
+                                                        <a id="HideItems_" +="" i="" onclick="hideItems(i)" style="display: none;">убрать</a>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table class="dataBlock">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div>VERNET</div>
+                                            <div>TE7136105J</div>
+                                        </td>
+                                        <td>
+                                            <div>Термостат (в корпусе)</div>
+                                        </td>
+
+
+                                        <td>
+                                                <table class="visibleItems">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>оригинал_0</td>
+                                                            <td>Термостат (в корпусе)</td>
+                                                            <td>26.12.2022</td>
+                                                            <td>6082,00</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>оригинал_1</td>
+                                                            <td>Автокомпонент</td>
+                                                            <td>14.02.2023</td>
+                                                            <td>6627,00</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>оригинал_2</td>
+                                                            <td>Термостат (в корпусе)</td>
+                                                            <td>26.12.2022</td>
+                                                            <td>7641,00</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                    <table class="hiddenItems" style="display: none">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>24.12.2022</td>
+                                                                <td>10569,00</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>22.12.2022</td>
+                                                                <td>10782,00</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>26.12.2022</td>
+                                                                <td>12277,00</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Автодеталь</td>
+                                                                <td>01.02.2023</td>
+                                                                <td>4223</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Автодеталь</td>
+                                                                <td>01.02.2023</td>
+                                                                <td>4223</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>деталь</td>
+                                                                <td>02.02.2023</td>
+                                                                <td>5043</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>деталь</td>
+                                                                <td>09.02.2023</td>
+                                                                <td>5043</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат PEUGEOT 207 3008 308 5008</td>
+                                                                <td>22.12.2022</td>
+                                                                <td>5453</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат (в корпусе)</td>
+                                                                <td>23.12.2022</td>
+                                                                <td>5695</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>23.12.2022</td>
+                                                                <td>5734</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат (в корпусе)</td>
+                                                                <td>23.12.2022</td>
+                                                                <td>5806</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат (в корпусе)</td>
+                                                                <td>22.12.2022</td>
+                                                                <td>5882</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат охлаждающей жидкости</td>
+                                                                <td>23.12.2022</td>
+                                                                <td>5914</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат охлаждающей жидкости</td>
+                                                                <td>24.12.2022</td>
+                                                                <td>5927</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>22.12.2022</td>
+                                                                <td>5955</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат охлаждающей жидкости</td>
+                                                                <td>23.12.2022</td>
+                                                                <td>5991</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Автокомпонент</td>
+                                                                <td>16.02.2023</td>
+                                                                <td>6206</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат охлаждающей жидкости</td>
+                                                                <td>23.12.2022</td>
+                                                                <td>6236</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат (в корпусе)</td>
+                                                                <td>24.12.2022</td>
+                                                                <td>6309</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат (в корпусе)</td>
+                                                                <td>27.12.2022</td>
+                                                                <td>6409</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат охлаждающей жидкости</td>
+                                                                <td>22.12.2022</td>
+                                                                <td>6451</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат охлаждающей жидкости</td>
+                                                                <td>27.12.2022</td>
+                                                                <td>6451</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>24.12.2022</td>
+                                                                <td>6528</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат охлаждающей жидкости</td>
+                                                                <td>29.12.2022</td>
+                                                                <td>6639</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат (в корпусе)</td>
+                                                                <td>27.12.2022</td>
+                                                                <td>6684</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>27.12.2022</td>
+                                                                <td>6846</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат охлаждающей жидкости</td>
+                                                                <td>14.01.2023</td>
+                                                                <td>6871</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат PEUGEOT 207 3008 308 5008</td>
+                                                                <td>28.12.2022</td>
+                                                                <td>7135</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>ТЕРМОСТАТ CITROEN 105C 1 6 16V PEUGEOT MINI</td>
+                                                                <td>27.12.2022</td>
+                                                                <td>7146</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат (в корпусе)</td>
+                                                                <td>24.12.2022</td>
+                                                                <td>7255</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>20.12.2022</td>
+                                                                <td>10096</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>22.12.2022</td>
+                                                                <td>10096</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>24.12.2022</td>
+                                                                <td>10096</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>23.12.2022</td>
+                                                                <td>10703</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>28.12.2022</td>
+                                                                <td>10803</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>31.12.2022</td>
+                                                                <td>10804</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>ТЕРМОСТАТ CITROEN 105C 1 6 16V PEUGEOT  MINI</td>
+                                                                <td>26.01.2023</td>
+                                                                <td>10868</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>23.12.2022</td>
+                                                                <td>10884</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>27.12.2022</td>
+                                                                <td>11328</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>29.12.2022</td>
+                                                                <td>11510</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Деталь</td>
+                                                                <td>30.12.2022</td>
+                                                                <td>11611</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>30.12.2022</td>
+                                                                <td>11712</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>28.12.2022</td>
+                                                                <td>12115</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>29.12.2022</td>
+                                                                <td>12115</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>11.01.2023</td>
+                                                                <td>12115</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>ТЕРМОСТАТ CITROEN 105C 1 6 16V PEUGEOT MINI</td>
+                                                                <td>23.12.2022</td>
+                                                                <td>12318</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>19.01.2023</td>
+                                                                <td>13933</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>ТЕРМОСТАТ CITROEN 105C 1 6 16V PEUGEOT MINI</td>
+                                                                <td>28.12.2022</td>
+                                                                <td>14781</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>20.12.2022</td>
+                                                                <td>11038,38</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>23.12.2022</td>
+                                                                <td>6226,16</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>22.12.2022</td>
+                                                                <td>6851,38</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат охлаждающей жидкости</td>
+                                                                <td>22.12.2022</td>
+                                                                <td>5878,17</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат PEUGEOT  207 3008 308 5008</td>
+                                                                <td>22.12.2022</td>
+                                                                <td>5948,54</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат (в корпусе)</td>
+                                                                <td>22.12.2022</td>
+                                                                <td>6406,66</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат охлаждающей жидкости</td>
+                                                                <td>24.12.2022</td>
+                                                                <td>6792,38</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат охлаждающей жидкости</td>
+                                                                <td>26.12.2022</td>
+                                                                <td>6790,98</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>28.12.2022</td>
+                                                                <td>7629,03</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>26.12.2022</td>
+                                                                <td>7215,06</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>20.12.2022</td>
+                                                                <td>10950,9</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>21.12.2022</td>
+                                                                <td>11503,05</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>20.12.2022</td>
+                                                                <td>10950,9</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>20.12.2022</td>
+                                                                <td>10941,4</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>22.12.2022</td>
+                                                                <td>10941,4</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>30.12.2022</td>
+                                                                <td>13250,4</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>30.12.2022</td>
+                                                                <td>13250,4</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>23.12.2022</td>
+                                                                <td>5796,41</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>23.12.2022</td>
+                                                                <td>5804,70</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>22.12.2022</td>
+                                                                <td>6083,02</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>23.12.2022</td>
+                                                                <td>5970,36</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>23.12.2022</td>
+                                                                <td>6374,50</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>23.12.2022</td>
+                                                                <td>6468,00</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат охлаждающей жидкости</td>
+                                                                <td>22.12.2022</td>
+                                                                <td>5778,30</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>23.12.2022</td>
+                                                                <td>5929,00</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>22.12.2022</td>
+                                                                <td>11383,46</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>21.12.2022</td>
+                                                                <td>11383,46</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>23.12.2022</td>
+                                                                <td>6724,81</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>22.12.2022</td>
+                                                                <td>6127,87</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>22.12.2022</td>
+                                                                <td>6417,43</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>22.12.2022</td>
+                                                                <td>6133,44</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>26.12.2022</td>
+                                                                <td>6372,39</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>22.12.2022</td>
+                                                                <td>13149,07</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>26.12.2022</td>
+                                                                <td>12601,42</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>23.12.2022</td>
+                                                                <td>10957,55</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>22.12.2022</td>
+                                                                <td>5601,31</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>22.12.2022</td>
+                                                                <td>5869,72</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>23.12.2022</td>
+                                                                <td>6224,50</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>23.12.2022</td>
+                                                                <td>6835,33</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>23.12.2022</td>
+                                                                <td>6721,26</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>25.01.2023</td>
+                                                                <td>4653,07</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>30.01.2023</td>
+                                                                <td>15495,00</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>24.12.2022</td>
+                                                                <td>7697,64</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>24.12.2022</td>
+                                                                <td>12963,21</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>26.12.2022</td>
+                                                                <td>6061,68</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>20.02.2023</td>
+                                                                <td>7022,73</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>26.12.2022</td>
+                                                                <td>7610,53</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>28.12.2022</td>
+                                                                <td>6628,46</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>22.03.2023</td>
+                                                                <td>13541,42</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>29.12.2022</td>
+                                                                <td>11559,32</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>30.12.2022</td>
+                                                                <td>12423,30</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>30.12.2022</td>
+                                                                <td>11789,30</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>30.12.2022</td>
+                                                                <td>11991,32</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>31.12.2022</td>
+                                                                <td>13221,37</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>02.01.2023</td>
+                                                                <td>11699,01</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат [107C]</td>
+                                                                <td>07.02.2023</td>
+                                                                <td>4368</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат охлаждающей жидкости Возврат невозможен</td>
+                                                                <td>08.01.2023</td>
+                                                                <td>8034,04</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>26.02.2023</td>
+                                                                <td>12899,52</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>08.01.2023</td>
+                                                                <td>15397,92</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>29.01.2023</td>
+                                                                <td>4932,25</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат PEUGEOT: 207/3008/308/5008 Возврат с удержанием 10%</td>
+                                                                <td>25.12.2022</td>
+                                                                <td>5304,67</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат охлаждающей жидкости Возврат с удержанием 10%</td>
+                                                                <td>25.12.2022</td>
+                                                                <td>5885,84</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат PEUGEOT: 207/3008/308/5008 Возврат с удержанием 10%</td>
+                                                                <td>25.12.2022</td>
+                                                                <td>6143,81</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат (в корпусе) Возврат с удержанием 10%
+            ВНИМАНИЕ!!! Запросы на возврат при отказе клиента рассматриваются строго в течение 1 недели с момента прихода детали на склад АДЕО.ПРО! Передача деталей на возврат должна произойти в течение 2 дней с момента одобрения заявки на возврат! В случае задержки, детали будут возвращены клиенту, а возврат аннулирован!!!</td>
+                                                                <td>25.12.2022</td>
+                                                                <td>6470,55</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат Возврат невозможен</td>
+                                                                <td>25.12.2022</td>
+                                                                <td>6652,64</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат охлаждающей жидкости Возврат с удержанием 10%</td>
+                                                                <td>27.12.2022</td>
+                                                                <td>6697,5</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат охлаждающей жидкости Возврат с удержанием 10%</td>
+                                                                <td>25.12.2022</td>
+                                                                <td>7207,15</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат охлаждающей жидкости Возврат с удержанием 10%</td>
+                                                                <td>29.12.2022</td>
+                                                                <td>7207,15</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат (в корпусе) Возврат невозможен</td>
+                                                                <td>25.12.2022</td>
+                                                                <td>7246,78</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>27.12.2022</td>
+                                                                <td>7131,08</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>29.12.2022</td>
+                                                                <td>7652,72</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>29.12.2022</td>
+                                                                <td>7862,25</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>29.12.2022</td>
+                                                                <td>8099,23</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>27.12.2022</td>
+                                                                <td>8271,18</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>29.12.2022</td>
+                                                                <td>8560,18</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>29.12.2022</td>
+                                                                <td>9470,53</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>03.01.2023</td>
+                                                                <td>15400,81</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат (в корпусе)</td>
+                                                                <td>29.12.2022</td>
+                                                                <td>6318,73</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат (в корпусе)</td>
+                                                                <td>29.12.2022</td>
+                                                                <td>6329,63</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат (в корпусе)</td>
+                                                                <td>29.12.2022</td>
+                                                                <td>6428,82</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат охлаждающей жидкости</td>
+                                                                <td>29.12.2022</td>
+                                                                <td>7050,12</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат (в корпусе)</td>
+                                                                <td>03.01.2023</td>
+                                                                <td>7305,18</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат (в корпусе)</td>
+                                                                <td>29.12.2022</td>
+                                                                <td>8018,04</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>29.12.2022</td>
+                                                                <td>11034,07</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>ТЕРМОСТАТ</td>
+                                                                <td>27.12.2022</td>
+                                                                <td>5408,87</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>ТЕРМОСТАТ</td>
+                                                                <td>27.12.2022</td>
+                                                                <td>5816,96</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>ТЕРМОСТАТ</td>
+                                                                <td>27.12.2022</td>
+                                                                <td>6275,22</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>ТЕРМОСТАТ</td>
+                                                                <td>27.12.2022</td>
+                                                                <td>7381,3</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат охлаждающей жидкости</td>
+                                                                <td>01.01.2023</td>
+                                                                <td>5503,64</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат PEUGEOT 207/3008/308/5008</td>
+                                                                <td>01.01.2023</td>
+                                                                <td>5557,16</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат (в корпусе)</td>
+                                                                <td>29.12.2022</td>
+                                                                <td>5661,97</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат (в корпусе)</td>
+                                                                <td>01.01.2023</td>
+                                                                <td>5830,34</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат охлаждающей жидкости</td>
+                                                                <td>05.01.2023</td>
+                                                                <td>5844,83</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат (в корпусе)</td>
+                                                                <td>01.01.2023</td>
+                                                                <td>5927,34</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат (в корпусе)</td>
+                                                                <td>01.01.2023</td>
+                                                                <td>6022,12</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат (в корпусе)</td>
+                                                                <td>03.01.2023</td>
+                                                                <td>6114,66</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>01.01.2023</td>
+                                                                <td>10633,76</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>03.01.2023</td>
+                                                                <td>12760,06</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат PEUGEOT 207/3008/308/5008</td>
+                                                                <td>01.01.2023</td>
+                                                                <td>5764,69</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат охлаждающей жидкости</td>
+                                                                <td>01.01.2023</td>
+                                                                <td>6317,4</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат (в корпусе)</td>
+                                                                <td>01.01.2023</td>
+                                                                <td>6344,05</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат PEUGEOT: 207/3008/308/5008</td>
+                                                                <td>01.01.2023</td>
+                                                                <td>7486,71</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>01.01.2023</td>
+                                                                <td>11031,89</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>01.01.2023</td>
+                                                                <td>13238,26</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат PEUGEOT 207/3008/308/5008</td>
+                                                                <td>01.01.2023</td>
+                                                                <td>5999,4</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>29.12.2022</td>
+                                                                <td>6268,9</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат (в корпусе)</td>
+                                                                <td>05.01.2023</td>
+                                                                <td>6602,2</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>27.12.2022</td>
+                                                                <td>5937,39</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>27.12.2022</td>
+                                                                <td>6221,9</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>01.01.2023</td>
+                                                                <td>6425,38</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>27.12.2022</td>
+                                                                <td>6495,54</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>27.12.2022</td>
+                                                                <td>6501,45</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>27.12.2022</td>
+                                                                <td>6597,97</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>01.01.2023</td>
+                                                                <td>6754,73</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>27.12.2022</td>
+                                                                <td>6802,48</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>01.01.2023</td>
+                                                                <td>7026,17</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>25.12.2022</td>
+                                                                <td>5045,66</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>25.12.2022</td>
+                                                                <td>5791,97</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>01.01.2023</td>
+                                                                <td>5933,44</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>27.12.2022</td>
+                                                                <td>6143,71</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>27.12.2022</td>
+                                                                <td>6160,58</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>27.12.2022</td>
+                                                                <td>6324,12</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>27.12.2022</td>
+                                                                <td>6361,75</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>27.12.2022</td>
+                                                                <td>6493,49</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>27.12.2022</td>
+                                                                <td>6493,49</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>29.12.2022</td>
+                                                                <td>6766,05</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат PEUGEOT: 207/3008/308/5008</td>
+                                                                <td>27.12.2022</td>
+                                                                <td>6053,84</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат (в корпусе)</td>
+                                                                <td>29.12.2022</td>
+                                                                <td>6058</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат охлаждающей жидкости</td>
+                                                                <td>27.12.2022</td>
+                                                                <td>6084</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат (в корпусе)</td>
+                                                                <td>27.12.2022</td>
+                                                                <td>6301,36</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат охлаждающей жидкости</td>
+                                                                <td>27.12.2022</td>
+                                                                <td>6318</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат (в корпусе)</td>
+                                                                <td>27.12.2022</td>
+                                                                <td>6406,4</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат (в корпусе)</td>
+                                                                <td>27.12.2022</td>
+                                                                <td>6508,32</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат PEUGEOT: 207/3008/308/5008</td>
+                                                                <td>27.12.2022</td>
+                                                                <td>6538,48</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат PEUGEOT: 207/3008/308/5008</td>
+                                                                <td>27.12.2022</td>
+                                                                <td>6555,12</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат охлаждающей жидкости</td>
+                                                                <td>27.12.2022</td>
+                                                                <td>6558,24</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>25.12.2022</td>
+                                                                <td>6475,21</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>25.12.2022</td>
+                                                                <td>7125,44</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>22.12.2022</td>
+                                                                <td>11479,92</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат охлаждающей жидкости</td>
+                                                                <td>25.12.2022</td>
+                                                                <td>6009,43</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>25.12.2022</td>
+                                                                <td>6028,27</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>25.12.2022</td>
+                                                                <td>6036,89</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>25.12.2022</td>
+                                                                <td>6166,16</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>25.12.2022</td>
+                                                                <td>6209,17</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>25.12.2022</td>
+                                                                <td>6326,34</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>25.12.2022</td>
+                                                                <td>6629,48</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>25.12.2022</td>
+                                                                <td>6726,72</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат [107°C]</td>
+                                                                <td>27.12.2022</td>
+                                                                <td>6971,36</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат [107°C]</td>
+                                                                <td>25.12.2022</td>
+                                                                <td>12359,85</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат в корпусе [Отказы не принимаются!] (7:00;11:00;14:00)</td>
+                                                                <td>25.12.2022</td>
+                                                                <td>5682,09</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>TE7136105J (13:00;сб:12:00)</td>
+                                                                <td>25.12.2022</td>
+                                                                <td>5683,2</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат в корпусе (9:00;13:00;16:00)</td>
+                                                                <td>25.12.2022</td>
+                                                                <td>5773,11</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат (7:00;9:30)</td>
+                                                                <td>25.12.2022</td>
+                                                                <td>5844,15</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат в корпусе (7:00;13:00;сб:12:00)</td>
+                                                                <td>25.12.2022</td>
+                                                                <td>6082,8</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат PEUGEOT 20730083085008 [Отказы не принимаются!] (9:00;15:00)</td>
+                                                                <td>27.12.2022</td>
+                                                                <td>6089,46</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат охлаждающей жидкости (7:00)</td>
+                                                                <td>25.12.2022</td>
+                                                                <td>6331,44</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат в корпусе (7:00;13:00)</td>
+                                                                <td>27.12.2022</td>
+                                                                <td>7128,42</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат [Все заказы отправленные в работу до 12-00 прибудут к нам на склад в Москве до 21-00] (9:00;12:00;17:00)</td>
+                                                                <td>25.12.2022</td>
+                                                                <td>9908,97</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат [107C]</td>
+                                                                <td>27.12.2022</td>
+                                                                <td>5554,64</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат [107C]</td>
+                                                                <td>27.12.2022</td>
+                                                                <td>5665,92</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат [107C]</td>
+                                                                <td>27.12.2022</td>
+                                                                <td>5889,52</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат [107C]</td>
+                                                                <td>29.12.2022</td>
+                                                                <td>5989,36</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат [107C]</td>
+                                                                <td>27.12.2022</td>
+                                                                <td>6077,76</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат [107C]</td>
+                                                                <td>27.12.2022</td>
+                                                                <td>6152,64</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат [107C]</td>
+                                                                <td>01.01.2023</td>
+                                                                <td>6396</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат [107C]</td>
+                                                                <td>01.01.2023</td>
+                                                                <td>6788,08</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат [107C]</td>
+                                                                <td>27.12.2022</td>
+                                                                <td>6861,92</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат TE7136.105J</td>
+                                                                <td>25.12.2022</td>
+                                                                <td>5558,68</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат TE7136.105J</td>
+                                                                <td>25.12.2022</td>
+                                                                <td>5745,04</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат TE7136.105J</td>
+                                                                <td>25.12.2022</td>
+                                                                <td>6153,76</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат TE7136.105J</td>
+                                                                <td>25.12.2022</td>
+                                                                <td>6226,77</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат TE7136.105J</td>
+                                                                <td>25.12.2022</td>
+                                                                <td>6356,26</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат TE7136.105J</td>
+                                                                <td>25.12.2022</td>
+                                                                <td>6434,96</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат TE7136.105J</td>
+                                                                <td>27.12.2022</td>
+                                                                <td>6905,7</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат TE7136.105J</td>
+                                                                <td>25.12.2022</td>
+                                                                <td>6971,33</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат TE7136.105J</td>
+                                                                <td>29.12.2022</td>
+                                                                <td>6971,33</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат TE7136.105J</td>
+                                                                <td>25.12.2022</td>
+                                                                <td>7808,96</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>27.12.2022</td>
+                                                                <td>5844,8</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>27.12.2022</td>
+                                                                <td>6040,32</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>27.12.2022</td>
+                                                                <td>6543,68</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>27.12.2022</td>
+                                                                <td>6648,72</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>27.12.2022</td>
+                                                                <td>7483,84</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>25.12.2022</td>
+                                                                <td>10240,88</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>27.12.2022</td>
+                                                                <td>10240,88</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>27.12.2022</td>
+                                                                <td>11489,92</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>20.12.2022</td>
+                                                                <td>9570,54</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>22.12.2022</td>
+                                                                <td>9570,54</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>25.12.2022</td>
+                                                                <td>9570,54</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>27.12.2022</td>
+                                                                <td>6289,24</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>25.12.2022</td>
+                                                                <td>11006,12</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>27.12.2022</td>
+                                                                <td>13339,41</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат охлаждающей жидкости</td>
+                                                                <td>25.12.2022</td>
+                                                                <td>6059,44</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат PEUGEOT  207 3008 308 5008</td>
+                                                                <td>25.12.2022</td>
+                                                                <td>6131,98</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат (в корпусе)</td>
+                                                                <td>25.12.2022</td>
+                                                                <td>6493,52</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат (в корпусе)</td>
+                                                                <td>25.12.2022</td>
+                                                                <td>6607,17</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат охлаждающей жидкости</td>
+                                                                <td>25.12.2022</td>
+                                                                <td>7004,96</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат охлаждающей жидкости</td>
+                                                                <td>25.12.2022</td>
+                                                                <td>7246,51</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>29.12.2022</td>
+                                                                <td>7712,92</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>22.12.2022</td>
+                                                                <td>11053,97</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>22.12.2022</td>
+                                                                <td>11053,97</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>22.12.2022</td>
+                                                                <td>11278,8</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>01.01.2023</td>
+                                                                <td>5774,59</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат (в корпусе)</td>
+                                                                <td>27.12.2022</td>
+                                                                <td>5822,76</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат (в корпусе)</td>
+                                                                <td>27.12.2022</td>
+                                                                <td>5831,08</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат (в корпусе)</td>
+                                                                <td>27.12.2022</td>
+                                                                <td>5924,15</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>27.12.2022</td>
+                                                                <td>5997,5</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат PEUGEOT: 207/3008/308/5008</td>
+                                                                <td>27.12.2022</td>
+                                                                <td>6110,68</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат охлаждающей жидкости</td>
+                                                                <td>27.12.2022</td>
+                                                                <td>6497,4</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>27.12.2022</td>
+                                                                <td>10160,56</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Корпус термостата шт.</td>
+                                                                <td>25.12.2022</td>
+                                                                <td>6383,52</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Корпус термостата Термостат (в корпусе)</td>
+                                                                <td>25.12.2022</td>
+                                                                <td>6466,72</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Корпус термостата CITROEN C4 / DS3 PEUGEOT 207 / 3008 / 308 / 5008 / RCZ</td>
+                                                                <td>27.12.2022</td>
+                                                                <td>6532,24</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Корпус термостата Термостат охлаждающей жидкости</td>
+                                                                <td>27.12.2022</td>
+                                                                <td>6597,76</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Корпус термостата Термостат</td>
+                                                                <td>27.12.2022</td>
+                                                                <td>6604</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Корпус термостата Термостат охлаждающей жидкости</td>
+                                                                <td>29.12.2022</td>
+                                                                <td>7154,16</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Корпус термостата Термостат охлаждающей жидкости</td>
+                                                                <td>27.12.2022</td>
+                                                                <td>7215,52</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Корпус термостата Термостат PEUGEOT: 207/3008/308/5008</td>
+                                                                <td>29.12.2022</td>
+                                                                <td>7711,6</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Корпус термостата Термостат (в корпусе)</td>
+                                                                <td>27.12.2022</td>
+                                                                <td>8205,6</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Корпус термостата Термостат (в корпусе)</td>
+                                                                <td>29.12.2022</td>
+                                                                <td>8217,04</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат PEUGEOT 207/3008/308/5008</td>
+                                                                <td>25.12.2022</td>
+                                                                <td>5764,69</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат (в корпусе)</td>
+                                                                <td>25.12.2022</td>
+                                                                <td>6344,05</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>25.12.2022</td>
+                                                                <td>11031,89</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>25.12.2022</td>
+                                                                <td>13238,26</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат охлаждающей жидкости</td>
+                                                                <td>23.12.2022</td>
+                                                                <td>6068</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат (в корпусе)</td>
+                                                                <td>23.12.2022</td>
+                                                                <td>6284</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат охлаждающей жидкости</td>
+                                                                <td>24.12.2022</td>
+                                                                <td>6301</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат (в корпусе)</td>
+                                                                <td>23.12.2022</td>
+                                                                <td>6389</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат (в корпусе)</td>
+                                                                <td>24.12.2022</td>
+                                                                <td>6491</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат охлаждающей жидкости</td>
+                                                                <td>24.12.2022</td>
+                                                                <td>6541</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>23.12.2022</td>
+                                                                <td>6572</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>24.12.2022</td>
+                                                                <td>6694</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>27.12.2022</td>
+                                                                <td>7239</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>23.12.2022</td>
+                                                                <td>7323</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>27.12.2022</td>
+                                                                <td>7456</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>23.12.2022</td>
+                                                                <td>7909</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат PEUGEOT: 207/3008/308/5008</td>
+                                                                <td>29.12.2022</td>
+                                                                <td>8530</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>23.12.2022</td>
+                                                                <td>11021</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>24.12.2022</td>
+                                                                <td>11211</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>23.12.2022</td>
+                                                                <td>11211</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>27.12.2022</td>
+                                                                <td>11259</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>29.12.2022</td>
+                                                                <td>11338</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>23.12.2022</td>
+                                                                <td>12557</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>27.12.2022</td>
+                                                                <td>12559</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>ТЕРМОСТАТ</td>
+                                                                <td>29.12.2022</td>
+                                                                <td>12948</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>29.12.2022</td>
+                                                                <td>13130</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>24.12.2022</td>
+                                                                <td>13454</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>27.12.2022</td>
+                                                                <td>14000</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>27.12.2022</td>
+                                                                <td>14236</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>30.12.2022</td>
+                                                                <td>15310</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат TE7136.105J</td>
+                                                                <td>23.12.2022</td>
+                                                                <td>5626,19</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат TE7136.105J</td>
+                                                                <td>23.12.2022</td>
+                                                                <td>5814,82</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат TE7136.105J</td>
+                                                                <td>23.12.2022</td>
+                                                                <td>6228,5</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат TE7136.105J</td>
+                                                                <td>23.12.2022</td>
+                                                                <td>6302,4</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат TE7136.105J</td>
+                                                                <td>24.12.2022</td>
+                                                                <td>6433,46</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат TE7136.105J</td>
+                                                                <td>23.12.2022</td>
+                                                                <td>6513,12</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат TE7136.105J</td>
+                                                                <td>26.12.2022</td>
+                                                                <td>6989,58</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат TE7136.105J</td>
+                                                                <td>23.12.2022</td>
+                                                                <td>7056</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат TE7136.105J</td>
+                                                                <td>27.12.2022</td>
+                                                                <td>7056</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат TE7136.105J</td>
+                                                                <td>24.12.2022</td>
+                                                                <td>7903,81</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат TE7136.105J</td>
+                                                                <td>20.12.2022</td>
+                                                                <td>10306,73</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат TE7136.105J</td>
+                                                                <td>23.12.2022</td>
+                                                                <td>10766,85</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат TE7136.105J</td>
+                                                                <td>23.12.2022</td>
+                                                                <td>12920,23</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат TE7136.105J</td>
+                                                                <td>13.02.2023</td>
+                                                                <td>13164</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат TE7136.105J</td>
+                                                                <td>30.12.2022</td>
+                                                                <td>13250,4</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат TE7136.105J</td>
+                                                                <td>12.01.2023</td>
+                                                                <td>13250,4</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>23.12.2022</td>
+                                                                <td>10582,81</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>26.12.2022</td>
+                                                                <td>12826,36</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>аналог</td>
+                                                                <td>Термостат</td>
+                                                                <td>24.12.2022</td>
+                                                                <td>6047,35</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                            <table class="moreItems">
+                                                <tbody>
+                                                <tr>
+                                                    <td class="more-label">
+                                                        <a id="ShowItems_" +="" i="" onclick="showItems(i)">ещё</a>
+                                                        <a id="HideItems_" +="" i="" onclick="hideItems(i)" style="display: none;">убрать</a>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table class="dataBlock">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div>VERNET-CALORSTAT</div>
+                                            <div>TE7136105J</div>
+                                        </td>
+                                        <td>
+                                            <div>Термостат (в корпусе)</div>
+                                        </td>
+
+
+                                        <td>
+                                                <table class="visibleItems">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>оригинал_0</td>
+                                                            <td>Термостат (в корпусе)</td>
+                                                            <td>26.12.2022</td>
+                                                            <td>6082,00</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>оригинал_1</td>
+                                                            <td>Автокомпонент</td>
+                                                            <td>14.02.2023</td>
+                                                            <td>6627,00</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>оригинал_2</td>
+                                                            <td>Термостат (в корпусе)</td>
+                                                            <td>26.12.2022</td>
+                                                            <td>7641,00</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            <table class="moreItems">
+                                                <tbody>
+                                                <tr>
+                                                    <td class="more-label">
+                                                        <a id="ShowItems_" +="" i="" onclick="showItems(i)">ещё</a>
+                                                        <a id="HideItems_" +="" i="" onclick="hideItems(i)" style="display: none;">убрать</a>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+
+                                    </tr>
+                                </tbody>
+                            </table>
+                    </div>
+                </div>
+            </div>
+
+</div>
+
+</div>
+
+        <div id="result2"></div>
+        
+        <script type="text/javascript">
+            var searchFunction = function search() {
+                var art = $('#searchArtikul').val();
+                $('#result').empty();
+                $('#result').load('/Search/Search?Articul=' + art + '&idClient=' + 158);
+            }
+        </script>
+        
+        <script type="text/javascript">
+            var searchFunction2 = function() {
+                var art = $('#searchArtikul').val();
+                $('#result').load('/Search/SearchNew?Articul=' + art + '&idClient=' + 158);
+            }
+        </script>
+        
+        <script type="text/javascript">
+            var busketList = function() {
+                $('#result2').html('');
+                $('#result').load('/Busket/BusketList');
+            }
+        </script>
+        
+        <script type="text/javascript">
+            var orderList = function() {
+                $('#result').empty();
+                $('#result').load('/Order/ListOrders');
+            }
+        </script>
+
+    </div>
+
+   
+
+
+  
+
+<!-- Visual Studio Browser Link -->
+<script type="text/javascript" src="https://localhost:44399/642cafea3c9a4c499d6b718939f55724/browserLink" async="async" id="__browserLink_initializationData" data-requestid="e756edcd0ecc49f186679b4c4ac56980" data-requestmappingfromserver="False"></script>
+<!-- End Browser Link -->
+
+<script src="/_framework/aspnetcore-browser-refresh.js"></script>
+
+
+
+
+
+            </div>
+        </div>
+
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer_row">
+                    <div class="footer_text">
+                        <p class="float-end"><a href="#">Back to top</a></p>
+                        <p>© 2022 <a href="#">1 пункт</a> · <a href="#">2 пункт</a></p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <script src="/js/bootstrap.bundle.js"></script>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/site.js"></script>
+    
+
+
+
+<live-preview-root></live-preview-root></body></html>

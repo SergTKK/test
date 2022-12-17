@@ -338,3 +338,8 @@ body.loading .waitmodal {
 #tableOfOrders tbody tr td:nth-child(4) div {
   padding: 0px 5px 0px 0px;
 }
+
+#originalItem {
+  background: antiquewhite;
+  width: auto;
+}
