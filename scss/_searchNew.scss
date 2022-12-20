@@ -1,26 +1,41 @@
 #originalItem {
     background: antiquewhite;
+    border: 1px solid black;
+    border-radius: 2px;
     margin: auto;      
-    width: 95%; 
+    width: 95%;    
 }
 
 #resultMainModul {    
     background: aquamarine;          
-    width: 100%;    
-    align-items: center;
+    width: 100%;        
 }
 
 .row {
 }
 .headerItems {
-    
+    padding: 5px;
+    text-align: end;    
 }
 .inner {
+    padding: 20px;
+    padding-top: 10px;
 }
 .part {
+
+    & table td {
+        border-bottom: 1px solid black;    
+    }
 }
+.dataBlock {  
+    width: 100%;   
+    display: table;
+}
+
 .dataBlock {
+    
 }
+
 .visibleItems {
 }
 .hiddenItems {
@@ -28,4 +43,8 @@
 .moreItems {
 }
 .more-label {
+}
+
+.d_brand_art, .d_name {
+    vertical-align: top;
 }
