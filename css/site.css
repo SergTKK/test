@@ -350,11 +350,38 @@ body.loading .waitmodal {
 #resultMainModul {
   background: aquamarine;
   width: 100%;
+  display: flex;
+  margin-left: 0;
+  margin-right: 0;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
 }
 
 .headerItems {
   padding: 5px;
-  text-align: end;
+  text-align: center;
+  width: 100%;
+}
+
+.th-brand {
+  width: 200px;
+}
+
+.th-name {
+  width: 200px;
+}
+
+.th-quantity {
+  width: 200px;
+}
+
+.th-delivery {
+  width: 200px;
+}
+
+.th-price {
+  width: 200px;
 }
 
 .inner {
@@ -362,15 +389,40 @@ body.loading .waitmodal {
   padding-top: 10px;
 }
 
-.part table td {
-  border-bottom: 1px solid black;
-}
-
 .dataBlock {
   width: 100%;
   display: table;
+  border: 1px solid yellowgreen;
+}
+
+.visibleItems {
+  width: 100%;
+  text-align: center;
+}
+
+.moreItems {
+  width: 100%;
+}
+
+.more-label {
+  text-align: right;
+  padding-right: 50px;
+  cursor: pointer;
 }
 
 .d_brand_art, .d_name {
   vertical-align: top;
+  width: 200px;
+}
+
+.td-quantity {
+  width: 200px;
+}
+
+.td-delivery {
+  width: 200px;
+}
+
+.td-price {
+  width: 200px;
 }
