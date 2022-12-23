@@ -1,13 +1,22 @@
-#originalItem {
-    background: antiquewhite;
-    border: 1px solid black;
-    border-radius: 2px;
+.originalItems {           
     margin: auto;      
-    width: 95%;    
+    width: 97%;    
 }
 
-#resultMainModul {    
-    background: aquamarine;          
+.analogItems {
+    margin: auto;
+    width: 97%;
+}
+
+.analogLabel {
+    margin-left: 20px;
+    margin-bottom: 0px;
+    font-size: 20px;
+    color: red;
+    font-weight: 600;
+}
+
+#resultMainModul {         
     width: 100%;    
     display: flex;    
     margin-left: 0;
@@ -19,17 +28,20 @@
 
 .row {
 }
+
 .headerItems {
     padding: 5px;
     text-align: center;  
-    width: 100%;      
+    width: 100%;  
+    background: antiquewhite;    
+    line-height: 2;    
 }
 
 .th-brand {
     width: 200px;
 }
 .th-name {
-    width: 200px;
+    width: 320px;
 }
 .th-quantity {
     width: 200px;
@@ -38,36 +50,40 @@
     width: 200px;
 }
 .th-price {
-    width: 200px;
+    width: 100px;
 }
 
 .inner {
     padding: 20px;
     padding-top: 10px;
 }
-.part {
 
-    & table td {
-        
-    }
-}
 .dataBlock {  
     width: 100%;   
+    margin-bottom: 10px;
     display: table;
-    border: 1px solid yellowgreen;
-}
-
-.dataBlock {
-    
+    border: 1px solid antiquewhite;
 }
 
 .visibleItems, .hiddenItems {
     width: 100%;
     text-align: center;
+    line-height: 2;
+}
+
+.my_cart {
+    color: coral;
+    &:hover {
+        color: saddlebrown;       
+        cursor: pointer;
+    }
 }
 
 .moreItems {
-    width: 100%;
+    width: 98%;    
+    color: seagreen;
+    font-size: 14px;
+    font-style: italic;
 }
 .more-label {
     text-align: right;
@@ -77,7 +93,12 @@
     }
 }
 
-.d_brand_art, .d_name {
+.d_brand_art {
+    vertical-align: top;
+    width: 300px;    
+}
+
+.d_name {
     vertical-align: top;
     width: 200px;
 }
@@ -87,9 +108,12 @@
 }
 .td-delivery {
     width: 200px;
+    font-size: 15px;
 }
 .td-price {
-    width: 200px;
+    width: 100px;
+    font-size: 16px;
+    font-weight: 500;
 }
 
 
