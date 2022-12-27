@@ -497,6 +497,7 @@ body.loading .waitmodal {
   top: 0;
   text-align: center;
   padding-top: 20%;
+  background: rgba(169, 169, 169, 0.5);
 }
 .wait img {
   position: relative;
