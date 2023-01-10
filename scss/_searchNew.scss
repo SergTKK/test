@@ -38,7 +38,7 @@
     width: 150px;
 }
 .th-name {
-    width: 420px;
+    width: 410px;
 }
 .th-quantity {
     width: 200px;
@@ -50,10 +50,11 @@
     width: 65px;
 }
 .th-delivery {
-    width: 190px;
+    width: 140px;
 }
 .th-price {
     width: 100px;
+    padding-left: 50px;
 }
 
 .inner {
@@ -190,4 +191,12 @@
         overflow: clip;
         
     }
+}
+
+.btnBackToBrands {
+    width: 100px;
+    margin-left: 50%;
+    margin-top: 0;
+    height: 32px;
+    background-color: burlywood;
 }
